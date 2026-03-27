@@ -1,0 +1,421 @@
+
+/*Estilização da página de relatório.*/
+/*cor da página.*/
+.body{
+    background-color: white;
+}
+/*Parte de cima do site*/
+/*Primeiro título.*/
+.unicotitulo{
+    color: blueviolet;
+    position: static;
+    font-family:dm sans;
+}
+/*Primeiro parágrafo da primeira parte dessa página.*/
+.primeiroparagrafo{
+    color: #3B3B3B;
+    font-family: lato;
+}
+/*Botão do início da primeira seção.*/
+.botao{
+    background-color: #FF7A00;
+    border: #ff7a00;
+    border-radius: 5px;
+    width: 150px;
+    height: 32px;
+    color: white;
+    font-size: small;
+    font-family: lato;
+    left: -5px;
+}
+/*linha.*/
+ .linha{
+    background-color: blueviolet;
+    border: none;
+    border-top: 1px solid blueviolet ;
+
+
+}
+.secao1{
+    color: blueviolet;
+    font-family: dm sans;
+    font-style:normal;
+    text-decoration: underline;/*Linha de baixo do texto.*/
+    text-decoration-color: #FF7A00;/*Cor da linha.*/
+    text-decoration-thickness: 1px;/*Espessura da linha. */
+    text-underline-offset: 5px;/*Medida de afastamento do texto.*/
+
+
+}
+
+/*Segundo parágrafo da primeira seção.*/
+.paragrafosecao1{
+    color: #3B3B3B;
+    font-family: lato;
+    position: static;
+}
+/*Cards da seção visão geral de métricas e chaves.*/
+.eventos{
+      width: 150px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  text-align: center;
+  font-family: lato;
+  border-left: 5px solid #FF7A00;
+}
+/*título do número 16.*/
+.dezesseis{
+    color: #FF7A00;
+    font-size: 30px;
+    font-family: dm sans; 
+}
+/*Card dois da seção visão geral de métricas e chaves.*/
+.inscricoes{
+ width: 150px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  text-align: center;
+  font-family: lato;
+  border-left: 5px solid #FF7A00;
+
+}
+/*título do número 214.*/
+.duzentosequatorze{
+    color: #FF7A00;
+    font-size: 30px;
+    font-family: dm sans;
+}
+/*Card três da seção visão geral de métricas e chaves.*/
+.feedbacks{
+     width: 150px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  text-align: center;
+  font-family: lato;
+  border-left: 5px solid #FF7A00;
+}
+/*título do número noventa.*/
+.noventa{
+    color: #FF7A00;
+    font-size: 30px;
+    font-family: dm sans;
+
+}
+/*Card quatro da seção visão geral de métricas e chaves.*/
+.avaliacao{
+       width: 150px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  text-align: center;
+  font-family: lato;
+  border-left: 5px solid #FF7A00;
+}
+/*título do número quatro mil.*/
+.quatromil{
+     color: #FF7A00;
+    font-size: 30px;
+    font-family: dm sans;
+
+}
+
+/*Segunda seção de satisfação e engajamento.*/
+.secao2{
+      color: blueviolet;
+    font-family: dm sans;
+    font-style:normal;
+    text-decoration: underline;/*Linha de baixo do texto.*/
+    text-decoration-color: #FF7A00;/*Cor da linha.*/
+    text-decoration-thickness: 1px;/*Espessura da linha. */
+    text-underline-offset: 5px;/*Medida de afastamento do texto.*/
+}
+/*Parágrafo da seção dois.*/
+.paragrafosecao2{
+    color: #3B3B3B;
+    font-family: lato;
+    position: static;
+}
+/*Terceira seção de qualidade percebida e impacto qualicativo.*/
+.secao3{
+   color: blueviolet;
+    font-family: dm sans;
+    font-style:normal;
+    text-decoration: underline;/*Linha de baixo do texto.*/
+    text-decoration-color: #FF7A00;/*Cor da linha.*/
+    text-decoration-thickness: 1px;/*Espessura da linha. */
+    text-underline-offset: 5px;/*Medida de afastamento do texto.*/
+
+}
+/*Parágrafo da seção três.*/
+.pterceirasecao{
+     color: #3B3B3B;
+    font-family: lato;
+    position: static;
+
+}
+/*Cards da terceira seção, qualidade percebida e impacto qualitativo.*/
+/*Primeiro card,acolhimento e segurança emocional.*/
+.card1{
+     border-left: 4px solid #8A2BE2;
+  padding: 16px 20px;
+  background-color: #fff;
+  max-width: 300px;
+  border-radius: 10px;
+}
+/*título do card 1*/
+.acolhimento{
+    color: #8A2BE2;
+    font-family: dm sans;
+}
+ /*Parágrafo do primeiro card da seção três.*/
+ .pseguranca{
+     color: #3B3B3B;
+    font-family: lato;
+    position: relative;
+    border-left: 3px solid #FF7A00;
+    border-radius: 7px;
+ }
+ /*Segundo card,representatividade e pertencimento.*/
+ .card2{
+      border-left: 4px solid #8A2BE2;
+  padding: 16px 20px;
+  background-color: #fff;
+  max-width: 300px;
+  border-radius: 10px;
+ }
+ /*título card 2*/
+ .representatividade{
+     color: #8A2BE2;
+    font-family: dm sans;
+}
+/*Parágrafo do segundo card da seção três.*/
+.prepresentatividade{
+      color: #3B3B3B;
+    font-family: lato;
+    position: relative;
+    border-left: 3px solid #FF7A00;
+    border-radius: 7px;
+
+}
+/*Terceiro card,didática e clareza.*/
+.card3{
+       border-left: 4px solid #8A2BE2;
+  padding: 16px 20px;
+  background-color: #fff;
+  max-width: 300px;
+  border-radius: 10px;
+}
+/*título do card 3.*/
+.didatica{
+    color: #8A2BE2;
+    font-family: dm sans;
+}
+/*Parágrafo do terceiro card da seção três.*/
+.pdidatica{
+        color: #3B3B3B;
+    font-family: lato;
+    position: relative;
+    border-left: 3px solid #FF7A00;
+    border-radius: 7px;
+}
+/*Quarto card,pedido explícito por continuidade.*/
+.card4{
+         border-left: 4px solid #8A2BE2;
+  padding: 16px 20px;
+  background-color: #fff;
+  max-width: 300px;
+  border-radius: 10px;
+}
+/*título do card quatro.*/
+.pedido{
+    color: #8A2BE2;
+    font-family: dm sans;
+}
+/*Parágrafo do quarto card da seção três.*/
+.ppedido{
+        color: #3B3B3B;
+    font-family: lato;
+    position: relative;
+    border-left: 3px solid #FF7A00;
+    border-radius: 7px;
+}
+/*Quadrado da terceira seção.*/
+.letras{
+    background-color: #7153C3;
+    border-radius: 10px;
+}
+/*Primeiro texto do quadrado.*/
+.texto1{
+    color: white;
+    font-family: lato;
+
+}
+/*Segundo texto do quadrado.*/
+.texto2{
+    color: #FF7A00;
+    font-family: lato;
+}
+/*Terceiro texto do quadrado.*/
+.texto3{
+    color: white;
+    font-family: lato;
+}
+/*Quarto texto do quadrado.*/
+.texto4{
+    color: #FF7A00;
+    font-family: lato;
+}
+/*Quinto texto do quadrado.*/
+.texto5{
+color: white;
+font-family: lato;
+}
+/*Sexto texto do quadrado.*/
+.texto6{
+    color: #FF7A00;
+}
+/*Sétimo texto do quadrado.*/
+.texto7{
+    color: white;
+    font-family: lato;}
+
+/*Ultima parte*/
+.ultimasecao{
+     color: blueviolet;
+    font-family: dm sans;
+    font-style:normal;
+    text-decoration: underline;/*Linha de baixo do texto.*/
+    text-decoration-color: #FF7A00;/*Cor da linha.*/
+    text-decoration-thickness: 1px;/*Espessura da linha. */
+    text-underline-offset: 5px;/*Medida de afastamento do texto.*/
+}
+.recomendacoes{
+       color: blueviolet;
+    font-family: dm sans;
+    font-style:normal;
+    text-decoration: underline;/*Linha de baixo do texto.*/
+    text-decoration-color: #FF7A00;/*Cor da linha.*/
+    text-decoration-thickness: 1px;/*Espessura da linha. */
+    text-underline-offset: 5px;/*Medida de afastamento do texto.*/
+}
+/*Primeiro parágrafo da ultima parte.*/
+.paragrafoultimasecao{
+       color: #3B3B3B;
+    font-family: lato;
+    position: static;
+
+}
+/*Card um da ultima seção*/
+    .cardum{
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-left: 5px solid #7c3aed; /* borda roxa à esquerda */
+  border-radius: 8px;
+  padding: 16px 20px;
+  max-width: 320px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.text1{
+       color: blueviolet;
+    font-family: dm sans;
+    font-style:normal;
+    text-decoration: underline;/*Linha de baixo do texto.*/
+    text-decoration-color: #FF7A00;/*Cor da linha.*/
+    text-decoration-thickness: 1px;/*Espessura da linha. */
+    text-underline-offset: 5px;/*Medida de*/
+    font-size: 15px;
+} 
+    
+
+.textt1 {
+ color: #3B3B3B;
+}
+/*Card dois da ultima seção*/
+    .carddois{
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-left: 5px solid #7c3aed; /* borda roxa à esquerda */
+  border-radius: 8px;
+  padding: 16px 20px;
+  max-width: 320px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.text2{
+       color: blueviolet;
+    font-family: dm sans;
+    font-style:normal;
+    text-decoration: underline;/*Linha de baixo do texto.*/
+    text-decoration-color: #FF7A00;/*Cor da linha.*/
+    text-decoration-thickness: 1px;/*Espessura da linha. */
+    text-underline-offset: 5px;/*Medida de*/
+    font-size: 15px;
+
+}
+
+.textt2 {
+ color: #3B3B3B;
+}
+/*Card tres da ultima seção.*/
+    .cardtres{
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-left: 5px solid #7c3aed; /* borda roxa à esquerda */
+  border-radius: 8px;
+  padding: 16px 20px;
+  max-width: 320px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.text3{
+   color: blueviolet;
+    font-family: dm sans;
+    font-style:normal;
+    text-decoration: underline;/*Linha de baixo do texto.*/
+    text-decoration-color: #FF7A00;/*Cor da linha.*/
+    text-decoration-thickness: 1px;/*Espessura da linha. */
+    text-underline-offset: 5px;/*Medida de*/
+    font-size: 15px;
+}
+
+.textt3 {
+   color: #3B3B3B;
+}
+/*Card quatro da ultima seção*/
+    .cardquatro{
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-left: 5px solid #7c3aed; /* borda roxa à esquerda */
+  border-radius: 8px;
+  padding: 16px 20px;
+  max-width: 320px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.text4{
+    color: blueviolet;
+    font-family: dm sans;
+    font-style:normal;
+    text-decoration: underline;/*Linha de baixo do texto.*/
+    text-decoration-color: #FF7A00;/*Cor da linha.*/
+    text-decoration-thickness: 1px;/*Espessura da linha. */
+    text-underline-offset: 5px;/*Medida de*/
+    font-size: 15px;
+}
+
+.textt4{
+     color: #3B3B3B;
+ 
+}
+
+
+
+
+
+
+
+
