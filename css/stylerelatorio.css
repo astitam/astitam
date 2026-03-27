@@ -26,7 +26,6 @@
     color: white;
     font-size: small;
     font-family: lato;
-    left: -5px;
 }
 /*linha.*/
  .linha{
@@ -63,6 +62,7 @@
   text-align: center;
   font-family: lato;
   border-left: 5px solid #FF7A00;
+  
 }
 /*título do número 16.*/
 .dezesseis{
@@ -177,6 +177,17 @@
     position: relative;
     border-left: 3px solid #FF7A00;
     border-radius: 7px;
+    margin-left: 5px;
+    padding: 5px;
+ }
+  .pseguranc{
+     color: #3B3B3B;
+    font-family: lato;
+    position: relative;
+    border-left: 3px solid #FF7A00;
+    border-radius: 7px;
+    margin-left: 5px;
+    padding: 5px;
  }
  /*Segundo card,representatividade e pertencimento.*/
  .card2{
@@ -411,7 +422,75 @@ font-family: lato;
      color: #3B3B3B;
  
 }
+/*Alnahr os cards*/
 /*teste*/
+@media (min-width:320px){
+    h2,h1{
+        text-align: center;
+
+    }
+    .botao{
+        display: flex;
+        justify-content: flex;
+        align-items:center;
+        width: 50%;
+        padding: 10px 0;
+        margin-left: 20%;
+        text-align: center;
+        padding: 6%;
+        
+
+    }
+
+    .metricasChave{
+      display:grid;
+      grid-template-columns: repeat(1, 0fr);
+      justify-items: center;
+      width: 15%;
+      padding: 20%;
+      gap: 25px;
+      align-items: center;
+    }
+    .eventos,.inscricoes,.feedbacks,.avaliacao{
+        width: 220px;
+        margin-right: 16%;
+    }
+    .QualidadeeImpacto{
+          display:grid;
+      grid-template-columns: repeat(1, 0fr);
+      justify-items: center;
+      width: 15%;
+      padding: 20%;
+      gap: 25px;
+      align-items: center;
+    }
+    .card1{
+        padding: 15%;
+        margin-right: 66%;
+
+    }
+    .card2{
+        padding: 15%;
+        margin-right: 30%;
+
+    }
+    .card3{
+         padding: 15%;
+        margin-right: 76%;
+    }
+     .card4{
+         padding: 15%;
+        margin-right: 57%;
+    }
+
+     
+       
+    
+
+
+    
+
+}
 
 
 
