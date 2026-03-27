@@ -1,0 +1,366 @@
+body{
+    background-color: white;
+}
+
+/* Novo header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    position: relative;
+}
+
+.logo_header img {
+    height: 100px;
+}
+/* Botão hamburguer — visível só no celular */
+.btn-menu {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #8A2BE2; /* ajuste para a cor do seu tema */
+}
+
+/* Menu escondido no celular por padrão */
+nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 999;
+}
+nav.aberto {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    padding: 16px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #3B3B3B;
+    font-family: 'lato';
+}
+/* Desktop — a partir de 768px */
+@media (min-width: 768px) {
+    .btn-menu {
+        display: none; /* esconde o ícone */
+    }
+
+    nav {
+        display: block !important;
+        position: static;
+        width: auto;
+        box-shadow: none;
+        background: none;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 24px;
+        padding: 0;
+    }
+}
+/* header
+header {
+  display: flex;
+  justify-content: space-between;   logo à esquerda, menu à direita 
+  align-items: center;             alinha verticalmente ao centro 
+  padding: 16px 32px;
+}
+
+.logo_header img {
+  width: 20%;    ajuste o tamanho da logo 
+}
+  @media (max-width: 768px) {
+ 
+    /* mostra o botão ☰ no celular 
+    .btn-menu {
+        display: block;
+        margin: 10px auto;
+        /* centraliza o botão 
+    }
+
+    /* esconde o menu por padrão no celular 
+    .menu {
+        display: none;
+    }
+
+    /* quando tiver a classe "ativo", o menu aparece 
+    .menu.ativo {
+        display: block;
+    }
+
+    /* no celular, o menu vira coluna 
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    .menu ul li {
+        font-size: 70px;
+        padding: 12px;
+    }
+}
+*/
+/* Header 
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 16px 32px;
+}
+*/
+
+/*imagem
+header a img{
+    width: 30%;
+    margin: 0 auto;
+}
+*/
+/* Nav - borda apenas embaixo do menu */
+nav {
+  border-bottom: 1px solid #8A2BE2;
+  padding-bottom: 8px;
+}
+
+/* Menu */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 24px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+/*Menu
+.menu ul li{
+    background-color: white;
+    list-style: none;
+}
+
+.Home{
+    color: #3B3B3B;
+    font-size: 17px;
+}
+
+.Sobre{
+    color: #3B3B3B;
+    font-size: 17px;
+}*/
+.Atividades{
+    color: #3B3B3B;
+    font-size: 17px;
+}
+
+.Vozes{
+    color: #3B3B3B;
+    font-size: 17px;
+}
+
+.Comunidade{
+    color: #3B3B3B;
+    font-size: 17px;
+}
+.Contato{
+    color: #3B3B3B;
+    font-size: 17px;
+}
+
+.Relatorio{
+    color: #3B3B3B;
+    font-size: 17px;
+}
+/*teste*/
+/*Titulo*/
+.título{
+    color: #8A2BE2;
+    font-size: 3em;
+    font-family: dm sans;
+}
+
+.paragrafo{
+   color: #3B3B3B;
+   font-family: lato; 
+   font-size: 1.2em;
+}
+
+.frase-impacto{
+    color: #8A2BE2;
+    font-size: 1.3em;
+    font-style: italic;
+    font-family: Lato;   /* fonte mais discreta que cursiva */
+    letter-spacing: normal;          /* remove o espaçamento extra entre letras */
+}
+/*Botão Junte-se a nós*/
+
+.btn-junte-se {
+  display: inline-block;       /* para não ocupar a linha toda */
+  padding: 12px 28px;          /* tamanho compacto */
+  border-radius: 12px;         /* bordas arredondadas */
+  background-color: #FF7A00;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  font-size: 18px;
+  text-decoration: none;
+  font-family: dm sans;
+}
+.container_carrossel {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0 20px;
+}
+
+.nossas_atividades {
+    background-color: #ffff;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 20px;
+    width: 100%;
+}
+.card_oficinas {
+    background-color: #ffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: left;
+    align-self: start;
+}
+
+@media (max-width: 768px) {
+    .nossas_atividades {
+        grid-template-columns: 1fr;
+    }
+    .container_carrossel {
+        flex-direction: column;
+    }
+}
+.titulo_h4_oficina{
+    color: #8A2BE2;
+    font-family: dm sans;
+    font-size: 1.2em;
+}
+.paragrafo_cinzaClaro_oficina{
+    color: #A5A5A5;
+    font-family: lato;
+    font-size: 0.8em;
+}
+.paragrafo_cinzaEscuro_oficina{
+    color: #3B3B3B;
+    font-family: lato;
+    font-size: 1em;
+}
+/* Botão das oficinas */
+.btn_oficina{
+  display: inline-block;       /* para não ocupar a linha toda */
+  padding: 8px 24px;          /* tamanho compacto */
+  border-radius: 10px;         /* bordas arredondadas */
+  background-color: #8A2BE2;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  text-decoration: none;
+  font-family: dm sans;
+}
+.btn_seta{
+    background-color: #8A2BE2;
+    color: #fff;
+    border-radius: 30px;
+    height: 50px;
+    width: 50px;
+    font-size: 40px;
+    border: none;
+}
+
+/*Nossa comunidade*/
+.nossa_comunidade {
+    background-color: #ffff;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+/*Card nossa comunidade*/
+.card_comunidade{
+    background-color: #ffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    padding: 20px;
+    text-align: left;
+    margin-bottom: 24px; 
+}
+.nome_comunidade{
+    color: #3B3B3B;
+    font-family: 'lato';
+}
+.oq_comunidade{
+    color: #8A2BE2;
+    font-family: 'lato';
+}
+.p_comunidade{
+    color: #3B3B3B;
+    font-family: 'lato';
+}
+/*Configurações gerais do footer (paragrafo, etc.)*/
+footer{
+    justify-content: center;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*imagem*/
+footer a img{
+    width: 45%;
+    margin: 0 auto;
+}
+/*logo*/
+.logo_footer{
+    justify-content: center;
+    display:flex;
+    align-items: center;
+}
+/*Icones do footer (Insta e Wpp)*/
+.icones{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+/* Frase footer*/
+.frase_footer{
+    color: #3B3B3B;
+    font-family: 'lato';
+    font-size: 0.8em;
+}
+
+/*CELULAR*/
+
+
+    
