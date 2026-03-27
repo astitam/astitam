@@ -329,6 +329,7 @@ nav ul li a {
 }
 /*Configurações gerais do footer (paragrafo, etc.)*/
 footer{
+    text-align: center;
     justify-content: center;
     display:flex;
     align-items: center;
