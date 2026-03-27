@@ -1,0 +1,95 @@
+body{
+    background-color: #F9F2FF;
+}
+.titulo_contato{
+    color: #8A2BE2;
+    font-family: lato; 
+    font-size: 3em;
+    text-align: center;
+}
+.p_contato{
+    color: #3B3B3B;
+    font-family: lato; 
+    font-size: 1.2em;
+    max-width: 320px;
+}
+.container_contato{
+background: #ffffff;       /* fundo branco */
+border-radius: 12px;       /* cantos arredondados */
+padding: 2rem;             /* espaço interno */
+max-width: 360px;          /* largura máxima */
+margin: 0 auto;            /* centraliza horizontalmente */
+box-shadow: 0 4px 24px rgba(0,0,0,0.08); /* sombra suave */
+}
+/*LABELS*/
+.comandoEntrada_contato{
+    color: #282828;
+    font-family: 'DM Sans';
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 6px;
+    margin-top: 1rem;
+}
+/*INPUTS, TEXTAREA*/
+.input_contato {
+    width: 100%;
+    border: 1px solid #3B3B3B;
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 0.9em;
+    font-family: lato;
+    color: #595959;
+    background-color: #FFFF;
+    box-sizing: border-box;
+    outline: none;
+}
+.input_contato::placeholder{
+    color: #595959;
+}
+.input_contato:focus{
+    border-color: #8A2BE2;
+    box-shadow: 0 0 0 3px rgba(124,58,237,0.12);
+}
+/*TEXTEAREA ESPECIFICO*/
+textarea.input_contato{
+    min-height: 120px;
+    resize: vertical;
+}
+/*BOTÃO*/
+.btn_contato{
+    background-color: #8A2BE2;
+    color: #ffffff;
+    font-family: 'DM Sans';
+    font-size: 1.2em;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    padding: 13px;
+    height: 50px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 1.5rem;
+}
+.btn_contato:hover {
+  background: #ffffff;  /* roxo mais escuro — só quando o mouse está em cima */
+  color: #8A2BE2;
+  border: 2px solid #8A2BE2;
+}
+/*Configurações gerais do footer (paragrafo, etc.)*/
+footer{
+    background-color: white;
+    font-family: lato;
+    font-size: 12px;
+    text-align: center;
+    justify-content: center;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+/*imagem*/
+footer a img{
+    width: 45%;
+    margin: 0 auto;
+}
