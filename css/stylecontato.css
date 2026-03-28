@@ -87,6 +87,24 @@ footer{
     display:flex;
     align-items: center;
     flex-direction: column;
+    margin-top: 40px;
+    padding: 0;
+}
+.logofrase_footer{
+    background-color: #ffffff;
+}
+.titulo_footer{
+    color: #8A2BE2;
+     font-family: DM Sans;
+    font-size: 20px;
+}
+.p_footer{
+    color: #3B3B3B;
+    font-family: lato;
+    font-size: 15px;
+}
+.frase_footer{
+    margin-top: 40px;
 }
 /*imagem*/
 footer a img{
