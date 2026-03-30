@@ -171,6 +171,7 @@
   background-color: #fff;
   max-width: 300px;
   border-radius: 10px;
+  box-shadow: #3B3B3B 0px 1px 4px;
 }
 /*título do card 1*/
 .acolhimento{
@@ -203,6 +204,8 @@
   background-color: #fff;
   max-width: 300px;
   border-radius: 10px;
+    box-shadow: #3B3B3B 0px 1px 4px;
+
  }
  /*título card 2*/
  .representatividade{
@@ -225,6 +228,8 @@
   background-color: #fff;
   max-width: 300px;
   border-radius: 10px;
+    box-shadow: #3B3B3B 0px 1px 4px;
+
 }
 /*título do card 3.*/
 .didatica{
@@ -238,6 +243,15 @@
     position: relative;
     border-left: 3px solid #FF7A00;
     border-radius: 7px;
+
+}
+.pdidatic{
+        color: #3B3B3B;
+    font-family: lato;
+    position: relative;
+    border-left: 3px solid #FF7A00;
+    border-radius: 7px;
+
 }
 /*Quarto card,pedido explícito por continuidade.*/
 .card4{
@@ -246,6 +260,8 @@
   background-color: #fff;
   max-width: 300px;
   border-radius: 10px;
+    box-shadow: #3B3B3B 0px 1px 4px;
+
 }
 /*título do card quatro.*/
 .pedido{
@@ -429,8 +445,8 @@ font-family: lato;
      color: #3B3B3B;
  
 }
-/*Alnahr os cards*/
-/*teste*/
+/*Alinhar os  cards*/
+/*Responsivo*/
 @media (min-width:320px){
     h2,h1{
         text-align: center;
@@ -473,21 +489,21 @@ font-family: lato;
     }
     .card1{
         padding: 15%;
-        margin-right: 66%;
+        margin-right: -1%;
 
     }
     .card2{
         padding: 15%;
-        margin-right: 30%;
+        margin-right: -1%;
 
     }
     .card3{
          padding: 15%;
-        margin-right: 76%;
+        margin-right: -1%;
     }
      .card4{
          padding: 15%;
-        margin-right: 57%;
+        margin-right: -1%;
     }
     .primeiroparagrafo{
         align-items: center;
@@ -506,6 +522,74 @@ font-family: lato;
         justify-content: center;
        
     }
+    .acolhimento{
+        font-size: 13px;
+        align-items: center;
+    }
+    .pseguranca{
+        font-size: 15px;
+        margin-left: -6%;
+    }
+    .pseguranc{
+        font-size: 15px;
+        margin-left: -6%;
+    }
+    .representatividade{
+         font-size: 13px;
+        align-items: center;
+
+    }
+    .prepresentatividade{
+            font-size: 15px;
+            margin-left: -6%;
+    }
+    .prepresentatividade{
+            font-size: 15px;
+            margin-left: -6%;
+    }
+    .didatica{
+         font-size: 13px;
+        align-items: center;
+
+    }
+    .pdidatica{
+            font-size: 15px;
+            margin-left: -6%;
+    }
+    .pdidatic{
+            font-size: 15px;
+            margin-left: -6%;
+    }
+        .pedido{
+            font-size: 13px;
+            align-items: center;
+    
+        }
+
+    .ultimasecao{
+            font-size: 20px;
+            align-items: center;
+            margin-right: -70%;
+            margin-left: -69%;
+    }
+    .paragrafoultimasecao{
+            font-size: 15px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            margin-right: -54%;
+            margin-left: -29%;
+            padding: -50px;
+    }
+    .recomendacoes{
+            align-items: center;margin-right: -60%;
+            margin-left: 50%;
+         
+    }
+    
+
+
+
 
 
     
