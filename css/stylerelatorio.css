@@ -417,6 +417,193 @@ font-family: lato;
 
 
 
+/*Configurações gerais do footer (paragrafo, etc.)*/
+footer{
+    background-color: white;
+    font-family: lato;
+    font-size: 12px;
+    text-align: center;
+    justify-content: center;
+    display:flex;
+    align-items: center;
+    flex-direction: row; /*lado a lado no desktop*/
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 40px;
+    padding: 20px;
+}
+.contato_footer,
+.redesociais_footer {
+    border-left: 1px solid #ccc;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+.logofrase_footer{
+    background-color: #ffffff;
+}
+.titulo_footer{
+    color: #8A2BE2;
+     font-family: DM Sans;
+    font-size: 20px;
+}
+.p_footer{
+    color: #3B3B3B;
+    font-family: lato;
+    font-size: 15px;
+}
+.frase_footer{
+    margin-top: 40px;
+}
+/*imagem*/
+footer a img{
+    width: 45%;
+    margin: 0 auto;
+}
 
+/*RESPONSIVO*/
+@media (min-width: 375px){
+    .p_contato{
+        text-align: center;
+    }
+}
+/*@media (min-width: 425px){
+    .p_contato{
+        text-align: center;
+    }
+}*/
 
+/* MOBILE - empilhado apenas em telas pequenas */
+@media (max-width: 480px) {
+    footer {
+        flex-direction: column;
+    }
 
+    .contato_footer,
+    .redesociais_footer {
+        border-left: none;
+        padding-left: 0;
+        padding-top: 0;
+        width: 100%;
+    }
+}
+
+@media (min-width: 540px) {
+    footer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 30px;
+        gap: 20px;
+    }
+
+    .logofrase_footer {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        border-left: none;
+        padding: 0;
+        margin: 0 auto;    
+    }
+    .texto_footer {
+        text-align: center;
+        display: flex;        
+        flex-direction: column; 
+        align-items: center;    
+    }
+    .contato_footer{
+        border-left: none;
+        padding: 20px 30px;
+        width: calc(50% - 20px);
+        box-sizing: border-box;
+    }
+    .redesociais_footer {
+        border-left: none;
+        border-left: 1px solid #282828;
+        padding: 20px 30px;
+        width: calc(50% - 20px);
+        box-sizing: border-box;
+    }
+
+    .frase_relatorio,
+    .frase_footer {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+/* Desktop — a partir de 768px */
+@media (min-width: 768px) {
+    footer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+        gap: 20px;
+    }
+    .logofrase_footer {
+        width: calc(33% - 20px);           /* ocupa linha inteira */
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        border-left: none;
+        padding: 0;
+    }
+    .frase_relatorio {
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;  /* ← aumenta o espaço */
+    }
+    .p_footer{
+        text-align: center !important;
+    }
+
+    .contato_footer{
+        border-left: none;
+        border-left: 1px solid #282828;
+        padding: 20px 30px;
+        width: calc(33% - 20px);
+        box-sizing: border-box;
+    }
+    .redesociais_footer {
+        border-left: none;
+        border-left: 1px solid #282828;
+        padding: 20px 30px;
+        width: calc(33% - 20px);
+        box-sizing: border-box;
+    }
+    .icones {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: center;
+    }
+    .frase_footer {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .btn-menu {
+        display: none; /* esconde o ícone */
+    }
+
+    nav {
+        display: block !important;
+        position: static;
+        width: auto;
+        box-shadow: none;
+        background: none;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 24px;
+        padding: 0;
+    }
+}
