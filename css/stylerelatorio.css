@@ -11,10 +11,17 @@
     position: static;
     font-family:dm sans;
 }
+.h2exe{
+    color: blueviolet;
+    position: static;
+    font-family: dm sans;
+}
+
 /*Primeiro parágrafo da primeira parte dessa página.*/
 .primeiroparagrafo{
     color: #3B3B3B;
     font-family: lato;
+    
 }
 /*Botão do início da primeira seção.*/
 .botao{
@@ -435,7 +442,7 @@ font-family: lato;
         align-items:center;
         width: 50%;
         padding: 10px 0;
-        margin-left: 20%;
+        margin-left: 26%;
         text-align: center;
         padding: 6%;
         
@@ -482,6 +489,27 @@ font-family: lato;
          padding: 15%;
         margin-right: 57%;
     }
+    .primeiroparagrafo{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        font-size: 15px;
+    }
+    h2{
+        font-size: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+    .paragrafosecao1{
+        font-size: 15px;
+        align-items: center;
+        justify-content: center;
+       
+    }
+
+
+    
+
 
      
        
