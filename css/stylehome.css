@@ -192,6 +192,13 @@ nav ul li a {
     flex-direction: column;
     gap: 8px;
     padding: 20px;
+    margin-top: -30px;  /* ← reduz o espaço acima */
+}
+.activities-mobile-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px;
 }
 .container_carrossel {
     display: flex;
