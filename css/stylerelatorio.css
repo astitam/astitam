@@ -414,6 +414,7 @@ font-family: lato;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
 }
 
+
 .text4{
     color: blueviolet;
     font-family: dm sans;
@@ -428,6 +429,9 @@ font-family: lato;
 .textt4{
      color: #3B3B3B;
  
+}
+.ultimoscardss{
+ box-shadow: 0 1px 1px rgba(0,0,0,0.1);
 }
 /*Alnahr os cards*/
 /*teste*/
@@ -506,19 +510,52 @@ font-family: lato;
         justify-content: center;
        
     }
-
-
+    .ultimasecao{
+        font-size: 20px;
+        margin-right: -66%;
+        margin-left: -66%;
     
+    }
+     .paragrafoultimasecao{
+        font-size: 15px;
+        align-items: center;
+        justify-content: center;
+        margin-right: -48%;
+        margin-left: -28%;
+    }
 
+    .recomendacoes{
+        font-size: 20px;
+        margin-right: -5%;
+        margin-left: -1%;
+    }
+    .ultimoscardss{
+            display:grid;
+      grid-template-columns: repeat(1, 0fr);
+      justify-items: center;
+      width: 15%;
+      padding: 20%;
+      gap: 25px;
+      align-items: center;
+    margin-right: 79%;
 
-     
-       
-    
+    }
+}
 
-
-    
+    @media (min-width: 768px) {
+  .botao{
+width: 210px;
+margin-left: 0;
+top:5 px;
 
 }
+
+  
+  
+ 
+}
+
+
 
 
 
@@ -572,6 +609,10 @@ footer a img{
     .p_contato{
         text-align: center;
     }
+    .pterceirasecao{
+        margin-left: -1%;
+    }
+
 }
 /*@media (min-width: 425px){
     .p_contato{
