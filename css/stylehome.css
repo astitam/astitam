@@ -1,8 +1,13 @@
-body{
+/* ================================
+   BASE
+================================ */
+body {
     background-color: white;
 }
 
-/* Novo header */
+/* ================================
+   HEADER
+================================ */
 header {
     display: flex;
     align-items: center;
@@ -14,17 +19,12 @@ header {
 .logo_header img {
     height: 100px;
 }
-/* Botão hamburguer — visível só no celular */
-.btn-menu {
-    display: block;
-    background: none;
-    border: none;
-    font-size: 28px;
-    cursor: pointer;
-    color: #8A2BE2; /* ajuste para a cor do seu tema */
-}
 
-/* Menu escondido no celular por padrão */
+/* ================================
+   NAVEGAÇÃO
+================================ */
+
+/* Nav - borda apenas embaixo do menu */
 nav {
     display: none;
     position: absolute;
@@ -34,11 +34,14 @@ nav {
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     z-index: 999;
+    border-bottom: 1px solid #8A2BE2;
+    padding-bottom: 8px;
 }
 nav.aberto {
     display: block;
 }
 
+/* Menu */
 nav ul {
     list-style: none;
     padding: 16px;
@@ -54,6 +57,345 @@ nav ul li a {
     color: #3B3B3B;
     font-family: 'lato';
 }
+
+/* Botão hamburguer — visível só no celular */
+.btn-menu {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #8A2BE2;
+}
+
+/* Links do menu */
+.Atividades {
+    color: #3B3B3B;
+    font-size: 17px;
+}
+.Vozes {
+    color: #3B3B3B;
+    font-size: 17px;
+}
+.Comunidade {
+    color: #3B3B3B;
+    font-size: 17px;
+}
+.Contato {
+    color: #3B3B3B;
+    font-size: 17px;
+}
+.Relatorio {
+    color: #3B3B3B;
+    font-size: 17px;
+}
+
+/* ================================
+   TIPOGRAFIA GERAL
+================================ */
+
+/*Titulo*/
+.título {
+    color: #8A2BE2;
+    font-size: 3em;
+    font-family: dm sans;
+}
+
+.paragrafo {
+    color: #3B3B3B;
+    font-family: lato;
+    font-size: 1.2em;
+}
+
+.frase-impacto {
+    color: #8A2BE2;
+    font-size: 1.3em;
+    font-style: italic;
+    font-family: Lato;
+    letter-spacing: normal;
+}
+
+/* ================================
+   BOTÕES
+================================ */
+
+/*Botão Junte-se a nós*/
+.btn-junte-se {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 12px;
+    background-color: #FF7A00;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    font-size: 18px;
+    text-decoration: none;
+    font-family: dm sans;
+}
+
+/* Botão das oficinas */
+.btn_oficina {
+    display: inline-block;
+    padding: 8px 24px;
+    border-radius: 10px;
+    background-color: #8A2BE2;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: dm sans;
+}
+
+.btn_seta {
+    background-color: #8A2BE2;
+    color: #fff;
+    border-radius: 30px;
+    height: 50px;
+    width: 50px;
+    font-size: 40px;
+    border: none;
+}
+
+/* ================================
+   ATIVIDADES
+================================ */
+.monthFilterLabel {
+    font-family: lato;
+    font-size: 1em;
+    color: #3B3B3B;
+}
+#monthFilter {
+    font-family: lato;
+    font-size: 1em;
+    color: #3B3B3B;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid #8A2BE2;
+    cursor: pointer;
+}
+#monthFilter option {
+    font-family: lato;
+    font-size: 1em;
+    color: #3B3B3B;
+    border: 1px solid #8A2BE2;
+}
+#monthFilter:focus {
+    outline: none;
+    border-color: #8A2BE2;
+    box-shadow: 0 0 0 3px rgba(124,58,237,0.12);
+}
+.activities-mobile-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px;
+}
+.container_carrossel {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0 20px;
+}
+
+.nossas_atividades {
+    background-color: #ffff;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 20px;
+    width: 100%;
+}
+
+.card_oficinas {
+    background-color: #ffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: left;
+    align-self: start;
+}
+
+.titulo_h4_oficina {
+    color: #8A2BE2;
+    font-family: dm sans;
+    font-size: 1.2em;
+}
+
+.paragrafo_cinzaClaro_oficina {
+    color: #A5A5A5;
+    font-family: lato;
+    font-size: 0.8em;
+}
+
+.paragrafo_cinzaEscuro_oficina {
+    color: #3B3B3B;
+    font-family: lato;
+    font-size: 1em;
+}
+
+/* ================================
+   COMUNIDADE
+================================ */
+
+/*Nossa comunidade*/
+.nossa_comunidade {
+    background-color: #ffff;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+/*Card nossa comunidade*/
+.card_comunidade {
+    background-color: #ffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    padding: 20px;
+    text-align: left;
+    margin-bottom: 24px;
+}
+
+.nome_comunidade {
+    color: #3B3B3B;
+    font-family: 'lato';
+}
+
+.oq_comunidade {
+    color: #8A2BE2;
+    font-family: 'lato';
+}
+
+.p_comunidade {
+    color: #3B3B3B;
+    font-family: 'lato';
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+/*Configurações gerais do footer (paragrafo, etc.)*/
+footer {
+    background-color: white;
+    font-family: lato;
+    font-size: 12px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: row; /*lado a lado no desktop*/
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.logofrase_footer {
+    background-color: #ffffff;
+}
+
+.contato_footer {
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+.redesociais_footer {
+    border-left: 1px solid #282828;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+.titulo_footer {
+    color: #8A2BE2;
+    font-family: DM Sans;
+    font-size: 20px;
+}
+
+.p_footer {
+    color: #3B3B3B;
+    font-family: lato;
+    font-size: 15px;
+}
+
+.frase_footer {
+    margin-top: 40px;
+}
+
+/*imagem*/
+footer a img {
+    width: 45%;
+    margin: 0 auto;
+}
+
+/*logo*/
+.logo_footer {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+/*Icones do footer (Insta e Wpp)*/
+.icones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Frase footer*/
+.frase_footer {
+    color: #3B3B3B;
+    font-family: 'lato';
+    font-size: 0.8em;
+}
+
+/* ================================
+   RESPONSIVO
+================================ */
+
+/*RESPONSIVO*/
+@media (min-width: 375px) {
+    .p_contato {
+        text-align: center;
+    }
+}
+
+/*@media (min-width: 425px){
+    .p_contato{
+        text-align: center;
+    }
+}*/
+
+/* MOBILE - empilhado apenas em telas pequenas */
+@media (max-width: 480px) {
+    footer {
+        flex-direction: column;
+    }
+
+    .contato_footer,
+    .redesociais_footer {
+        border-left: none;
+        padding-left: 0;
+        padding-top: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .nossas_atividades {
+        grid-template-columns: 1fr;
+    }
+    .container_carrossel {
+        flex-direction: column;
+    }
+}
+
 /* Desktop — a partir de 768px */
 @media (min-width: 768px) {
     .btn-menu {
@@ -73,295 +415,55 @@ nav ul li a {
         gap: 24px;
         padding: 0;
     }
-}
-/* header
-header {
-  display: flex;
-  justify-content: space-between;   logo à esquerda, menu à direita 
-  align-items: center;             alinha verticalmente ao centro 
-  padding: 16px 32px;
-}
 
-.logo_header img {
-  width: 20%;    ajuste o tamanho da logo 
-}
-  @media (max-width: 768px) {
- 
-    /* mostra o botão ☰ no celular 
-    .btn-menu {
-        display: block;
-        margin: 10px auto;
-        /* centraliza o botão 
-    }
-
-    /* esconde o menu por padrão no celular 
-    .menu {
-        display: none;
-    }
-
-    /* quando tiver a classe "ativo", o menu aparece 
-    .menu.ativo {
-        display: block;
-    }
-
-    /* no celular, o menu vira coluna 
-    .menu ul {
-        flex-direction: column;
+    footer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
-        margin-bottom: 0;
+        padding: 40px;
+        gap: 20px;
     }
 
-    .menu ul li {
-        font-size: 70px;
-        padding: 12px;
+    .logofrase_footer {
+        width: calc(33% - 20px);
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        border-left: none;
+        padding: 0;
+    }
+
+    .p_footer {
+        text-align: center !important;
+    }
+
+    .contato_footer {
+        border-left: 1px solid #282828;
+        padding: 20px 30px;
+        width: calc(33% - 20px);
+        box-sizing: border-box;
+    }
+
+    .redesociais_footer {
+        border-left: 1px solid #282828;
+        padding: 20px 30px;
+        width: calc(33% - 20px);
+        box-sizing: border-box;
+    }
+
+    .icones {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .frase_footer {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
     }
 }
-*/
-/* Header 
-header {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 16px 32px;
-}
-*/
-
-/*imagem
-header a img{
-    width: 30%;
-    margin: 0 auto;
-}
-*/
-/* Nav - borda apenas embaixo do menu */
-nav {
-  border-bottom: 1px solid #8A2BE2;
-  padding-bottom: 8px;
-}
-
-/* Menu */
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 24px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: inherit;
-}
-/*Menu
-.menu ul li{
-    background-color: white;
-    list-style: none;
-}
-
-.Home{
-    color: #3B3B3B;
-    font-size: 17px;
-}
-
-.Sobre{
-    color: #3B3B3B;
-    font-size: 17px;
-}*/
-.Atividades{
-    color: #3B3B3B;
-    font-size: 17px;
-}
-
-.Vozes{
-    color: #3B3B3B;
-    font-size: 17px;
-}
-
-.Comunidade{
-    color: #3B3B3B;
-    font-size: 17px;
-}
-.Contato{
-    color: #3B3B3B;
-    font-size: 17px;
-}
-
-.Relatorio{
-    color: #3B3B3B;
-    font-size: 17px;
-}
-/*teste*/
-/*Titulo*/
-.título{
-    color: #8A2BE2;
-    font-size: 3em;
-    font-family: dm sans;
-}
-
-.paragrafo{
-   color: #3B3B3B;
-   font-family: lato; 
-   font-size: 1.2em;
-}
-
-.frase-impacto{
-    color: #8A2BE2;
-    font-size: 1.3em;
-    font-style: italic;
-    font-family: Lato;   /* fonte mais discreta que cursiva */
-    letter-spacing: normal;          /* remove o espaçamento extra entre letras */
-}
-/*Botão Junte-se a nós*/
-
-.btn-junte-se {
-  display: inline-block;       /* para não ocupar a linha toda */
-  padding: 12px 28px;          /* tamanho compacto */
-  border-radius: 12px;         /* bordas arredondadas */
-  background-color: #FF7A00;
-  color: white;
-  text-align: center;
-  cursor: pointer;
-  border: none;
-  font-size: 18px;
-  text-decoration: none;
-  font-family: dm sans;
-}
-.container_carrossel {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding: 0 20px;
-}
-
-.nossas_atividades {
-    background-color: #ffff;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    padding: 20px;
-    width: 100%;
-}
-.card_oficinas {
-    background-color: #ffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    text-align: left;
-    align-self: start;
-}
-
-@media (max-width: 768px) {
-    .nossas_atividades {
-        grid-template-columns: 1fr;
-    }
-    .container_carrossel {
-        flex-direction: column;
-    }
-}
-.titulo_h4_oficina{
-    color: #8A2BE2;
-    font-family: dm sans;
-    font-size: 1.2em;
-}
-.paragrafo_cinzaClaro_oficina{
-    color: #A5A5A5;
-    font-family: lato;
-    font-size: 0.8em;
-}
-.paragrafo_cinzaEscuro_oficina{
-    color: #3B3B3B;
-    font-family: lato;
-    font-size: 1em;
-}
-/* Botão das oficinas */
-.btn_oficina{
-  display: inline-block;       /* para não ocupar a linha toda */
-  padding: 8px 24px;          /* tamanho compacto */
-  border-radius: 10px;         /* bordas arredondadas */
-  background-color: #8A2BE2;
-  color: white;
-  text-align: center;
-  cursor: pointer;
-  border: none;
-  font-size: 16px;
-  text-decoration: none;
-  font-family: dm sans;
-}
-.btn_seta{
-    background-color: #8A2BE2;
-    color: #fff;
-    border-radius: 30px;
-    height: 50px;
-    width: 50px;
-    font-size: 40px;
-    border: none;
-}
-
-/*Nossa comunidade*/
-.nossa_comunidade {
-    background-color: #ffff;
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    padding: 20px;
-    flex-wrap: wrap;
-}
-/*Card nossa comunidade*/
-.card_comunidade{
-    background-color: #ffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    padding: 20px;
-    text-align: left;
-    margin-bottom: 24px; 
-}
-.nome_comunidade{
-    color: #3B3B3B;
-    font-family: 'lato';
-}
-.oq_comunidade{
-    color: #8A2BE2;
-    font-family: 'lato';
-}
-.p_comunidade{
-    color: #3B3B3B;
-    font-family: 'lato';
-}
-/*Configurações gerais do footer (paragrafo, etc.)*/
-footer{
-    text-align: center;
-    justify-content: center;
-    display:flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-/*imagem*/
-footer a img{
-    width: 45%;
-    margin: 0 auto;
-}
-/*logo*/
-.logo_footer{
-    justify-content: center;
-    display:flex;
-    align-items: center;
-}
-/*Icones do footer (Insta e Wpp)*/
-.icones{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-}
-/* Frase footer*/
-.frase_footer{
-    color: #3B3B3B;
-    font-family: 'lato';
-    font-size: 0.8em;
-}
-
-/*CELULAR*/
-
-
-    

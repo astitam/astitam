@@ -19,11 +19,30 @@
 </head>
 
 <body>
+
+    <header>
+        <!--imagem-->
+        <a href="" class="logo_header">
+            <img src="img/ELAS TITAM.png" alt="logo elas titam">
+        </a>
+
+        <button id="btnMenu" class="btn-menu" aria-label="Abrir menu" onclick="toggleMenu()">☰</button>
+
+        <nav id="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Atividades</a></li>
+                <li><a href="#">Vozes</a></li>
+                <li><a href="#">Comunidade</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Relatório</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <h2 class="titulo_contato">Entre em contato</h2>
-    <p class="p_contato">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-    nisi ut aliquip ex ea commodo consequat.</p>
+    <p class="p_contato">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
 
   <div class="container_contato">
 
@@ -46,12 +65,13 @@
 <footer>
     <!--DIV LOGO E FRASE-->
     <div class="logofrase_footer">
-        <!--imagem-->
-        <a href="" class="logo_footer"> <img src="img/ELAS TITAM.png" alt="logo elas titam"></a>
-        <h4 class="titulo_footer">Elas Titam - Girls In Tech</h4>
-        <p class="p_footer">Empoderando mulheres na tecnologia através de desenvolvimento técnico, emocional e networking para transformar o futuro da área.</p>
+    <!--<a href="" class="logo_footer"><img src="img/ELAS_TITAM.png" alt="logo elas titam"></a> -->
+        <div class="texto_footer">
+            <h4 class="titulo_footer">Elas Titam - Girls In Tech</h4>
+            <p class="p_footer">Onde mulheres transformam ideias em tecnologia</p>
+        </div>
     </div>
-        
+
     <!--DIV CONTATO-->
     <div class="contato_footer">
         <h4 class="titulo_footer">Contato</h4>
@@ -61,17 +81,14 @@
     <!--DIV REDES SOCIAIS-->
     <div class="redesociais_footer">
         <h4 class="titulo_footer">Redes Sociais</h4>
-        <!--Div Insta e Wpp-->
         <div class="icones">
-            <!--icone Insta-->
-            <a href="">  <i class="fa-brands fa-instagram" style="font-size: 30px; color: #3B3B3B;"></i></a>
-            <!--icone Wpp-->
-            <a href=""> <i class="fa-brands fa-whatsapp" style="font-size: 30px; color: #3B3B3B;"> </i></a>
+            <a href=""><i class="fa-brands fa-instagram" style="font-size: 30px; color: #3B3B3B;"></i></a>
+            <a href=""><i class="fa-brands fa-whatsapp" style="font-size: 30px; color: #3B3B3B;"></i></a>
         </div>
     </div>
 
-        <p class="frase_footer">© 2025 ElasTitam - Girls in Tech. Todos os direitos reservados.</p>
-    </footer>
+    <p class="frase_footer">© 2025 ElasTitam - Girls in Tech. Todos os direitos reservados.</p>
+</footer>
 
 </body>
 </html>
