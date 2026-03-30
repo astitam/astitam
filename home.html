@@ -65,24 +65,27 @@
     <!--Sessão Nossas Atividades.-->
     <h2 class="título" tabindex="5">Nossas Atividades</h2>
 
+<!--Filtro por mês-->
+<div class="activities-mobile-filter">
+    <label for="monthFilter" class="monthFilterLabel">Filtrar por mês:</label>
+    <select id="monthFilter">
+        <option value="all">Todos</option>
+        <option value="03/2026">Março/2026</option>
+        <option value="04/2026">Abril/2026</option>
+        <option value="05/2026">Maio/2026</option>
+        <option value="06/2026">Junho/2026</option>
+        <option value="07/2026">Julho/2026</option>
+        <option value="08/2026">Agosto/2026</option>
+        <option value="09/2026">Setembro/2026</option>
+        <option value="10/2026">Outubro/2026</option>
+        <option value="11/2026">Novembro/2026</option>
+    </select>
+</div>
+
     <!--div referente ao carrosel de oficinas-->
     <div class="container_carrossel">
         <!--div mãe dos cards-->
         <div class="nossas_atividades">
-
-    
-            <!--Oficina O Poder da Mulher Negra nas Profissões do Futuro-->
-            <div class="card_oficinas">
-                <!--Imagem-->
-                <p class="paragrafo_cinzaClaro_oficina">Clique na imagem para ampliar</p>
-                <h4 class="titulo_h4_oficina">O Poder da Mulher Negra nas Profissões do Futuro</h4>
-                <p class="paragrafo_cinzaEscuro_oficina">Instrutoras: Tainã Antunes e Samira Vieira</p>
-                <p class="paragrafo_cinzaEscuro_oficina">Data: 24 de março de 2026</p>
-                <p class="paragrafo_cinzaEscuro_oficina">Horário: 14h às 16h</p>
-                <p class="paragrafo_cinzaEscuro_oficina">Local: SENAC Lapa Tito</p>
-                <p class="paragrafo_cinzaClaro_oficina">Evento presencial e gratuito! (não precisa estar matriculado no SENAC.)</p>
-                <button class="btn_oficina">Inscreva-se</button>
-            </div>
 
             <!--Oficina Poder feminino: Quem definiu os papeis?-->
             <div class="card_oficinas">
@@ -282,21 +285,34 @@
             <p class="oq_comunidade">Docente dos cursos de desenvolvimento</p>
         </div>
     </div>
-    <footer>
-        <!--imagem-->
-        <a href="" class="logo_footer"> <img src="img/ELAS TITAM.png" alt="logo elas titam"></a>
 
-        <!--Div Insta e Wpp-->
-        <div class="icones">
-            <!--icone Insta-->
-            <a href="">  <i class="fa-brands fa-instagram" style="font-size: 30px; color: #3B3B3B;"></i></a>
-            <!--icone Wpp-->
-            <a href=""> <i class="fa-brands fa-whatsapp" style="font-size: 30px; color: #3B3B3B;"> </i></a>
+<footer>
+    <!--DIV LOGO E FRASE-->
+    <div class="logofrase_footer">
+    <!--<a href="" class="logo_footer"><img src="img/ELAS_TITAM.png" alt="logo elas titam"></a> -->
+        <div class="texto_footer">
+            <h4 class="titulo_footer">Elas Titam - Girls In Tech</h4>
+            <p class="p_footer">Onde mulheres transformam ideias em tecnologia</p>
         </div>
-        
+    </div>
 
-        <p class="frase_footer">© 2025 ElasTitam - Girls in Tech. Todos os direitos reservados.</p>
-    </footer>
+    <!--DIV CONTATO-->
+    <div class="contato_footer">
+        <h4 class="titulo_footer">Contato</h4>
+        <p class="p_contato">elastitam@gmail.com</p>
+    </div>
+
+    <!--DIV REDES SOCIAIS-->
+    <div class="redesociais_footer">
+        <h4 class="titulo_footer">Redes Sociais</h4>
+        <div class="icones">
+            <a href=""><i class="fa-brands fa-instagram" style="font-size: 30px; color: #3B3B3B;"></i></a>
+            <a href=""><i class="fa-brands fa-whatsapp" style="font-size: 30px; color: #3B3B3B;"></i></a>
+        </div>
+    </div>
+
+    <p class="frase_footer">© 2025 ElasTitam - Girls in Tech. Todos os direitos reservados.</p>
+</footer>
  
 </body>
 </html>
