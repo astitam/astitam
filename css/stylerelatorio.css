@@ -61,16 +61,17 @@
     position: static;
 }
 /*Cards da seção visão geral de métricas e chaves.*/
-.eventos{
-      width: 150px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
-  text-align: center;
-  font-family: lato;
-  border-left: 5px solid #FF7A00;
-  
+/* CSS BASE — sem width fixo */
+.eventos, .inscricoes, .feedbacks, .avaliacao {
+    width: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    text-align: center;
+    font-family: lato;
+    border-left: 5px solid #FF7A00;
 }
+
 /*título do número 16.*/
 .dezesseis{
     color: #FF7A00;
@@ -78,16 +79,7 @@
     font-family: dm sans; 
 }
 /*Card dois da seção visão geral de métricas e chaves.*/
-.inscricoes{
- width: 150px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
-  text-align: center;
-  font-family: lato;
-  border-left: 5px solid #FF7A00;
 
-}
 /*título do número 214.*/
 .duzentosequatorze{
     color: #FF7A00;
@@ -95,15 +87,8 @@
     font-family: dm sans;
 }
 /*Card três da seção visão geral de métricas e chaves.*/
-.feedbacks{
-     width: 150px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
-  text-align: center;
-  font-family: lato;
-  border-left: 5px solid #FF7A00;
-}
+
+
 /*título do número noventa.*/
 .noventa{
     color: #FF7A00;
@@ -112,15 +97,7 @@
 
 }
 /*Card quatro da seção visão geral de métricas e chaves.*/
-.avaliacao{
-       width: 150px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
-  text-align: center;
-  font-family: lato;
-  border-left: 5px solid #FF7A00;
-}
+
 /*título do número quatro mil.*/
 .quatromil{
      color: #FF7A00;
@@ -447,20 +424,24 @@ font-family: lato;
 }
 /*Alinhar os  cards*/
 /*Responsivo*/
-@media (min-width:320px){
-    h2,h1{
-        text-align: center;
-
-    }
+@media (min-width: 425px){
+     .unicotitulo{ 
+        position: relative;
+       left: 12px; 
+       right: 15px;
+       width: 415px;
+       
+     }
+    
     .botao{
         display: flex;
         justify-content: flex;
         align-items:center;
-        width: 50%;
-        padding: 10px 0;
+        width: 161px;
+        padding: 10px;
         margin-left: 26%;
         text-align: center;
-        padding: 6%;
+        padding: 23px;
         
 
     }
@@ -486,6 +467,7 @@ font-family: lato;
       padding: 20%;
       gap: 25px;
       align-items: center;
+    
     }
     .card1{
         padding: 15%;
@@ -515,11 +497,13 @@ font-family: lato;
         font-size: 20px;
         align-items: center;
         justify-content: center;
+        margin-left: 29px;
     }
     .paragrafosecao1{
         font-size: 15px;
         align-items: center;
         justify-content: center;
+       margin-left: 12px;
        
     }
     .acolhimento{
@@ -570,39 +554,241 @@ font-family: lato;
             font-size: 20px;
             align-items: center;
             margin-right: -70%;
-            margin-left: -69%;
+            margin-left: -83%;
     }
     .paragrafoultimasecao{
             font-size: 15px;
             align-items: center;
             justify-content: center;
             display: flex;
-            margin-right: -54%;
-            margin-left: -29%;
-            padding: -50px;
+            margin-right: -7%;
+            margin-left: -19%;
+            top: -12px;
+            margin-top: -30px;
+            
+            
     }
     .recomendacoes{
-            align-items: center;margin-right: -60%;
-            margin-left: 50%;
+            align-items: center;
+            width: 149%;
          
     }
-    
+    .pterceirasecao{
+        width: 326px;
+        height: 30px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        margin-left: 20px;
+        margin-top: 32px;
 
 
+    }
+    .secao3{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        margin-left: 20px;
+        margin-top: 32px;
+        
+    }
+    .cardes{
+              display:grid;
+      grid-template-columns: repeat(1, 0fr);
+      justify-items: center;
+      width: -23px;
+      padding: 20px;
+      gap: 25px;
+      align-items: center;
+    }
+    .quadradoroxo{
+      justify-items: center;
+      align-items: center;
+      margin-left: -85px;
+      margin-right: -100px;
+    }
+    .texto1{
+        margin-left: 45px;
+    }
+    .texto2{
+        margin-left: 4px;
+    }
+    .texto3{
+        margin-left: 130px;
+      margin-top: -37px;
+    }
+    .texto4{
+        margin-left: 212px;
+        margin-top: -32px;
+    }
+    .texto5{
+        margin-left: 352px;
+        margin-top: -35px;
+    }
+    .texto6{
+        margin-left: 108px;
+        margin-top: -15px;
 
-
-
-    
-
-
-     
-       
-    
-
-
-    
-
+    }
+    .texto7{
+        margin-left: 20px;
+        margin-top: -17px;
+    }
 }
+
+
+@media (min-width: 768px) {
+    .unicotitulo {
+        font-size: 50px;
+       width: 100%;
+       margin-left: 47px;
+    }
+    .paragrafosecao1{
+        font-size: 15px;
+    }
+
+    .h2exe {
+        font-size: 35px;
+        width: 100%;
+        margin-left: 4px;
+    }
+
+    .primeiroparagrafo,
+    .paragrafosecao1,
+    .paragrafosecao2,
+    .pterceirasecao,
+    .paragrafoultimasecao {
+        font-size: 20px;
+    }
+  .botao{
+      width: 161px;
+      
+        
+
+    }
+    .metricasChave{
+     display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px
+
+
+    }
+    .dezesseis, .duzentosequatorze, .noventa, .quatromil {
+    font-size: 22px; /* reduz um pouco o número */
+}
+     
+    
+
+    .eventos, .inscricoes, .feedbacks,.avaliacao{
+    
+  width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px;
+    
+     
+    }
+
+    /* Cards seção 3 — 2 colunas */
+    .cards-secao3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+
+    /* Cards última seção — 2 colunas */
+    .cards-ultima {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .cardum, .carddois, .cardtres, .cardquatro {
+        max-width: 100%;
+    }
+    .secao1{
+        margin-left: 140px;
+    }
+
+    .secao1, .secao2, .secao3, .ultimasecao, .recomendacoes {
+        font-size: 30px;
+
+    }
+      footer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+        gap: 20px;
+    }
+    .logofrase_footer {
+        width: calc(33% - 20px);           /* ocupa linha inteira */
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        border-left: none;
+        padding: 0;
+    }
+    .frase_relatorio {
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;  /* ← aumenta o espaço */
+    }
+    .p_footer{
+        text-align: center !important;
+    }
+
+    .contato_footer{
+        border-left: none;
+        border-left: 1px solid #282828;
+        padding: 20px 30px;
+        width: calc(33% - 20px);
+        box-sizing: border-box;
+    }
+    .redesociais_footer {
+        border-left: none;
+        border-left: 1px solid #282828;
+        padding: 20px 30px;
+        width: calc(33% - 20px);
+        box-sizing: border-box;
+    }
+    .icones {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: center;
+    }
+    .frase_footer {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .btn-menu {
+        display: none; /* esconde o ícone */
+    }
+
+    nav {
+        display: block !important;
+        position: static;
+        width: auto;
+        box-shadow: none;
+        background: none;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 24px;
+        padding: 0;
+    }
+}
+
 
 
 
@@ -727,74 +913,3 @@ footer a img{
 }
 
 /* Desktop — a partir de 768px */
-@media (min-width: 768px) {
-    footer {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        padding: 40px;
-        gap: 20px;
-    }
-    .logofrase_footer {
-        width: calc(33% - 20px);           /* ocupa linha inteira */
-        justify-content: center;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 10px;
-        border-left: none;
-        padding: 0;
-    }
-    .frase_relatorio {
-        width: 100%;
-        text-align: center;
-        margin-top: 30px;  /* ← aumenta o espaço */
-    }
-    .p_footer{
-        text-align: center !important;
-    }
-
-    .contato_footer{
-        border-left: none;
-        border-left: 1px solid #282828;
-        padding: 20px 30px;
-        width: calc(33% - 20px);
-        box-sizing: border-box;
-    }
-    .redesociais_footer {
-        border-left: none;
-        border-left: 1px solid #282828;
-        padding: 20px 30px;
-        width: calc(33% - 20px);
-        box-sizing: border-box;
-    }
-    .icones {
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-        justify-content: center;
-    }
-    .frase_footer {
-        width: 100%;
-        text-align: center;
-        margin-top: 10px;
-    }
-    .btn-menu {
-        display: none; /* esconde o ícone */
-    }
-
-    nav {
-        display: block !important;
-        position: static;
-        width: auto;
-        box-shadow: none;
-        background: none;
-    }
-
-    nav ul {
-        flex-direction: row;
-        gap: 24px;
-        padding: 0;
-    }
-}
