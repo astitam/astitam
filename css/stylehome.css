@@ -237,6 +237,19 @@ nav ul li a {
 }
 
 /* ================================
+   NUVEM DE PALAVRAS
+================================ */
+
+.secao_nuvemDePalavras {
+  position: relative;
+  background-image: 
+    url('shapes-left.png'), 
+    url('shapes-right.png');
+  background-repeat: no-repeat, no-repeat;
+  background-position: left center, right center;
+}
+
+/* ================================
    COMUNIDADE
 ================================ */
 
