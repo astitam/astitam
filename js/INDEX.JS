@@ -99,3 +99,17 @@ $('#track').slick({
         }
     ]
 });
+const filtro = document.getElementById('monthFilter');
+
+filtro.addEventListener('change', function () {
+    const mesSelecionado = this.value;
+    const cards = document.querySelectorAll('.card_oficinas');
+
+    cards.forEach(function (card) {
+        if (mesSelecionado === 'all' || card.dataset.mes === mesSelecionado) {
+            card.style.display = '';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+});
