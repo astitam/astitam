@@ -71,6 +71,15 @@ nav ul li a {
     color: #8A2BE2;
 }
 
+/* Menu escondido por padrão no mobile */
+#menu {
+    display: none;
+}
+
+#menu.aberto {
+    display: block;
+}
+
 /* Links do menu */
 .Atividades {
     color: #3B3B3B;
@@ -431,10 +440,20 @@ footer a img {
     }
 }
 
+
 /* Desktop — a partir de 768px */
 @media (min-width: 768px) {
     .btn-menu {
-        display: none; /* esconde o ícone */
+        display: none;
+    }
+
+    nav {
+        display: flex !important; /* ← mude para flex */
+        position: static;
+        width: auto;
+        box-shadow: none;
+        background: none;
+        border: none;
     }
 
     nav {
