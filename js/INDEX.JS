@@ -71,3 +71,21 @@ $(document).ready(function(){
     $('#drawer-overlay').on('click', fecharDrawer);
 
 });
+$('#track').slick({
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    infinite: false,
+    prevArrow: $('#btnAnterior'),
+    nextArrow: $('#btnProximo'),
+    dots: true,
+    appendDots: $('#dots'),
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+    ]
+});

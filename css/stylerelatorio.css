@@ -1,6 +1,7 @@
 /*Estilização da página de relatório.*/
 .body {
     background-color: white;
+     position: relative;
 }
 /*Logo*/
 .primeiraimg{
@@ -8,10 +9,11 @@
 }
 
 .unicotitulo {
+    margin-top: 75px;
     color: blueviolet;
     font-family: dm sans;
+    text-align: center;
 }
-
 .h2exe {
     color: blueviolet;
     font-family: dm sans;
@@ -490,5 +492,124 @@ footer a img {
 
     .p_footer {
         text-align: center;
+    }
+}
+/* Logo centralizada e menor */
+.primeiraimg {
+    position: relative;
+    width: 100%;
+    height: 150px;
+}
+
+.circulosuperior {
+    position: absolute;
+    top: 0;
+    right: -30px;
+}
+
+.circulosuperior img {
+    width: 150px;
+}
+
+.lg {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.lg img {
+    width: 120px;
+}
+
+/* Centraliza tudo no topo */
+.unicotitulo,
+.h2exe,
+.primeiroparagrafo {
+    text-align: center;
+}
+
+/* Imagens lado a lado */
+.imgs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.graficoavaliacao img,
+.topeventos img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+/* Imagem dados centralizada */
+.imgdados {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.ultimografico img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+}
+
+/* Botao maior para caber icone */
+.botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 180px;
+    height: 40px;
+    margin: 10px auto;
+}
+
+/* Circulo inferior */
+.ftcirculo {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.circulo img {
+    width: 150px;
+}
+/*Logo*/
+.primeiraimg {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.lg {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.lg img {
+    width: 120px;
+}
+.circulo img{
+    width: 200px;
+}
+
+/* Responsivo mobile */
+@media (max-width: 768px) {
+    .imgs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .graficoavaliacao img,
+    .topeventos img {
+        max-width: 100%;
     }
 }
