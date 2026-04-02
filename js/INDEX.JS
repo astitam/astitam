@@ -23,6 +23,16 @@ $(document).ready(function(){
         ]
     });
 
+    // Menu hamburguer — adicione aqui:
+    $('#btnMenu').on('click', function(){
+        $('#menu').toggleClass('aberto');
+    });
+
+    // Fecha ao clicar em um link
+    $('#menu a').on('click', function(){
+        $('#menu').removeClass('aberto');
+    });
+
     $(document).ready(function(){
 
     $('.fotos_carrossel').slick({
