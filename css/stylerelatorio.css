@@ -2,6 +2,10 @@
 .body {
     background-color: white;
 }
+/*Logo*/
+.primeiraimg{
+    width: 200px;
+}
 
 .unicotitulo {
     color: blueviolet;
@@ -28,6 +32,11 @@
     font-size: small;
     font-family: lato;
     cursor: pointer;
+}
+.botao img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
 }
 
 .linha {
@@ -118,7 +127,6 @@
     margin-top: 8px;
 }
 
-/* ── QUADRADO ROXO ── */
 /* ── QUADRADO ROXO ── */
 .letras {
     background-color: #7153C3;
@@ -227,6 +235,17 @@
     .h2exe {
         font-size: 30px;
     }
+    .imgs {
+        flex-direction: column;
+    }
+     .graficoavaliacao img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .imgs {
+        padding: 0 8px;
+    }
 
     .primeiroparagrafo,
     .paragrafosecao1,
@@ -293,7 +312,38 @@
         padding: 0;
     }
 }
+/*img*/
+.imgs{
+       width: 600px;
+}
 
+.graficoavaliacao img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 16px;
+    width: 100%;
+}
+.topeventos img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 16px;
+    width: 100%;
+}
+.imgdados{
+    width: 600px;
+}
+.ultimografico img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 16px;
+    width: 100%;
+}
 /* ══════════════════════════════
    RESPONSIVO — 1024px
 ══════════════════════════════ */
