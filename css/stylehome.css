@@ -426,6 +426,9 @@ footer a img {
     height: 300px;
     object-fit: cover;
 }
+.secao_nuvemDePalavras {
+        padding: 0 30px;
+    }
 }
 
 /* Desktop — a partir de 768px */
@@ -503,4 +506,57 @@ footer a img {
     height: 300px;
     object-fit: cover;
 }
+}
+==========================
+      Carrossel
+==========================
+/*JAVASCRIPT*/
+.fotos_carrossel img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+.secao_nuvemDePalavras {
+    padding: 0 60px;
+    overflow: hidden;
+}
+
+.fotos_carrossel .slick-prev {
+    left: -40px;
+    z-index: 10;
+}
+
+.fotos_carrossel .slick-next {
+    right: -40px;
+    z-index: 10;
+}
+
+.fotos_carrossel .slick-prev:before,
+.fotos_carrossel .slick-next:before {
+    color: #8A2BE2;
+    font-size: 30px;
+    opacity: 1;
+}
+.fotos_carrossel .slick-prev,
+.fotos_carrossel .slick-next {
+    top: 50%;
+    transform: translateY(-50%);
+}
+.fotos_carrossel {
+    padding: 0 20px;
+    margin-bottom: 40px;
+}
+
+/* Setas do Slick em roxo */
+.fotos_carrossel .slick-prev:before,
+.fotos_carrossel .slick-next:before {
+    color: #8A2BE2;
+    font-size: 28px;
+}
+
+/* Bolinhas em roxo */
+.fotos_carrossel .slick-dots li button:before {
+    color: #8A2BE2;
 }
