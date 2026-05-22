@@ -8,7 +8,95 @@ body {
 /* ================================
    HEADER
 ================================ */
-header {
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* HEADER */
+.header{
+    width: 100%;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    z-index: 1000;
+    align-items: center;
+    border-bottom: 2px solid #FF7A00;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* CONTAINER */
+.container-header{
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 8px 40px;
+
+    position: relative;
+}
+
+/* LOGO */
+.logo img{
+    width: 90px;
+    height: auto;
+    display: block;
+}
+
+/* MENU DESKTOP */
+.menu ul{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    list-style: none;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+.menu a:hover{
+    color: #FF7A00;
+}
+
+/* BOTÃO HAMBURGUER */
+.menu-toggle{
+    display: none;
+
+    font-size: 32px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* ESPAÇO DO HEADER FIXO */
+main{
+    padding-top: 90px;
+}
+
+/* ESPAÇO PARA O HEADER FIXO */
+main{
+    padding-top: 90px;
+}
+/* header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -18,7 +106,7 @@ header {
 
 .logo_header img {
     height: 100px;
-}
+} */
 
 .container {
   width: 100%;
@@ -450,33 +538,77 @@ footer a img {
 
 /* Desktop — a partir de 768px */
 @media (min-width: 768px) {
-    .btn-menu {
+    .container-header{
+        padding: 12px 20px;
+    }
+
+    .logo img{
+        width: 70px;
+    }
+
+    /* MOSTRA HAMBURGUER */
+
+.menu-toggle{
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: #333;
+}
+
+    /* MENU MOBILE */
+    .menu{
+        position: absolute;
+
+        top: 100%;
+        right: 0;
+
+        width: 220px;
+
+        background-color: white;
+
+        border-left: 2px solid #FF7A00;
+        border-bottom: 2px solid #FF7A00;
+
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+
         display: none;
     }
 
-    nav {
-        display: flex !important; /* ← mude para flex */
-        position: static;
-        width: auto;
-        box-shadow: none;
-        background: none;
-        border: none;
+    /* QUANDO ABRIR */
+    .menu.active{
+        display: block;
     }
 
-    nav {
-        display: block !important;
-        position: static;
-        width: auto;
-        box-shadow: none;
-        background: none;
+    .menu ul{
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 0;
     }
 
-    nav ul {
-        flex-direction: row;
-        gap: 24px;
-        padding: 0;
+    .menu li{
+        width: 100%;
     }
 
+    .menu a{
+        display: block;
+
+        width: 100%;
+
+        padding: 15px 20px;
+
+        border-bottom: 1px solid #eee;
+
+        font-size: 15px;
+    }
+
+    .menu a:hover{
+        background-color: #fff4e8;
+    }
+
+    main{
+        padding-top: 90px;
+    }
     footer {
         flex-direction: row;
         flex-wrap: wrap;
@@ -531,9 +663,9 @@ footer a img {
     width: 100%;
     height: 300px;
     object-fit: cover;
+    }
 }
-}
-      Carrossel
+Carrossel
 
 /*JAVASCRIPT*/
 .fotos_carrossel img {
