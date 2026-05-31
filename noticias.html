@@ -5,15 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Olha o que rolou | ElasTitam</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="css/stylenoticia.css">
+  <!--link rel="stylesheet" href="css/stylenoticia.css">
   <link rel="stylesheet" href="css/noticias.css">
   <link rel="stylesheet" href="css/stylenoticia2.css">
   <link rel="icon" href="img/ElasTitamLogo1.png" sizes="64x64">
 </head>
-<body class="body">
-  
-    <!--HEADER-->
-    <header>
+<body>
+   <header>
         <!--imagem-->
         <a href="" class="logo_header">
             <img src="img_elastitam/ElasTitamLogo_roxa.png" alt="logo elas titam">
@@ -33,139 +31,67 @@
             </ul>
         </nav>
     </header>
-    <main>
-      <section class="noticias">
-       <div class="noticia-conteiner">
-        <p class="noticia-memorias"> Memórias do projeto</p>
-        <h1>Olha o que rolou</h1>
-        <p class="noticia-descricao">"Oficinas, encontros e ações do" <strong>ElasTitam</strong>"em formato de notícia, com texto completo e galeria de fotos por eventos."</p>
-       </div>
+     <main> <!-- Conteúdo principal da página -->
+      <section class="todas-as-not">
+        <div class="oque-rolou">
+          <p class="not-memorias">Memórias do projeto</p>
+          <h1> Olha o que rolou</h1>
+          <p class="not-p-memorias">
+            Oficinas, encontros e ações do <strong>Elastitam</strong>
+            em formato de notícia, com texto completo e galeria de fotos por evento.
+          </p>
+        </div>
       </section>
-      <!--Sessão das matérias das notícias.-->
-      <section class="noticia-materias" id="lista-de-materias">
-       <div class="cabecalho-secao-noticias">
-  <div>
-    <h2>Notícias do ElasTitam</h2>
-  </div>
-  <span id="contadorNoticias" class="pílula-noticias">15 matérias</span>
-</div>
-<section>
-  <div id="gradeNoticias" class="grade-noticias">
-  <article class="card-noticia" data-id="pitch" role="button" tabindex="0">
+      <section id="listacds" class="lista-cards">
+        <div class="not-card-principal">
+          <div>
+            <h2>Notícia do Elatitam</h2>
+          </div>
+          <span class="not-contidade" id="not-ctd"> <!--Contidade de materias-->
+            15 matérias
+          </span>
+          </div>
+        </div>
+        <!--Cards de notícias-->
+        <!--Voltar aqui depois para arrumar acessibilidade-->
+        <div class="parte-nots" id="partenot"> 
+          <article class="card-noticia" data.id="pitch">
+            <div class="not-card-midia">
+              <img src="img_elastitam/oficinaPitch_1026.png" alt="Noticia da oficina de pitch">
+            </div>
+            <!--Primeiro Card-->
+            <div class="not-card-conteudo">
+              <h3> Pitch Mode on: Ative sua apresentação</h3>
+              <div class="not-card-info">
+                <span>
+                  <!-- I para colocar icone-->
+                  <i class="fa-regular fa-calendar"></i>
+                  19/05/2026
+                </span>
+                <span>
+                  <i class=" fa-solid fa-location-dot"></i>
+                  Senac Lapa Tito
+                </span>
+              </div>
+              <p> O encontro apresentou ás participantes uma ferramenta importante para quem deseja explorar a criação visual de forma mais técnica, criativa e profissional.</p>
+              <div class="not-card-botao">
+                Ler notícia
+                <i class="fa-solid fa-arrow-righ"></i>  <!--Seta--> 
+              </div>
+              </div>
+            </div>
+          </article>
+          <article class="card-noticia" data.id="affinity">
+            <div class="">
 
-    <div class="card-noticia-midia">
-      <img
-        src="img/oficinas/oficinaPitch_1026.png"
-        alt="Pitch Mode On: Ative sua apresentação"
-        loading="lazy"
-      >
-    </div>
+            </div>
 
-    <div class="card-noticia-corpo">
-      <h3>Pitch Mode On: Ative sua apresentação</h3>
+          </article>
 
-      <div class="card-noticia-meta">
-        <span>
-          <i class="fa-regular fa-calendar" aria-hidden="true"></i>
-          19/05/2026
-        </span>
+        </div>
+      </section>
 
-        <span>
-          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-          Senac Lapa Tito
-        </span>
-      </div>
 
-      <p>
-        O encontro apresentou às participantes uma ferramenta importante
-        para quem deseja explorar a criação visual de forma mais técnica,
-        criativa e profissional.
-      </p>
-
-      <div class="card-noticia-cta">
-        Ler notícia
-        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-      </div>
-    </div>
-  </article>
-  <article class="card-noticia" data-id="affinity" role="button" tabindex="0">
-
-  <div class="card-noticia-midia">
-    <img
-      src="img/oficinas/oficina_Affinity_1126.png"
-      alt="Affinity: Design Criativo e Comunicação Visual Profissional"
-      loading="lazy"
-    >
-  </div>
-
-  <div class="card-noticia-corpo">
-    <h3>Affinity: Design Criativo e Comunicação Visual Profissional</h3>
-
-    <div class="card-noticia-meta">
-      <span>
-        <i class="fa-regular fa-calendar" aria-hidden="true"></i>
-        29/04/2026
-      </span>
-
-      <span>
-        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-        Senac Lapa Tito
-      </span>
-    </div>
-
-    <p>
-      O encontro apresentou às participantes uma ferramenta importante
-      para quem deseja explorar a criação visual de forma mais técnica,
-      criativa e profissional.
-    </p>
-
-    <div class="card-noticia-cta">
-      Ler notícia
-      <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-    </div>
-
-  </div>
-
-</article>
-<article class="card-noticia" data-id="canva" role="button" tabindex="0">
-
-  <div class="card-noticia-midia">
-    <img
-      src="img/oficinas/oficinaCanva_1226.png"
-      alt="Canva para Comunicação Digital e Impacto Social"
-      loading="lazy"
-    >
-  </div>
-
-  <div class="card-noticia-corpo">
-    <h3>Canva para Comunicação Digital e Impacto Social</h3>
-
-    <div class="card-noticia-meta">
-      <span>
-        <i class="fa-regular fa-calendar" aria-hidden="true"></i>
-        27/04/2026
-      </span>
-
-      <span>
-        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-        Senac Lapa Tito
-      </span>
-    </div>
-
-    <p>Um encontro potente sobre capacitação de mulheres criando um impacto social.</p>
-
-    <div class="card-noticia-cta">
-      Ler notícia
-      <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-    </div>
-
-  </div>
-</article>
-
-</section>
-
-</div>
     </main>
-
 </body>
 </html>
