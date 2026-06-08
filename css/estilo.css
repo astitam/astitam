@@ -1,73 +1,3 @@
-/* ===== HERO ===== */
-
-.hero {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-
-    background-image: url('../img_elastitam/imgElasTitam_home 1.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    display: flex;
-    align-items: center;
-}
-
-.hero .container {
-    max-width: 1400px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 40px;
-}
-
-/* ===== CONTEÚDO ===== */
-
-.hero-content {
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.hero-content h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #fff;
-    line-height: 1.2;
-}
-
-.hero-content p {
-    font-size: 1.1rem;
-    color: #f0f0f0;
-    line-height: 1.6;
-}
-
-.frase-impacto {
-    font-style: italic;
-    font-size: 1.2rem !important;
-    color: #f7931e !important;
-    font-weight: 600;
-}
-
-/* ===== BOTÃO ===== */
-
-.btn-junte-se {
-    width: fit-content;
-    padding: 14px 32px;
-    background: #f7931e;
-    color: #fff;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1rem;
-    transition: 0.3s ease;
-}
-
-.btn-junte-se:hover {
-    background: #e47f09;
-    transform: translateY(-2px);
-}
 /* ===== RESET ===== */
 
 *, *::before, *::after {
@@ -75,6 +5,47 @@
     margin: 0;
     padding: 0;
 }
+
+/* ===== VARIÁVEIS — SISTEMA DE PADDING ===== */
+/*
+ * Controle centralizado de espaçamento.
+ * Alterar um valor aqui reflete em todo o site.
+ *
+ * Breakpoints:
+ *   Desktop   > 1024px  → padding-x: 60px  / section-y: 80px
+ *   Tablet  768–1024px  → padding-x: 40px  / section-y: 64px
+ *   Mobile  480–767px   → padding-x: 24px  / section-y: 48px
+ *   Mobile S  < 480px   → padding-x: 16px  / section-y: 40px
+ */
+
+:root {
+  --site-padding-x:    60px;
+  --section-padding-y: 80px;
+  --container-max:     1400px;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --site-padding-x:    40px;
+    --section-padding-y: 64px;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --site-padding-x:    24px;
+    --section-padding-y: 48px;
+  }
+}
+
+@media (max-width: 479px) {
+  :root {
+    --site-padding-x:    16px;
+    --section-padding-y: 40px;
+  }
+}
+
+
 /* ===== HEADER ===== */
 
 header {
@@ -88,11 +59,10 @@ header {
 
     width: 100%;
     box-sizing: border-box;
-    padding: 28px 40px;
+    padding: 28px var(--site-padding-x);
     background: #fff;
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     border-bottom: 3px solid #FF7A00;
-    
 }
 
 /* ===== LOGO ===== */
@@ -137,19 +107,124 @@ nav#menu ul li a:hover {
     line-height: 1;
 }
 
-/* ===== SEÇÃO ===== */
 
-.atividades {
-    padding: 80px 20px;
-    
+/* ===== HERO ===== */
+
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+
+    background-image: url('../img_elastitam/imgElasTitam_home 1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
 }
 
-.atividades .container {
-    max-width: 1400px;
+.hero .container {
+    max-width: var(--container-max);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 var(--site-padding-x);
+}
+
+/* ===== CONTEÚDO HERO ===== */
+
+.hero-content {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+.frase-impacto {
+    font-style: italic;
+    font-size: 1.2rem !important;
+    color: #f7931e !important;
+    font-weight: 600;
+}
+
+/* ===== BOTÃO HERO ===== */
+
+.btn-junte-se {
+    width: fit-content;
+    padding: 14px 32px;
+    background: #f7931e;
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+.btn-junte-se:hover {
+    background: #e47f09;
+    transform: translateY(-2px);
+}
+
+
+/* ===== SOBRE NÓS ===== */
+
+.sobre {
+    padding: var(--section-padding-y) var(--site-padding-x);
+    background-color: #fbf6ff;
+}
+
+.sobre .container {
+    max-width: var(--container-max);
     margin: 0 auto;
 }
 
-/* ===== TÍTULO ===== */
+.sobre-conteudo {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.sobre-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+}
+
+.sobre-texto p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.7;
+}
+
+.sobre-image {
+    flex: 1;
+}
+
+.sobre-image video,
+.sobre-image iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    display: block;
+}
+
+
+/* ===== TÍTULO DE SEÇÃO (global) ===== */
 
 .secao-titulo {
     text-align: center;
@@ -158,150 +233,28 @@ nav#menu ul li a:hover {
 
 .secao-titulo h2 {
     font-size: 3rem;
-    color: #f7931e;
+    color: #8A2BE2;
     font-weight: 700;
 }
 
-/* ===== GRID DOS CARDS ATIVIDADES===== */
+
+/* ===== NOSSAS ATIVIDADES ===== */
 
 .atividades {
-    background-image: url('img_elastitam/fundoAtividades.png') !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    padding: 60px 0;
+    background-image: url('../img_elastitam/fundoAtividades.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: var(--section-padding-y) var(--site-padding-x);
 }
 
-.atividades-trilha {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 32px;
-    max-width: 1400px;
+.atividades .container {
+    max-width: var(--container-max);
     margin: 0 auto;
 }
 
-/* ===== CARD ===== */
+/* ===== FILTRO DE ATIVIDADES ===== */
 
-.atividades-card {
-    background: #fff;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    transition: 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.atividades-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
-}
-
-/* ===== IMAGEM ===== */
-
-.atividades-card figure {
-    width: 100%;
-    height: 280px;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-}
-
-.atividades-card figure img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    object-position: top center;
-    display: block;
-    transition: 0.4s ease;
-}
-
-.atividades-card:hover figure img {
-    transform: scale(1.05);
-}
-
-/* ===== LEGENDA ===== */
-
-figcaption {
-    font-size: 0.8rem;
-    color: #777;
-    padding: 6px 16px 0;
-}
-
-/* ===== CONTEÚDO ===== */
-
-.atividades-info {
-    padding: 12px 16px;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-/* ===== TÍTULO CARD ===== */
-
-.atividades-info h3 {
-    color: #f7931e;
-    font-size: 1.2rem;
-    margin-bottom: 8px;
-    line-height: 1.3;
-}
-
-/* ===== TEXTOS ===== */
-
-.atividades-info p,
-.atividades-info span {
-    color: #444;
-    line-height: 1.5;
-    margin-bottom: 4px;
-    font-size: 0.9rem;
-}
-
-.date {
-    font-weight: 600;
-}
-
-/* ===== LINK MAPA ===== */
-
-#mapa {
-    color: #f7931e;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-#mapa:hover {
-    text-decoration: underline;
-}
-
-/* ===== OBSERVAÇÃO ===== */
-
-#obs {
-    color: #777;
-    font-size: 0.85rem;
-}
-
-/* ===== BOTÃO ===== */
-
-.btn-of-btn {
-    margin-top: auto;
-    width: fit-content;
-    padding: 10px 22px;
-    background: #f7931e;
-    color: #fff;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s ease;
-}
-
-.btn-of-btn:hover {
-    background: #e47f09;
-    transform: translateY(-2px);
-}
-/* ===== NOSSAS ATIVIDADES ===== */
-
-/* Filtro de atividades*/
 .filtro-atividades-mobile {
     display: flex;
     align-items: center;
@@ -332,16 +285,226 @@ figcaption {
     box-shadow: 0 0 8px #8A2BE2, 0 0 16px #8A2BE2aa;
 }
 
+/* ===== GRID DOS CARDS ===== */
+
+.atividades-trilha {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    max-width: var(--container-max);
+    margin: 0 auto;
+}
+
+/* ===== CARD ===== */
+
+.atividades-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.atividades-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+/* ===== IMAGEM DO CARD ===== */
+
+.atividades-card figure {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.atividades-card figure img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    transition: 0.4s ease;
+}
+
+.atividades-card:hover figure img {
+    transform: scale(1.05);
+}
+
+/* ===== LEGENDA ===== */
+
+figcaption {
+    font-size: 0.8rem;
+    color: #777;
+    padding: 6px 16px 0;
+}
+
+/* ===== CONTEÚDO DO CARD ===== */
+
+.atividades-info {
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.atividades-info h3 {
+    color: #f7931e;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.atividades-info p,
+.atividades-info span {
+    color: #444;
+    line-height: 1.5;
+    margin-bottom: 4px;
+    font-size: 0.9rem;
+}
+
+.date {
+    font-weight: 600;
+}
+
+#mapa {
+    color: #f7931e;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#mapa:hover {
+    text-decoration: underline;
+}
+
+#obs {
+    color: #777;
+    font-size: 0.85rem;
+}
+
+.btn-of-btn {
+    margin-top: auto;
+    width: fit-content;
+    padding: 10px 22px;
+    background: #f7931e;
+    color: #fff;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn-of-btn:hover {
+    background: #f7931e;
+    transform: translateY(-2px);
+}
+
+
+/* ===== TEASER NOTÍCIAS ===== */
+
+.teaser-noticias {
+    background-color: #fbf6ff;
+    padding: var(--section-padding-y) var(--site-padding-x);
+    text-align: center;
+    border-top: 4px solid #8A2BE2;
+}
+
+.teaser-noticias .container {
+    max-width: 680px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.teaser-noticias .secao-titulo h2 {
+    color: #f7931e;
+}
+
+.teaser-noticias > .container > p {
+    color: #444;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 560px;
+}
+
+.teaser-noticias strong {
+    color: #8A2BE2;
+    font-weight: 700;
+}
+
+.teaser-noticias-acoes {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+/* Botão primário — laranja sólido */
+.teaser-noticias-acoes a:first-child {
+    padding: 14px 32px;
+    background: #f7931e;
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.teaser-noticias-acoes a:first-child:hover {
+    background: #e47f09;
+    transform: translateY(-2px);
+}
+
+/* Link secundário — roxo com seta */
+.teaser-noticias-acoes a:last-child {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 0.2s ease;
+}
+
+.teaser-noticias-acoes a:last-child:hover {
+    gap: 10px;
+}
+
+/* ===== SEPARADOR ONDA ===== */
+/*
+.separador-onda {
+    display: block;
+    line-height: 0;  elimina espaço fantasma abaixo da img 
+}
+
+.separador-onda img {
+    width: 100%;
+    display: block;
+}*/
+
 /* ===== NOSSA COMUNIDADE ===== */
 
 .comunidade {
-    background-color: #8A2BE2;
-    padding: 60px 0;
+    /* background-color: #fff; */
+    background: linear-gradient(135deg, #c084fc 0%, #a855f7 40%, #8A2BE2 100%);
+    padding: var(--section-padding-y) var(--site-padding-x);
 }
 
 .comunidade .secao-titulo h2 {
     text-align: center;
-    color: #f7931e;
+    color: #fff;
     font-size: 2rem;
     margin-bottom: 40px;
 }
@@ -354,6 +517,7 @@ figcaption {
 }
 
 .card-depoimento {
+    /* background: linear-gradient(135deg, #c084fc 0%, #a855f7 40%, #8A2BE2 100%); */
     background-color: #fff;
     border-radius: 12px;
     padding: 28px;
@@ -376,6 +540,7 @@ figcaption {
     display: flex;
     align-items: center;
     gap: 12px;
+    /* border-top: 0.8px solid #8A2BE2; */
 }
 
 .autor img {
@@ -388,27 +553,29 @@ figcaption {
 .info-autor h4 {
     font-size: 0.95rem;
     font-weight: 700;
-    color: #222;
+    color: #f7931e;
     margin: 0;
 }
 
 .info-autor p {
     font-size: 0.85rem;
-    color: #666;
+    color: #333;
     margin: 0;
 }
+
 
 /* ===== NEWSLETTER ===== */
 
 .newsletter {
     background-color: #fff;
-    padding: 48px 24px;
+    padding: var(--section-padding-y) var(--site-padding-x);
     display: flex;
     justify-content: center;
 }
 
 .newsletter-card {
-    background-color: #4a4a4a;
+    /* background-color: #4a4a4a; */
+    background: linear-gradient(135deg, #c084fc 0%, #a855f7 40%, #8A2BE2 100%);
     border-radius: 16px;
     padding: 40px;
     max-width: 560px;
@@ -468,12 +635,14 @@ figcaption {
     color: rgba(255, 255, 255, 0.5);
 }
 
+
 /* ===== FOOTER ===== */
 
 footer {
-    background-color: #8A2BE2;
+    position: relative;
+    background: linear-gradient(135deg, #c084fc 0%, #a855f7 40%, #8A2BE2 100%);
     color: #fff;
-    padding: 48px 60px 24px;
+    padding: var(--section-padding-y) var(--site-padding-x) 24px;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     grid-template-rows: auto auto;
@@ -541,16 +710,115 @@ footer {
     margin-top: 8px;
 }
 
-/* ===== MOBILE ===== */
+
+/* ===== CARROSSEL DE ATIVIDADES ===== */
+
+/* ── DESKTOP (> 900px) ── */
+@media (min-width: 901px) {
+
+  .filtro-atividades-mobile {
+    display: none !important;
+  }
+
+  .atividades-carrossel {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 16px;
+    box-sizing: border-box;
+    overflow: visible;
+  }
+
+  .atividades-carrossel .carrossel-viewport {
+    flex: 1 1 0;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .atividades-trilha {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 24px;
+    transition: transform 380ms cubic-bezier(.4, 0, .2, 1);
+    will-change: transform;
+  }
+
+  .atividades-trilha .atividades-card {
+    flex: 0 0 calc((100% - 48px) / 3);
+    min-width: 0;
+  }
+
+  .atividades-trilha .atividades-card[aria-hidden="true"] {
+    display: none;
+  }
+
+  .carrossel-btn {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: #8A2BE2;
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .22);
+    transition: background-color .2s, opacity .2s, transform .15s;
+  }
+
+  .carrossel-btn:hover:not(:disabled) {
+    background-color: #8A2BE2;
+    transform: scale(1.07);
+  }
+
+  .carrossel-btn:disabled {
+    opacity: .32;
+    cursor: default;
+    transform: none;
+  }
+
+  .carrossel-btn svg {
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+  }
+}
+
+/* ── MOBILE (≤ 900px) ── */
+@media (max-width: 900px) {
+
+  .carrossel-btn {
+    display: none !important;
+  }
+
+  .atividades-trilha {
+    transform: none !important;
+    transition: none !important;
+    display: block;
+  }
+
+  .atividades-trilha .atividades-card[aria-hidden="true"] {
+    display: block !important;
+  }
+
+  .filtro-atividades-mobile {
+    display: block;
+  }
+}
+
+
+/* ===== MOBILE GERAL ===== */
 
 @media (max-width: 768px) {
+
     .hero {
         min-height: 100svh;
         background-position: right center;
-    }
-
-    .hero .container {
-        padding: 0 20px;
     }
 
     .hero-content h1 {
@@ -560,9 +828,9 @@ footer {
     .hero-content p {
         font-size: 1rem;
     }
-    
+
     header {
-        padding: 16px 20px;
+        padding: 16px var(--site-padding-x);
         flex-wrap: wrap;
     }
 
@@ -594,5 +862,18 @@ footer {
 
     nav#menu ul li:last-child a {
         border-bottom: none;
+    }
+
+    .sobre-conteudo {
+        flex-direction: column;
+    }
+
+    .teaser-noticias-acoes {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
     }
 }
