@@ -1,4 +1,8 @@
 /* ===== RESET ===== */
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -52,11 +56,9 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     width: 100%;
     box-sizing: border-box;
     padding: 28px var(--site-padding-x);
@@ -114,14 +116,14 @@ nav#menu ul li a:hover {
     position: relative;
     width: 100%;
     min-height: 100vh;
-
     background-image: url('../img_elastitam/imgElasTitam_home 1.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     display: flex;
     align-items: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .hero .container {
@@ -185,6 +187,8 @@ nav#menu ul li a:hover {
 .sobre {
     padding: var(--section-padding-y) var(--site-padding-x);
     background-color: #fbf6ff;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .sobre .container {
@@ -246,6 +250,8 @@ nav#menu ul li a:hover {
     background-position: center;
     background-repeat: no-repeat;
     padding: var(--section-padding-y) var(--site-padding-x);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .atividades .container {
@@ -413,6 +419,8 @@ figcaption {
     padding: var(--section-padding-y) var(--site-padding-x);
     text-align: center;
     border-top: 4px solid #8A2BE2;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .teaser-noticias .container {
@@ -500,6 +508,8 @@ figcaption {
     /* background-color: #fff; */
     background: linear-gradient(135deg, #c084fc 0%, #a855f7 40%, #8A2BE2 100%);
     padding: var(--section-padding-y) var(--site-padding-x);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .comunidade .secao-titulo h2 {
@@ -571,11 +581,16 @@ figcaption {
     padding: var(--section-padding-y) var(--site-padding-x);
     display: flex;
     justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .newsletter-card {
     /* background-color: #4a4a4a; */
     background: linear-gradient(135deg, #c084fc 0%, #a855f7 40%, #8A2BE2 100%);
+    /* background: linear-gradient(135deg, #f7931e 0%, #fca746 100%); */
+    /* background: #fff;
+    border: 2px solid #f7931e; */
     border-radius: 16px;
     padding: 40px;
     max-width: 560px;
@@ -595,6 +610,7 @@ figcaption {
 .newsletter-card p {
     color: rgba(255, 255, 255, 0.8);
     font-size: 0.95rem;
+    
 }
 
 .newsletter-form {
@@ -627,7 +643,7 @@ figcaption {
 }
 
 .newsletter-form button:hover {
-    background-color: #e0821a;
+    background-color: #e47f09;
 }
 
 .newsletter-card span {
@@ -647,6 +663,8 @@ footer {
     grid-template-columns: 2fr 1fr 1fr;
     grid-template-rows: auto auto;
     gap: 32px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .logofrase_footer {
@@ -710,6 +728,28 @@ footer {
     margin-top: 8px;
 }
 
+/* RESPONSIVO */
+@media (min-width: 320px) {
+
+}
+
+@media (max-width: 480px) {
+    .atividades-trilha {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 0 var(--site-padding-x);
+    }
+
+    .atividades-card {
+        width: 100%;
+    }
+
+    .atividades-card figure,
+    .atividades-card figure img {
+        height: 220px;
+    }
+}
 
 /* ===== CARROSSEL DE ATIVIDADES ===== */
 
@@ -789,26 +829,46 @@ footer {
   }
 }
 
+@media (max-width: 768px) {
+   .atividades-info {
+    padding: 1rem;
+   } 
+}
 /* ── MOBILE (≤ 900px) ── */
 @media (max-width: 900px) {
 
-  .carrossel-btn {
-    display: none !important;
-  }
+    .atividades-carrossel {
+        display: block;
+        max-width: 100% !important;
+        padding: 0 !important;
+        /* padding: 0 var(--site-padding-x); */
+    }
 
-  .atividades-trilha {
+    .carrossel-viewport {
+        overflow: visible;
+    }
+
+    .carrossel-btn {
+    display: none !important;
+    }
+
+    .atividades-trilha {
     transform: none !important;
     transition: none !important;
-    display: block;
-  }
+    /* display: block; */
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+    padding: 0 var(--site-padding-x);
+    }
 
-  .atividades-trilha .atividades-card[aria-hidden="true"] {
+    .atividades-trilha .atividades-card[aria-hidden="true"] {
     display: block !important;
-  }
+    }
 
-  .filtro-atividades-mobile {
+    .filtro-atividades-mobile {
     display: block;
-  }
+    }
 }
 
 
@@ -871,6 +931,16 @@ footer {
     .teaser-noticias-acoes {
         flex-direction: column;
         gap: 12px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100%;
+        box-sizing: border-box;
     }
 
     footer {
