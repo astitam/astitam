@@ -1,17 +1,34 @@
-body{
+/* ==========================
+   1. RESET E CONFIGURAÇÕES GLOBAIS
+========================== */
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
     background-color: #F9F2FF;
 }
-/* ===== HEADER ===== */
+
+
+/* ==========================
+   2. CABEÇALHO
+========================== */
 
 header {
     position: sticky;
     top: 0;
     z-index: 1000;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     width: 100%;
     box-sizing: border-box;
     padding: 28px var(--site-padding-x);
@@ -20,16 +37,14 @@ header {
     border-bottom: 3px solid #FF7A00;
 }
 
-/* ===== LOGO ===== */
-
+/* ── Logo ── */
 .logo_header img {
     height: 100px;
     width: auto;
     display: block;
 }
 
-/* ===== NAV DESKTOP ===== */
-
+/* ── Nav desktop ── */
 nav#menu ul {
     list-style: none;
     display: flex;
@@ -50,8 +65,7 @@ nav#menu ul li a:hover {
     color: #f7931e;
 }
 
-/* ===== BOTÃO HAMBURGUER ===== */
-
+/* ── Botão hamburguer — visível apenas no mobile ── */
 .btn-menu {
     display: none;
     background: none;
@@ -62,109 +76,204 @@ nav#menu ul li a:hover {
     line-height: 1;
 }
 
-/* header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 24px;
-    position: relative;
+
+/* ==========================
+   3. SEÇÃO PRINCIPAL — DUAS COLUNAS
+   Grid que divide a página entre coluna
+   de informações (esquerda) e formulário (direita)
+========================== */
+
+.secao_contato {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 40px 80px;
 }
 
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
 
-.logo_header img {
-    height: 100px;
-}
-/* Botão hamburguer — visível só no celular */
-/*.btn-menu {
-    display: block;
-    background: none;
-    border: none;
-    font-size: 28px;
-    cursor: pointer;
-    color: #8A2BE2;  ajuste para a cor do seu tema 
-}*/
+/* ==========================
+   4. COLUNA ESQUERDA — INFORMAÇÕES DE CONTATO
+========================== */
 
-/* Menu escondido no celular por padrão */
-/* nav {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    z-index: 999;
-}
-nav.aberto {
-    display: block;
-}
-
-nav ul {
-    list-style: none;
-    padding: 16px;
-    margin: 0;
+/* ── Wrapper da coluna esquerda ── */
+.contato_info {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 32px;
 }
 
-nav ul li a {
+/* ── Bloco de introdução: badge + título + descrição ── */
+.contato_intro {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ── Etiqueta laranja acima do título ── */
+.contato_badge {
+    background-color: #ffe5ca;
+    color: #c26a00;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 4px 14px;
+    border-radius: 6px;
+    width: fit-content;
+}
+
+/* ── Título principal da página — laranja ── */
+.titulo_contato {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #f7931e;
+    padding-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+/* ── Texto descritivo abaixo do título ── */
+.contato_descricao {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* ── Lista de itens de informação (e-mail, etc.) ── */
+.contato_detalhes {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* ── Cada item de informação (ícone + texto) ── */
+.contato_item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+/* ── Quadrado com ícone laranja ── */
+.contato_icone {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background-color: #ffe5ca;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contato_icone i {
+    color: #f7931e;
+    font-size: 1rem;
+}
+
+/* ── Rótulo pequeno acima do valor (ex: "E-mail") ── */
+.contato_item_label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #888;
+    margin-bottom: 2px;
+}
+
+/* ── Valor do item (ex: "elastitam@gmail.com") ── */
+.contato_item_valor {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #333;
+}
+
+/* ── Bloco de redes sociais ── */
+.contato_redes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ── Linha com os botões de rede social ── */
+.contato_redes_botoes {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* ── Pílula de rede social (Instagram, WhatsApp) ── */
+.contato_rede_pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1.5px solid #f7931e;
+    background-color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    color: #3B3B3B;
-    font-family: 'lato';
-}
-nav {
-  border-bottom: 1px solid #8A2BE2;
-  padding-bottom: 8px;
+    transition: background-color 0.2s ease;
 }
 
-/* Menu */
-/* nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 24px;
-} */
-
-/* nav ul li a {
-  text-decoration: none;
-  color: inherit;
-} */ 
-
-
-
-.titulo_contato{
-    color: #8A2BE2;
-    font-family: lato; 
-    font-size: 3em;
-    text-align: center;
+.contato_rede_pill i {
+    color: #f7931e;
+    font-size: 1rem;
 }
-.p_contato{
-    color: #3B3B3B;
-    font-family: lato; 
-    font-size: 1.2em;
-    max-width: 320px;
-    text-align: center;   /* ← centraliza o texto */
-    margin: 0 auto 30px auto;
+
+.contato_rede_pill span {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #f7931e;
 }
-.container_contato{
-background: #ffffff;       /* fundo branco */
-border-radius: 12px;       /* cantos arredondados */
-padding: 2rem;             /* espaço interno */
-max-width: 360px;          /* largura máxima */
-margin: 0 auto;            /* centraliza horizontalmente */
-box-shadow: 0 4px 24px rgba(0,0,0,0.08); /* sombra suave */
+
+/* ── Hover da pílula: fundo laranja, texto branco ── */
+.contato_rede_pill:hover {
+    background-color: #f7931e;
 }
-/*LABELS*/
-.comandoEntrada_contato{
+
+.contato_rede_pill:hover i,
+.contato_rede_pill:hover span {
+    color: #fff;
+}
+
+/* ── Elemento decorativo com ícone de microchip ── */
+.contato_decorativo {
+    width: 100%;
+    height: 90px;
+    border-radius: 12px;
+    background-color: #ffe5ca;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+}
+
+.contato_decorativo i {
+    font-size: 3rem;
+    color: #f7931e;
+}
+
+/* ==========================
+   5. COLUNA DIREITA — FORMULÁRIO
+   Estilos originais preservados
+========================== */
+
+/* ── Card branco do formulário ── */
+.container_contato {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    width: 100%;
+    margin-bottom: 48px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+/* ── Labels dos campos ── */
+.comandoEntrada_contato {
     color: #282828;
     font-family: 'DM Sans';
     font-size: 1.2em;
@@ -172,10 +281,11 @@ box-shadow: 0 4px 24px rgba(0,0,0,0.08); /* sombra suave */
     margin-bottom: 6px;
     margin-top: 1rem;
 }
-/*INPUTS, TEXTAREA*/
+
+/* ── Inputs e textarea ── */
 .input_contato {
     width: 100%;
-    border: 1px solid #3B3B3B;
+    border: 1px solid #6e6e6e;
     border-radius: 6px;
     padding: 10px 14px;
     font-size: 0.9em;
@@ -185,20 +295,25 @@ box-shadow: 0 4px 24px rgba(0,0,0,0.08); /* sombra suave */
     box-sizing: border-box;
     outline: none;
 }
-.input_contato::placeholder{
+
+.input_contato::placeholder {
     color: #595959;
 }
-.input_contato:focus{
+
+/* ── Foco com borda roxa e sombra suave ── */
+.input_contato:focus {
     border-color: #8A2BE2;
     box-shadow: 0 0 0 3px rgba(124,58,237,0.12);
 }
-/*TEXTEAREA ESPECIFICO*/
-textarea.input_contato{
+
+/* ── Textarea com altura mínima e redimensionável ── */
+textarea.input_contato {
     min-height: 120px;
     resize: vertical;
 }
-/*BOTÃO*/
-.btn_contato{
+
+/* ── Botão de envio ── */
+.btn_contato {
     background-color: #8A2BE2;
     color: #ffffff;
     font-family: 'DM Sans';
@@ -214,145 +329,205 @@ textarea.input_contato{
     cursor: pointer;
     margin-top: 1.5rem;
 }
+
+/* ── Hover do botão: inverte para branco com borda roxa ── */
 .btn_contato:hover {
-  background: #ffffff;  /* roxo mais escuro — só quando o mouse está em cima */
-  color: #8A2BE2;
-  border: 2px solid #8A2BE2;
+    background: #ffffff;
+    color: #8A2BE2;
+    border: 2px solid #8A2BE2;
 }
 
-/* ===== FOOTER ===== */
+
+/* ==========================
+   6. RODAPÉ
+========================== */
 
 footer {
-    position: relative;
-    background: linear-gradient(135deg, #c084fc 0%, #a855f7 40%, #8A2BE2 100%);
-    color: #fff;
-    padding: var(--section-padding-y) var(--site-padding-x) 24px;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 32px;
+  position: relative;
+  background: linear-gradient(135deg, #c084fc 0%, #a855f7 40%, #8A2BE2 100%);
+  color: #fff;
+  padding: var(--section-padding-y) var(--site-padding-x) 24px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 32px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .logofrase_footer {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .logo_footer img {
-    width: 120px;
-    object-fit: contain;
+  width: 120px;
+  object-fit: contain;
 }
 
 .contato_footer,
 .redesociais_footer {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .titulo_footer {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 4px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
 }
 
 .p_footer {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.8);
-    line-height: 1.6;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
 }
 
 .p_contato {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .icones {
-    display: flex;
-    gap: 16px;
-    align-items: center;
+  display: flex;
+  gap: 16px;
+  align-items: center;
 }
 
 .icones a i {
-    color: #fff !important;
-    transition: opacity 0.3s ease;
+  color: #fff !important;
+  transition: opacity 0.3s ease;
 }
 
 .icones a:hover i {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .frase_footer {
-    grid-column: 1 / -1;
-    text-align: center;
-    font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.6);
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    padding-top: 20px;
-    margin-top: 8px;
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 20px;
+  margin-top: 8px;
 }
 
-/*Configurações gerais do footer (paragrafo, etc.)*/
-/*footer{
-    background-color: white;
-    font-family: lato;
-    font-size: 12px;
-    text-align: center;
-    justify-content: center;
-    display:flex;
-    align-items: center;
-    flex-direction: row; lado a lado no desktop
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 40px;
-    padding: 20px;
-}
-.contato_footer{
-    padding-left: 20px;
-    box-sizing: border-box;
-}
-.redesociais_footer {
-    border-left: 1px solid #282828;
-    padding-left: 20px;
-    box-sizing: border-box;
-}
-.logofrase_footer{
-    background-color: #ffffff;
-}
-.titulo_footer{
-    color: #8A2BE2;
-     font-family: DM Sans;
-    font-size: 20px;
-}
-.p_footer{
-    color: #3B3B3B;
-    font-family: lato;
-    font-size: 15px;
-}
-.frase_footer{
-    margin-top: 40px;
-}
-/*imagem
-footer a img{
-    width: 45%;
-    margin: 0 auto;
-}*/
 
-/*RESPONSIVO*/
-@media (min-width: 375px){
-    .p_contato{
+/* ==========================
+   7. MEDIA QUERIES
+   (do maior para o menor breakpoint)
+========================== */
+
+/* ── Desktop a partir de 768px ── */
+@media (min-width: 768px) {
+    
+    footer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+        gap: 20px;
+    }
+
+    .logofrase_footer {
+        width: calc(33% - 20px);
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        border-left: none;
+        padding: 0;
+    }
+
+    .p_footer {
+        text-align: center !important;
+    }
+
+    .contato_footer {
+        border-left: none;
+        border-left: 1px solid #282828;
+        padding: 20px 30px;
+        width: calc(33% - 20px);
+        box-sizing: border-box;
+    }
+
+    .redesociais_footer {
+        border-left: none;
+        border-left: 1px solid #282828;
+        padding: 20px 30px;
+        width: calc(33% - 20px);
+        box-sizing: border-box;
+    }
+
+    .icones {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .frase_footer {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+}
+
+/* ── Mobile — até 768px ── */
+@media (max-width: 768px) {
+
+    /* Duas colunas viram uma coluna empilhada */
+    .secao_contato {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 40px 24px 60px;
+    }
+
+    /* Título alinhado ao centro no mobile */
+    .titulo_contato {
+        font-size: 1.8rem;
         text-align: center;
     }
-}
-/*@media (min-width: 425px){
-    .p_contato{
+
+    /* Badge centralizada no mobile */
+    .contato_badge {
+        margin: 0 auto;
+    }
+
+    /* Descrição centralizada no mobile */
+    .contato_descricao {
         text-align: center;
     }
-}*/
 
-/* MOBILE - empilhado apenas em telas pequenas */
+    /* Ícones e redes centralizados no mobile */
+    .contato_item {
+        justify-content: center;
+    }
+
+    .contato_redes {
+        align-items: center;
+    }
+
+    /* Elemento decorativo escondido no mobile para economizar espaço */
+    .contato_decorativo {
+        display: none;
+    }
+
+    /* Formulário ocupa largura total no mobile */
+    .container_contato {
+        max-width: 100%;
+        margin: 0 0 48px 0;
+    }
+}
+
+/* ── Mobile pequeno — até 480px ── */
 @media (max-width: 480px) {
     footer {
         flex-direction: column;
@@ -367,70 +542,9 @@ footer a img{
     }
 }
 
-/* Desktop — a partir de 768px */
-@media (min-width: 768px) {
-    footer {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        padding: 40px;
-        gap: 20px;
-    }
-    .logofrase_footer {
-        width: calc(33% - 20px);           /* ocupa linha inteira */
-        justify-content: center;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 10px;
-        border-left: none;
-        padding: 0;
-    }
-    .p_footer{
-        text-align: center !important;
-    }
-
-    .contato_footer{
-        border-left: none;
-        border-left: 1px solid #282828;
-        padding: 20px 30px;
-        width: calc(33% - 20px);
-        box-sizing: border-box;
-    }
-    .redesociais_footer {
-        border-left: none;
-        border-left: 1px solid #282828;
-        padding: 20px 30px;
-        width: calc(33% - 20px);
-        box-sizing: border-box;
-    }
-    .icones {
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-        justify-content: center;
-    }
-    .frase_footer {
-        width: 100%;
+/* ── Mobile extra pequeno ── */
+@media (min-width: 375px) {
+    .p_contato {
         text-align: center;
-        margin-top: 10px;
-    }
-    .btn-menu {
-        display: none; /* esconde o ícone */
-    }
-
-    nav {
-        display: block !important;
-        position: static;
-        width: auto;
-        box-shadow: none;
-        background: none;
-    }
-
-    nav ul {
-        flex-direction: row;
-        gap: 24px;
-        padding: 0;
     }
 }
