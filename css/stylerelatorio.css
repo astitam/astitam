@@ -1,3 +1,124 @@
+
+.home-page{
+    background-color:#5E2E81;
+    color:white;
+    
+}
+.container{
+   top:20px
+}
+.text-one{
+    color:#FF7A00;
+    font-size: 50px;
+    text-align: center;
+    position: relative;
+    font-family:  'Poppins', sans-serif;
+}
+.text{
+    color:white;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    font-family:lato;
+
+}
+.card-frog h2{
+    color:#FF7A00;
+    font-size: 40px;
+    font-family:  'Poppins', sans-serif;
+
+}
+.card-account h2{
+    color:#FF7A00;
+    font-size: 40px;
+    font-family:  'Poppins', sans-serif;
+}
+   
+
+.card-frog{
+  background-color: white;
+  color: #3B3B3B;
+  font-family:inter;
+  border-top: 8px solid #FF7A00;
+  border-radius: 10px;
+   text-align: left;
+   text-decoration:none;
+   padding: 32px;
+   position: relative;
+   top:11px;
+
+       /* Suaviza a animação do movimento e da sombra */
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+.card-frog:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+.card-account {
+  background-color: white;
+  color: #3B3B3B;
+  font-family: inter;
+  border-top: 8px solid #FF7A00;
+  border-radius: 10px;
+   text-align: left;
+   text-decoration:none;
+   padding: 32px;
+   position: relative;
+   top:11px;
+
+       /* Suaviza a animação do movimento e da sombra */
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+   
+}
+/* Efeito quando o mouse passa sobre o card */
+.card-account:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+.text-span{
+    position: relative;
+    top: -30px;
+}
+.span{
+    font-size: 14px;
+    font-weight: 600;
+    color: #1f2937;
+    font-family: 'Poppins', sans-serif;
+     position: relative;
+    top: -22px;
+
+}
+.cards-report{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    height: auto;
+}
+.card-report {
+    width: 240px;
+}
+
+.card-account {
+    width: 300px;
+}
+@media (max-width: 768px) {
+
+    .cards-report {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+
+
+
+
 /*Estilização da página de relatório.*/
 .body {
     background-color: white;
