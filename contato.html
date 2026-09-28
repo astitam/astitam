@@ -26,153 +26,277 @@
 </head>
 
 <body>
-
-    <!-- ==================== CABEÇALHO ==================== -->
+    <!-- HEADER -->
     <header>
 
-        <!-- Logo clicável que redireciona para a home -->
-        <a href="" class="logo_header">
-            <img src="img_elastitam/ElasTitamLogo_roxa.png" alt="logo elas titam">
+        <!-- LOGO -->
+        <a href="index.html" class="logo_header">
+            <img
+                src="img_elastitam/ElasTitamLogo_roxa.png"
+                alt="Logo Elas Titam"
+            >
         </a>
 
-        <!-- Botão hamburguer — aparece somente no mobile para abrir o menu -->
-        <button id="btnMenu" class="btn-menu" aria-label="Abrir menu">☰</button>
+        <!-- BOTÃO MENU MOBILE -->
+        <button
+            id="btnMenu"
+            class="btn-menu"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+        >
+            ☰
+        </button>
 
-        <!-- Menu de navegação principal -->
+        <!-- MENU -->
         <nav id="menu">
+
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#atividades">Atividades</a></li>
-                <li><a href="#noticias">Notícias</a></li>
-                <li><a href="#comunidade">Comunidade</a></li>
-                <li><a href="contato.html">Contato</a></li>
-                <li><a href="relatorio.html">Relatório</a></li>
+
+                <li>
+                    <a href="index.html#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="index.html#sobre">Sobre</a>
+                </li>
+
+                <li>
+                    <a href="index.html#atividades">Atividades</a>
+                </li>
+
+                <li>
+                    <a href="index.html#noticias">Notícias</a>
+                </li>
+
+                <li>
+                    <a href="index.html#comunidade">Comunidade</a>
+                </li>
+
+                <li>
+                    <a href="contato.html">Contato</a>
+                </li>
+
+                <li>
+                    <a href="homenot.html">Relatório</a>
+                </li>
+
             </ul>
+
         </nav>
 
     </header>
-    <!-- ==================== FIM CABEÇALHO ==================== -->
 
 
-    <!-- ==================== SEÇÃO PRINCIPAL — DUAS COLUNAS ==================== -->
-    <section class="secao_contato">
+    <main>
 
-        <!-- ===== COLUNA ESQUERDA — informações de contato ===== -->
-        <div class="contato_info">
+        <!-- ==================== HERO ==================== -->
 
-            <!-- Bloco de introdução: badge, título e descrição -->
-            <div class="contato_intro">
-                <span class="contato_badge">Entre em contato</span>
-                <h2 class="titulo_contato">Fale com a gente</h2>
-                <p class="contato_descricao">Tem dúvidas, sugestões ou quer participar do projeto? Manda uma mensagem — adoramos conversar!</p>
-            </div>
+        <section class="hero_contato" aria-label="Elas Titam">
 
-            <!-- Bloco com os dados de contato -->
-            <div class="contato_detalhes">
+        </section>
+        <!-- ==================== FORMULÁRIO ==================== -->
 
-                <!-- Item: e-mail -->
-                <div class="contato_item">
-                    <div class="contato_icone">
-                        <i class="fa-regular fa-envelope"></i>
-                    </div>
-                    <div>
-                        <p class="contato_item_label">E-mail</p>
-                        <p class="contato_item_valor">elastitam@gmail.com</p>
-                    </div>
+        <section class="formulario_contato">
+
+            <div class="formulario_conteudo">
+
+                <div class="formulario_imagem">
+
+                    <img src="img_elastitam/backgroundimage_formContato (1).png" alt="Participantes em uma atividade do Elas Titam">
+
+                </div>
+
+                <div class="formulario_area">
+
+                    <form action="#" method="post">
+
+                        <div class="campo">
+
+                            <label for="nome">
+                                Nome Completo
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nome"
+                                name="nome"
+                                autocomplete="name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="email">
+                                E-mail
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="curso">
+                                Curso / Área de interesse
+                            </label>
+
+                            <input
+                                type="text"
+                                id="curso"
+                                name="curso"
+                            >
+
+                        </div>
+
+
+                        <div class="campo campo_mensagem">
+
+                            <label for="mensagem">
+                                Mensagem
+                            </label>
+
+                            <textarea
+                                id="mensagem"
+                                name="mensagem"
+                                rows="5"
+                            ></textarea>
+
+                        </div>
+
+
+                        <button type="submit" class="botao_cadastro">
+                            CRIAR MINHA CONTA
+                        </button>
+
+                    </form>
+
                 </div>
 
             </div>
 
-            <!-- Bloco de redes sociais com links externos -->
-            <div class="contato_redes">
-                <p class="contato_item_label">Redes sociais</p>
-                <div class="contato_redes_botoes">
+        </section>
 
-                    <!-- Link para o Instagram — abre em nova aba -->
-                    <a href="https://www.instagram.com/elastitam" target="_blank" rel="noopener noreferrer" class="contato_rede_pill">
-                        <i class="fa-brands fa-instagram"></i>
-                        <span>Instagram</span>
-                    </a>
 
-                    <!-- Link para o WhatsApp — substitua SEU_NUMERO pelo número real (ex: 5511999999999) -->
-                    <a href="https://wa.me/SEU_NUMERO" target="_blank" rel="noopener noreferrer" class="contato_rede_pill">
-                        <i class="fa-brands fa-whatsapp"></i>
-                        <span>WhatsApp</span>
-                    </a>
+        <!-- ==================== BENEFÍCIOS ==================== -->
 
-                </div>
+        <section class="beneficios" id="comunidade">
+
+            <div class="beneficios_conteudo">
+
+
+                <article class="beneficio">
+
+                    <div class="beneficio_icone" aria-hidden="true">
+
+                        <svg viewBox="0 0 24 24">
+                            <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9Z"></path>
+                            <path d="M10 21h4"></path>
+                        </svg>
+
+                    </div>
+
+                    <div class="beneficio_texto">
+
+                        <h2>
+                            Receba novidades
+                            <br>
+                            e convites
+                        </h2>
+
+                        <p>
+                            Fique por dentro dos eventos,
+                            oficinas e conteúdos exclusivos.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="beneficio">
+
+                    <div class="beneficio_icone" aria-hidden="true">
+
+                        <svg viewBox="0 0 24 24">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+
+                    </div>
+
+                    <div class="beneficio_texto">
+
+                        <h2>
+                            Fique por dentro
+                            <br>
+                            das atividades
+                        </h2>
+
+                        <p>
+                            Informações em primeira mão
+                            sobre tudo que acontece.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="beneficio">
+
+                    <div class="beneficio_icone" aria-hidden="true">
+
+                        <svg viewBox="0 0 24 24">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78Z"></path>
+                        </svg>
+
+                    </div>
+
+                    <div class="beneficio_texto">
+
+                        <h2>
+                            Conecte-se a
+                            <br>
+                            mulheres incríveis
+                        </h2>
+
+                        <p>
+                            Fique por dentro dos eventos,
+                            oficinas e conteúdos exclusivos.
+                        </p>
+
+                    </div>
+
+                </article>
+
             </div>
 
-            <!-- Elemento decorativo ilustrativo -->
-            <div class="contato_decorativo">
-                <i class="fa-solid fa-microchip"></i>
-            </div>
-
-        </div>
-        <!-- ===== FIM COLUNA ESQUERDA ===== -->
+        </section>
 
 
-        <!-- ===== COLUNA DIREITA — formulário original preservado ===== -->
-        <div class="container_contato">
+        <!-- ==================== ÁREA FINAL ==================== -->
 
-            <h3 class="comandoEntrada_contato">Nome: *</h3>
-            <input type="text" class="input_contato" placeholder="Digite seu nome completo">
+        <section class="area_final" id="relatorio">
 
-            <h3 class="comandoEntrada_contato">E-mail:</h3>
-            <input type="email" class="input_contato" placeholder="Digite seu e-mail">
+        </section>
 
-            <h3 class="comandoEntrada_contato">Curso/ Área de Interesse:</h3>
-            <input type="text" class="input_contato" placeholder="Digite seu curso ou área de interesse">
+    </main>
 
-            <h3 class="comandoEntrada_contato">Mensagem:</h3>
-            <textarea class="input_contato" placeholder="Digite sua mensagem..."></textarea>
-
-            <button class="btn_contato">Enviar Mensagem</button>
-
-        </div>
-        <!-- ===== FIM COLUNA DIREITA ===== -->
-
-    </section>
-    <!-- ==================== FIM SEÇÃO PRINCIPAL ==================== -->
-
-
-    <!-- ==================== RODAPÉ ==================== -->
-    <footer>
-
-        <!-- Logo e frase institucional -->
-        <div class="logofrase_footer">
-            <a href="" class="logo_footer"><img src="img_elastitam/elastitam_Logo_branco.png" alt="logo elas titam"></a>
-            <div class="texto_footer">
-                <h4 class="titulo_footer">Elas Titam - Girls In Tech</h4>
-                <p class="p_footer">Onde mulheres transformam ideias em tecnologia</p>
-            </div>
-        </div>
-
-        <!-- E-mail de contato -->
-        <div class="contato_footer">
-            <h4 class="titulo_footer">Contato</h4>
-            <p class="p_contato">elastitam@gmail.com</p>
-        </div>
-
-        <!-- Ícones das redes sociais -->
-        <div class="redesociais_footer">
-            <h4 class="titulo_footer">Redes Sociais</h4>
-            <div class="icones">
-                <!-- Link Instagram — abre em nova aba -->
-                <a href="https://www.instagram.com/elastitam" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-instagram" style="font-size: 30px;"></i>
-                </a>
-                <!-- Link WhatsApp -->
-                <a href=""><i class="fa-brands fa-whatsapp" style="font-size: 30px;"></i></a>
-            </div>
-        </div>
-
-        <!-- Direitos autorais -->
-        <p class="frase_footer">© 2025 ElasTitam - Girls in Tech. Todos os direitos reservados.</p>
-
-    </footer>
-    <!-- ==================== FIM RODAPÉ ==================== -->
-
+    <!-- Seu arquivo JS -->
+    <script src="js/script.js"></script>
+    
 </body>
+
 </html>

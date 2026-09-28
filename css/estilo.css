@@ -159,17 +159,17 @@ nav#menu ul li a:hover {
 ========================== */
 
 .hero {
-    position: relative;
-    width: 100%;
-    height: auto;
-    background-image: url('../img_elastitam/banner_homeElasTiam.png');
-    background-size: 100% auto;
-    background-position: top center;
-    background-repeat: no-repeat;
-    aspect-ratio: 1366 / 497;
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-image: url('../img_elastitam/banner_homeElasTiam.png');
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1366 / 497;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .hero .container {
