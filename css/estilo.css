@@ -27,9 +27,14 @@ html, body {
 ========================== */
 
 :root {
-  --site-padding-x:    60px;
+  --roxo: #5E2E81;
+  --laranja: #F96412;
+  --cinza: #444;
+  --cinza-claro: #f5f5f5;
+  --branco: #ffffff;
+  --site-padding-x: 60px;
   --section-padding-y: 80px;
-  --container-max:     1400px;
+  --container-max: 1400px;
 }
 
 /* ==========================
@@ -109,18 +114,18 @@ html, body {
 ========================== */
 
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
   z-index: 1000;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  box-sizing: border-box;
   padding: 28px var(--site-padding-x);
-  background: #fff;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-  border-bottom: 3px solid #F96412;
+  background-color: var(--branco);
+  border-bottom: 3px solid var(--laranja);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
 /* ── Logo ── */
@@ -170,6 +175,7 @@ nav#menu ul li a:hover {
   display: flex;
   align-items: center;
   box-sizing: border-box;
+  margin-top: 159px;
 }
 
 .hero .container {
