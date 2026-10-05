@@ -1,0 +1,1325 @@
+/* ==========================
+   VARIÁVEIS
+========================== */
+
+:root {
+
+    --roxo: #5E2E81;
+    --roxo-escuro: #482264;
+
+    --laranja: #F96412;
+    --laranja-claro: #FFEDE3;
+
+    --lilas: #F9F2FF;
+    --lilas-borda: #E5CFF2;
+
+    --branco: #FFFFFF;
+
+    --cinza: #666666;
+    --cinza-claro: #E8E8E8;
+
+    --site-padding: clamp(20px, 5vw, 88px);
+
+    --raio: 14px;
+}
+
+
+/* ==========================
+   RESET
+========================== */
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    min-width: 320px;
+
+    background-color: var(--branco);
+
+    color: var(--roxo);
+
+    font-family: 'Poppins',
+        Arial,
+        sans-serif;
+
+    line-height: 1.5;
+
+}
+
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+
+/* ==========================
+   HEADER
+========================== */
+
+.cabecalho {
+
+    width: 100%;
+
+    min-height: 150px;
+
+    padding: 12px var(--site-padding);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    background-color: var(--branco);
+
+    border-bottom: 3px solid var(--laranja);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+}
+
+
+/* LOGO */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-shrink: 0;
+
+}
+
+
+.logo img {
+
+    width: 88px;
+
+    height: 120px;
+
+    object-fit: contain;
+
+    display: block;
+
+}
+
+
+/* MENU */
+
+.menu {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: clamp(18px, 2.8vw, 48px);
+
+    color: #333;
+
+    font-size: .95rem;
+
+    font-weight: 500;
+
+}
+
+
+.menu a {
+
+    transition: color .3s ease;
+
+}
+
+
+.menu a:hover {
+
+    color: var(--laranja);
+
+}
+
+
+/* BOTÃO MOBILE */
+
+.menu-toggle {
+
+    display: none;
+
+    width: 42px;
+
+    height: 42px;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+}
+
+
+.menu-toggle span {
+
+    display: block;
+
+    width: 26px;
+
+    height: 3px;
+
+    margin: 5px auto;
+
+    border-radius: 10px;
+
+    background-color: var(--roxo);
+
+}
+
+
+/* ==========================
+   CONTEÚDO
+========================== */
+
+.pagina-acesso {
+
+    width: min(100%, 1480px);
+
+    margin: 0 auto;
+
+    padding: 36px var(--site-padding) 70px;
+
+}
+
+
+/* ==========================
+   BOAS-VINDAS
+========================== */
+
+.boas-vindas {
+
+    padding: clamp(30px, 4vw, 58px);
+
+    margin-bottom: 48px;
+
+    border-radius: var(--raio);
+
+    background-color: var(--lilas);
+
+}
+
+
+.boas-vindas h1 {
+
+    margin-bottom: 8px;
+
+    color: var(--roxo);
+
+    font-size: clamp(2.2rem, 4vw, 3.7rem);
+
+    line-height: 1.1;
+
+    font-weight: 600;
+
+}
+
+
+.boas-vindas p {
+
+    font-size: clamp(.9rem, 1.4vw, 1.1rem);
+
+}
+
+
+.frase-destaque {
+
+    margin-top: 24px;
+
+    color: var(--laranja);
+
+    font-style: italic;
+
+}
+
+
+/* ==========================
+   ESTATÍSTICAS
+========================== */
+
+.estatisticas {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: clamp(24px, 4vw, 62px);
+
+    margin-bottom: 48px;
+
+}
+
+
+.card-estatistica {
+
+    min-height: 260px;
+
+    padding: 28px 34px;
+
+    border-radius: var(--raio);
+
+    border: 1px solid var(--lilas-borda);
+
+}
+
+
+.card-laranja {
+
+    background-color: var(--laranja-claro);
+
+    border-color: #FFB998;
+
+}
+
+
+.card-lilas {
+
+    background-color: var(--lilas);
+
+}
+
+
+.icone-estatistica {
+
+    width: 54px;
+
+    height: 54px;
+
+    margin-bottom: 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--roxo);
+
+    font-size: 2rem;
+
+}
+
+
+.card-laranja .icone-estatistica {
+
+    color: var(--laranja);
+
+}
+
+
+.card-estatistica strong {
+
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-size: 2.9rem;
+
+    line-height: 1;
+
+}
+
+
+.card-laranja strong {
+
+    color: var(--laranja);
+
+}
+
+
+.card-lilas strong {
+
+    color: var(--roxo);
+
+}
+
+
+.card-estatistica h2 {
+
+    margin-bottom: 4px;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+}
+
+
+.card-estatistica p {
+
+    max-width: 280px;
+
+    color: #9A57C1;
+
+    font-size: .9rem;
+
+    line-height: 1.4;
+
+}
+
+
+/* ==========================
+   LINHAS
+========================== */
+
+.linha-principal,
+.linha-inferior {
+
+    display: grid;
+
+    gap: 32px;
+
+    margin-bottom: 48px;
+
+}
+
+
+.linha-principal {
+
+    grid-template-columns:
+        1.35fr .95fr;
+
+}
+
+
+.linha-inferior {
+
+    grid-template-columns:
+        .9fr 1.1fr;
+
+}
+
+
+.card {
+
+    padding: 24px 30px;
+
+    border: 1px solid var(--lilas-borda);
+
+    border-radius: var(--raio);
+
+    background-color: var(--branco);
+
+}
+
+
+.titulo-card {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-bottom: 16px;
+
+    margin-bottom: 2px;
+
+    border-bottom: 1px solid var(--lilas-borda);
+
+}
+
+
+.titulo-com-icone {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.card h2 {
+
+    font-size: clamp(1.15rem, 2vw, 1.7rem);
+
+    line-height: 1.2;
+
+    font-weight: 600;
+
+}
+
+
+.icone-titulo {
+
+    color: var(--roxo);
+
+    font-size: 1.6rem;
+
+    font-weight: 700;
+
+}
+
+
+.icone-titulo.laranja {
+
+    color: var(--laranja);
+
+}
+
+
+.titulo-card a {
+
+    color: var(--roxo);
+
+    font-size: .8rem;
+
+    font-weight: 600;
+
+    text-decoration: underline;
+
+}
+
+
+/* ==========================
+   OFICINAS
+========================== */
+
+.oficina {
+
+    min-height: 90px;
+
+    display: grid;
+
+    grid-template-columns:
+        60px 1fr auto;
+
+    align-items: center;
+
+    gap: 14px;
+
+    border-bottom:
+        1px solid var(--lilas-borda);
+
+}
+
+
+.oficina:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.data-oficina {
+
+    width: 48px;
+
+    min-height: 58px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 5px;
+
+    background-color: var(--lilas);
+
+}
+
+
+.data-oficina strong {
+
+    font-size: 1.2rem;
+
+    line-height: 1;
+
+}
+
+
+.data-oficina span {
+
+    font-size: .68rem;
+
+    font-weight: 700;
+
+}
+
+
+.info-oficina h3 {
+
+    margin-bottom: 5px;
+
+    font-size: .78rem;
+
+    line-height: 1.3;
+
+    font-weight: 600;
+
+}
+
+
+.info-oficina p {
+
+    color: var(--laranja);
+
+    font-size: .66rem;
+
+}
+
+
+.tag {
+
+    min-width: 110px;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    color: var(--branco);
+
+    background-color: var(--laranja);
+
+    text-align: center;
+
+    font-size: .6rem;
+
+    font-weight: 500;
+
+}
+
+
+/* ==========================
+   CERTIFICADOS
+========================== */
+
+.certificados {
+
+    background-color: var(--lilas);
+
+    border: none;
+
+}
+
+
+.certificados > p {
+
+    max-width: 420px;
+
+    margin: 16px 0 20px;
+
+    color: #9A57C1;
+
+    font-size: .9rem;
+
+    line-height: 1.45;
+
+}
+
+
+.botao {
+
+    min-height: 48px;
+
+    padding: 0 26px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 6px;
+
+    color: var(--branco);
+
+    background-color: var(--laranja);
+
+    font-size: .9rem;
+
+    font-weight: 600;
+
+    transition:
+        .2s ease;
+
+}
+
+
+.botao:hover {
+
+    background-color: #E95008;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* CERTIFICADO ILUSTRATIVO */
+
+.ilustracao-certificado {
+
+    position: relative;
+
+    width: 150px;
+
+    height: 100px;
+
+    margin: 28px auto 0;
+
+    transform: rotate(-4deg);
+
+}
+
+
+.folha-certificado {
+
+    position: absolute;
+
+    top: 5px;
+
+    left: 15px;
+
+    width: 105px;
+
+    height: 70px;
+
+    padding: 14px;
+
+    border: 5px solid var(--roxo);
+
+    border-radius: 7px;
+
+    background-color: var(--branco);
+
+}
+
+
+.folha-certificado span {
+
+    display: block;
+
+    width: 62px;
+
+    height: 5px;
+
+    margin-bottom: 7px;
+
+    background-color: var(--roxo);
+
+}
+
+
+.folha-certificado b {
+
+    position: absolute;
+
+    right: -14px;
+
+    bottom: -15px;
+
+    width: 34px;
+
+    height: 34px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    color: var(--branco);
+
+    background-color: var(--laranja);
+
+}
+
+
+/* ==========================
+   DESTAQUES
+========================== */
+
+.destaque {
+
+    min-height: 350px;
+
+    background-color: var(--lilas);
+
+    border: none;
+
+}
+
+
+.card-figurinha {
+
+    position: relative;
+
+    min-height: 240px;
+
+    margin-top: 24px;
+
+    padding: 38px 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    border:
+        2px solid var(--laranja);
+
+    border-radius: 18px;
+
+    background-color: var(--laranja-claro);
+
+    text-align: center;
+
+}
+
+
+.card-figurinha::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 8px;
+
+    border:
+        1px dashed var(--roxo);
+
+    border-radius: 12px;
+
+    opacity: .5;
+
+}
+
+
+.figurinha-decoracao {
+
+    position: relative;
+
+    z-index: 1;
+
+    margin-bottom: 14px;
+
+    color: var(--laranja);
+
+    font-size: 2rem;
+
+}
+
+
+.card-figurinha p {
+
+    position: relative;
+
+    z-index: 1;
+
+    max-width: 340px;
+
+    color: var(--roxo);
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    line-height: 1.45;
+
+}
+
+
+.figurinha-detalhes {
+
+    position: relative;
+
+    z-index: 1;
+
+    margin-top: 20px;
+
+    color: var(--laranja);
+
+    font-size: .6rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* ==========================
+   PROGRESSO
+========================== */
+
+.progresso {
+
+    min-height: 350px;
+
+}
+
+
+.barra-grupo {
+
+    margin-top: 24px;
+
+}
+
+
+.barra-label {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 9px;
+
+    font-size: .85rem;
+
+    font-weight: 600;
+
+}
+
+
+.barra {
+
+    width: 100%;
+
+    height: 15px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background-color: var(--cinza-claro);
+
+}
+
+
+.preenchimento {
+
+    display: block;
+
+    height: 100%;
+
+    border-radius: inherit;
+
+}
+
+
+.preenchimento.laranja {
+
+    width: 60%;
+
+    background-color: var(--laranja);
+
+}
+
+
+.preenchimento.roxo {
+
+    width: 70%;
+
+    background-color: var(--roxo);
+
+}
+
+
+.conquista {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 24px;
+
+    padding: 16px 22px;
+
+    border-radius: 8px;
+
+    color: var(--laranja);
+
+    background-color: var(--laranja-claro);
+
+}
+
+
+.conquista span {
+
+    flex-shrink: 0;
+
+    font-size: 2rem;
+
+}
+
+
+.conquista p {
+
+    font-size: .78rem;
+
+    line-height: 1.4;
+
+}
+
+
+/* ==========================
+   FOOTER
+========================== */
+
+.rodape {
+
+    padding: 24px var(--site-padding);
+
+    color: var(--branco);
+
+    background-color: var(--laranja);
+
+    text-align: center;
+
+    font-size: .8rem;
+
+}
+
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width: 1000px) {
+
+    .cabecalho {
+
+        min-height: 105px;
+
+    }
+
+
+    .logo img {
+
+        width: 68px;
+
+        height: 88px;
+
+    }
+
+
+    .menu {
+
+        gap: 18px;
+
+        font-size: .8rem;
+
+    }
+
+
+    .estatisticas {
+
+        gap: 18px;
+
+    }
+
+
+    .card-estatistica {
+
+        padding: 24px;
+
+    }
+
+
+    .linha-principal,
+    .linha-inferior {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 760px) {
+
+    .cabecalho {
+
+        min-height: 82px;
+
+        padding:
+            8px
+            var(--site-padding);
+
+    }
+
+
+    .logo img {
+
+        width: 55px;
+
+        height: 68px;
+
+    }
+
+
+    .menu-toggle {
+
+        display: block;
+
+    }
+
+
+    .menu {
+
+        position: absolute;
+
+        top: 100%;
+
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        padding:
+            8px
+            var(--site-padding)
+            18px;
+
+        background-color: var(--branco);
+
+        border-bottom:
+            3px solid
+            var(--laranja);
+
+        box-shadow:
+            0 8px 20px
+            rgba(94, 46, 129, .12);
+
+    }
+
+
+    .menu.aberto {
+
+        display: flex;
+
+    }
+
+
+    .menu a {
+
+        padding: 12px 0;
+
+        border-bottom:
+            1px solid #eee;
+
+    }
+
+
+    .pagina-acesso {
+
+        padding-top: 22px;
+
+    }
+
+
+    .boas-vindas {
+
+        margin-bottom: 28px;
+
+        padding: 28px 22px;
+
+    }
+
+
+    .boas-vindas h1 {
+
+        font-size: 2rem;
+
+    }
+
+
+    .estatisticas {
+
+        grid-template-columns: 1fr;
+
+        margin-bottom: 28px;
+
+    }
+
+
+    .card-estatistica {
+
+        min-height: auto;
+
+    }
+
+
+    .linha-principal,
+    .linha-inferior {
+
+        margin-bottom: 28px;
+
+    }
+
+
+    .card {
+
+        padding:
+            22px
+            18px;
+
+    }
+
+
+    .oficina {
+
+        grid-template-columns:
+            52px 1fr;
+
+        padding: 14px 0;
+
+    }
+
+
+    .tag {
+
+        grid-column: 2;
+
+        justify-self: start;
+
+    }
+
+
+    .titulo-card {
+
+        align-items: flex-start;
+
+    }
+
+
+    .certificados {
+
+        min-height: 350px;
+
+    }
+
+
+    .conquista {
+
+        align-items: flex-start;
+
+    }
+
+}
+
+
+/* ==========================
+   CELULARES PEQUENOS
+========================== */
+
+@media (max-width: 430px) {
+
+    :root {
+
+        --site-padding: 16px;
+
+    }
+
+
+    .boas-vindas h1 {
+
+        font-size: 1.7rem;
+
+    }
+
+
+    .frase-destaque {
+
+        margin-top: 16px;
+
+        font-size: .85rem;
+
+    }
+
+
+    .oficina {
+
+        grid-template-columns:
+            48px 1fr;
+
+        gap: 10px;
+
+    }
+
+
+    .info-oficina h3 {
+
+        font-size: .72rem;
+
+    }
+
+
+    .info-oficina p {
+
+        font-size: .6rem;
+
+    }
+
+
+    .tag {
+
+        font-size: .56rem;
+
+    }
+
+
+    .card-figurinha p {
+
+        font-size: .9rem;
+
+    }
+
+}
