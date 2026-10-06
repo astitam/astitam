@@ -19,23 +19,23 @@ a { color: inherit; text-decoration: none; }
 
 /* ---------- Header ---------- */
 .header {
-  height: 194px;
+  height: 203px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 7.3% 0 11%;
+  padding: 0 7.2% 0 11.1%;
   border-bottom: 6px solid var(--orange);
 }
-.header__logo img { display: block; height: 160px; width: auto; }
-.nav { display: flex; gap: 49px; padding-top: 18px; }
-.nav a { font-size: 24px; transition: color .2s; }
+.header__logo img { display: block; height: 166px; width: auto; }
+.nav { display: flex; gap: 52px; padding-top: 18px; }
+.nav a { font-size: 25px; transition: color .2s; }
 .nav a:hover { color: var(--orange); }
 
 /* ---------- Cadastro ---------- */
 .signup {
   display: grid;
-  grid-template-columns: 889fr 763fr;
-  min-height: 1239px;
+  grid-template-columns: 868fr 860fr;
+  min-height: 1209px;
 }
 .signup__media { background: #efe7f7; position: relative; min-height: 360px; }
 .signup__media img {
@@ -44,29 +44,37 @@ a { color: inherit; text-decoration: none; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: left center;
+  object-position: left top;
 }
 
-.signup__panel { padding: 80px 97px 80px 77px; }
-.form-wrap { width: 100%; max-width: 589px; }
+.signup__panel { padding: 48px 123px 64px 121px; }
+.form-wrap { width: 100%; max-width: 616px; }
 
 h1 {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 500;
-  font-size: 64px;
+  font-style: normal;
+  font-size: 3rem;
   line-height: 1.15;
   letter-spacing: -.5px;
   color: var(--purple);
-  margin-top: 8px;
 }
-.lead { font-size: 17px; line-height: 1.25; max-width: 450px; margin-top: 30px; }
+.lead { 
+  color: #3B3B3B;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.25; 
+  max-width: 470px; 
+  margin-top: 24px; 
+}
 
 /* Abas */
 .tabs {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 66px;
-  margin-top: 48px;
+  height: 69px;
+  margin-top: 56px;
   border: 1px solid var(--line);
   border-radius: 8px;
   overflow: hidden;
@@ -86,12 +94,12 @@ h1 {
 .tab--active i { color: #fff; }
 
 /* Formulário */
-.form { margin-top: 62px; }
-.field + .field { margin-top: 47px; }
-.field label { display: block; font-size: 18px; font-weight: 700; margin-bottom: 14px; }
+.form { margin-top: 71px; }
+.field + .field { margin-top: 34px; }
+.field label { display: block; font-size: 19px; line-height: 1.2; font-weight: 700; margin-bottom: 14px; }
 .field input {
   width: 100%;
-  height: 66px;
+  height: 69px;
   padding: 0 20px;
   font: inherit;
   font-size: 18px;
@@ -101,9 +109,13 @@ h1 {
   border-radius: 8px;
   transition: border-color .2s, box-shadow .2s;
 }
-.field input:focus { outline: none; border-color: var(--purple); box-shadow: 0 0 0 3px rgba(91, 45, 130, .18); }
+.field input:focus { 
+  outline: none; 
+  border-color: #F96412;
+  box-shadow:0 0 0 3px rgba(249, 100, 18, 0.10); 
+}
 
-.check { display: flex; align-items: flex-start; gap: 16px; margin-top: 28px; font-size: 16px; line-height: 1.15; color: var(--muted); max-width: 400px; cursor: pointer; }
+.check { display: flex; align-items: flex-start; gap: 16px; margin-top: 26px; font-size: 16.5px; line-height: 1.15; color: var(--muted); max-width: 400px; cursor: pointer; }
 .check input {
   appearance: none;
   flex: none;
@@ -123,8 +135,8 @@ h1 {
 .btn {
   display: block;
   width: 100%;
-  height: 66px;
-  margin-top: 40px;
+  height: 69px;
+  margin-top: 28px;
   font: inherit;
   font-size: 20px;
   font-weight: 500;
@@ -136,16 +148,30 @@ h1 {
   cursor: pointer;
   transition: background .2s;
 }
-.btn:hover { background: #e0540a; }
+.btn:hover { background: #5E2E81; }
 
-.divider { display: flex; align-items: center; gap: 30px; margin: 33px 6px 0 0; font-size: 15px; color: var(--muted); }
+.divider { display: flex; align-items: center; gap: 30px; margin: 39px 7px 0 0; font-size: 15px; color: var(--muted); }
 .divider::before, .divider::after { content: ""; flex: 1; height: 1px; background: var(--line); }
 .login { text-align: center; font-size: 16px; color: var(--muted); margin-top: 38px; padding-right: 8px; }
 .login a { font-weight: 700; color: var(--purple); }
 .login a:hover { text-decoration: underline; }
 
 /* ---------- Rodapé ---------- */
-.footer { min-height: 813px; background: linear-gradient(180deg, #f9a66f 0%, #fa6516 100%); }
+.footer {
+  min-height: 534px;
+  padding: 73px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(180deg, #f9a66f 0%, #fa6516 100%);
+  color: #fff;
+}
+.footer__logo img { display: block; height: 246px; width: auto; }
+.social { display: flex; gap: 14px; margin-top: 26px; }
+.social a { display: block; width: 47px; height: 47px; transition: transform .2s; }
+.social a:hover { transform: translateY(-3px); }
+.social svg { display: block; width: 100%; height: 100%; }
+.copyright { font-size: 20px; text-align: center; margin-top: 30px; }
 
 /* ---------- Responsivo ---------- */
 @media (max-width: 1300px) {
@@ -162,7 +188,7 @@ h1 {
   .nav a { font-size: 17px; }
   .signup { grid-template-columns: 1fr; min-height: 0; }
   .signup__media { height: 56vw; min-height: 240px; max-height: 480px; }
-  .signup__media img { object-position: center 30%; }
+  .signup__media img { object-position: center top; }
   .signup__panel { padding: 40px 6% 56px; }
   .form-wrap { max-width: 640px; margin: 0 auto; }
   h1 { font-size: 40px; }
@@ -171,7 +197,9 @@ h1 {
   .form { margin-top: 36px; }
   .field + .field { margin-top: 28px; }
   .field input, .btn { height: 56px; }
-  .footer { min-height: 240px; }
+  .footer { min-height: 0; padding: 48px 20px 40px; }
+  .footer__logo img { height: 190px; }
+  .copyright { font-size: 16px; }
 }
 @media (max-width: 480px) {
   h1 { font-size: 34px; }

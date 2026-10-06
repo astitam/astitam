@@ -4,16 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Entrar | ElasTitam</title>
-    <!--FONTE POPPINS DO GOOGLE-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <!--FONTE LATO DO GOOGLE -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="css/login.css">
+  <!--FONTE POPPINS DO GOOGLE-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <!--FONTE LATO DO GOOGLE -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
 
@@ -23,7 +22,7 @@
       <a href="#">Home</a>
       <a href="#">Sobre</a>
       <a href="#">Atividades</a>
-      <a href="#">Vozes</a>
+      <a href="#">Notícias</a>
       <a href="#">Comunidade</a>
       <a href="#">Contato</a>
       <a href="#">Relatório</a>
@@ -37,8 +36,8 @@
         <p class="lead">Continue acompanhando a sua jornada<br>com o ElasTitam.</p>
 
         <div class="tabs">
-          <a href="#" class="tab"><i class="fa-solid fa-circle-user"></i> Criar conta</a>
-          <a href="#" class="tab tab--active" aria-current="page"><i class="fa-solid fa-circle-user"></i> Entrar</a>
+          <a href="cadastro.html" class="tab"><svg class="tab__icon" viewBox="0 0 512 512" aria-hidden="true"><path d="M399 384.2C376.9 345.8 335.4 320 288 320h-64c-47.4 0-88.9 25.8-111 64.2 35.200 39.200 86.200 63.800 143 63.800s107.800-24.700 143-63.800zM0 256a256 256 0 1 1 512 0 256 256 0 1 1-512 0zm256 16a72 72 0 1 0 0-144 72 72 0 1 0 0 144z"/></svg> Criar conta</a>
+          <a href="login.html" class="tab tab--active" aria-current="page"><svg class="tab__icon" viewBox="0 0 512 512" aria-hidden="true"><path d="M399 384.2C376.9 345.8 335.4 320 288 320h-64c-47.4 0-88.9 25.8-111 64.2 35.200 39.200 86.200 63.800 143 63.800s107.800-24.700 143-63.800zM0 256a256 256 0 1 1 512 0 256 256 0 1 1-512 0zm256 16a72 72 0 1 0 0-144 72 72 0 1 0 0 144z"/></svg> Entrar</a>
         </div>
 
         <form class="form" action="#" method="post">
@@ -53,9 +52,9 @@
 
           <a href="#" class="forgot">Esqueci minha senha</a>
 
-          <button type="submit" class="btn">Criar minha conta</button>
+          <button type="submit" class="btn">Entrar</button>
 
-          <p class="signup-link">Ainda não possui uma conta? <a href="#">Cadastre-se</a></p>
+          <p class="signup-link">Ainda não possui uma conta? <a href="cadastro.html">Cadastre-se</a></p>
         </form>
       </div>
     </section>
@@ -65,7 +64,18 @@
     </div>
   </main>
 
-  <footer class="footer"></footer>
+  <footer class="footer">
+    <a href="#" class="footer__logo"><img src="img_elastitam/LogoRoxo_Elas Titam.png" alt="ElasTitam – Girls in tech"></a>
+    <div class="social">
+    <a href="#" aria-label="Instagram do ElasTitam">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#fff"/><circle cx="24" cy="25" r="10" fill="none" stroke="#fa6516" stroke-width="5"/><circle cx="37" cy="11" r="3.2" fill="#fa6516"/></svg>
+    </a>
+    <a href="#" aria-label="YouTube do ElasTitam">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><rect y="5" width="48" height="38" rx="11" fill="#fff"/><path d="M19 15l15 9-15 9z" fill="#fa6516"/></svg>
+    </a>
+    </div>
+    <p class="copyright">© 2026 ElasTitam - Girls in Tech. Todos os direitos reservados.</p>
+  </footer>
 
 </body>
 </html>
