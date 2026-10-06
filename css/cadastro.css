@@ -1,0 +1,182 @@
+:root {
+  --purple: #5b2d82;
+  --orange: #fa6516;
+  --text: #333;
+  --muted: #666;
+  --line: #cfcfcf;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Lato", sans-serif;
+  color: var(--text);
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+:focus-visible { outline: 3px solid var(--purple); outline-offset: 3px; }
+
+/* ---------- Header ---------- */
+.header {
+  height: 194px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7.3% 0 11%;
+  border-bottom: 6px solid var(--orange);
+}
+.header__logo img { display: block; height: 160px; width: auto; }
+.nav { display: flex; gap: 49px; padding-top: 18px; }
+.nav a { font-size: 24px; transition: color .2s; }
+.nav a:hover { color: var(--orange); }
+
+/* ---------- Cadastro ---------- */
+.signup {
+  display: grid;
+  grid-template-columns: 889fr 763fr;
+  min-height: 1239px;
+}
+.signup__media { background: #efe7f7; position: relative; min-height: 360px; }
+.signup__media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+}
+
+.signup__panel { padding: 80px 97px 80px 77px; }
+.form-wrap { width: 100%; max-width: 589px; }
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 1.15;
+  letter-spacing: -.5px;
+  color: var(--purple);
+  margin-top: 8px;
+}
+.lead { font-size: 17px; line-height: 1.25; max-width: 450px; margin-top: 30px; }
+
+/* Abas */
+.tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 66px;
+  margin-top: 48px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 18px;
+  color: var(--muted);
+  transition: background .2s;
+}
+.tab i { font-size: 27px; color: #9a9a9a; }
+.tab:hover { background: #f7f2fd; }
+.tab--active, .tab--active:hover { background: var(--purple); color: #fff; }
+.tab--active i { color: #fff; }
+
+/* Formulário */
+.form { margin-top: 62px; }
+.field + .field { margin-top: 47px; }
+.field label { display: block; font-size: 18px; font-weight: 700; margin-bottom: 14px; }
+.field input {
+  width: 100%;
+  height: 66px;
+  padding: 0 20px;
+  font: inherit;
+  font-size: 18px;
+  color: var(--text);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  transition: border-color .2s, box-shadow .2s;
+}
+.field input:focus { outline: none; border-color: var(--purple); box-shadow: 0 0 0 3px rgba(91, 45, 130, .18); }
+
+.check { display: flex; align-items: flex-start; gap: 16px; margin-top: 28px; font-size: 16px; line-height: 1.15; color: var(--muted); max-width: 400px; cursor: pointer; }
+.check input {
+  appearance: none;
+  flex: none;
+  width: 22px;
+  height: 22px;
+  margin-top: 1px;
+  border: 1.5px solid var(--purple);
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+.check input:checked { background: var(--purple); }
+.check input:checked::after { content: "\2713"; color: #fff; font-size: 15px; line-height: 1; }
+
+.btn {
+  display: block;
+  width: 100%;
+  height: 66px;
+  margin-top: 40px;
+  font: inherit;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--orange);
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background .2s;
+}
+.btn:hover { background: #e0540a; }
+
+.divider { display: flex; align-items: center; gap: 30px; margin: 33px 6px 0 0; font-size: 15px; color: var(--muted); }
+.divider::before, .divider::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.login { text-align: center; font-size: 16px; color: var(--muted); margin-top: 38px; padding-right: 8px; }
+.login a { font-weight: 700; color: var(--purple); }
+.login a:hover { text-decoration: underline; }
+
+/* ---------- Rodapé ---------- */
+.footer { min-height: 813px; background: linear-gradient(180deg, #f9a66f 0%, #fa6516 100%); }
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 1300px) {
+  .header { padding: 0 5%; }
+  .nav { gap: 28px; }
+  .nav a { font-size: 20px; }
+  .signup__panel { padding: 64px 5% 64px 5%; }
+  h1 { font-size: 52px; }
+}
+@media (max-width: 900px) {
+  .header { height: auto; flex-direction: column; gap: 12px; padding: 14px 20px; }
+  .header__logo img { height: 96px; }
+  .nav { flex-wrap: wrap; justify-content: center; gap: 8px 22px; padding-top: 0; }
+  .nav a { font-size: 17px; }
+  .signup { grid-template-columns: 1fr; min-height: 0; }
+  .signup__media { height: 56vw; min-height: 240px; max-height: 480px; }
+  .signup__media img { object-position: center 30%; }
+  .signup__panel { padding: 40px 6% 56px; }
+  .form-wrap { max-width: 640px; margin: 0 auto; }
+  h1 { font-size: 40px; }
+  .lead { margin-top: 18px; }
+  .tabs { margin-top: 32px; height: 56px; }
+  .form { margin-top: 36px; }
+  .field + .field { margin-top: 28px; }
+  .field input, .btn { height: 56px; }
+  .footer { min-height: 240px; }
+}
+@media (max-width: 480px) {
+  h1 { font-size: 34px; }
+  .tab { font-size: 16px; gap: 8px; }
+  .tab i { font-size: 22px; }
+  .btn { font-size: 17px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
