@@ -1,30 +1,20 @@
-/* ==========================
-   1. RESET E CONFIGURAÇÕES GLOBAIS
-========================== */
+/* ── Reset e configurações globais ── */
 
-html, body {
+html,
+body {
   width: 100%;
   overflow-x: hidden;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-
-/* ==========================
-   2. VARIÁVEIS (:root)
-   Controle centralizado de espaçamento.
-   Alterar um valor aqui reflete em todo o site.
-
-   Breakpoints:
-     Desktop   > 1024px  → padding-x: 60px  / section-y: 80px
-     Tablet  768–1024px  → padding-x: 40px  / section-y: 64px
-     Mobile  480–767px   → padding-x: 24px  / section-y: 48px
-     Mobile S  < 480px   → padding-x: 16px  / section-y: 40px
-========================== */
+/* ── Variáveis (:root) ── */
 
 :root {
   --roxo: #5E2E81;
@@ -37,11 +27,8 @@ html, body {
   --container-max: 1400px;
 }
 
-/* ==========================
-   4. COMPONENTES REUTILIZÁVEIS
-========================== */
+/* ── Componentes reutilizáveis ── */
 
-/* ── Título de seção (global) ── */
 .secao-titulo {
   text-align: center;
   margin-bottom: 40px;
@@ -49,13 +36,12 @@ html, body {
 
 .secao-titulo h2 {
   font-size: 3rem;
-  color: #8A2BE2;
+  color: #5E2E81;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-style: normal;
 }
 
-/* ── Botão primário — hero ── */
 .btn-junte-se {
   width: fit-content;
   padding: 14px 32px;
@@ -79,7 +65,6 @@ html, body {
   transform: translateY(-2px);
 }
 
-/* ── Botão secundário — cards de atividade ── */
 .btn-of-btn {
   margin-top: auto;
   width: fit-content;
@@ -97,7 +82,6 @@ html, body {
   transform: translateY(-2px);
 }
 
-/* ── Botão hamburguer (mobile) ── */
 .btn-menu {
   display: none;
   background: none;
@@ -108,10 +92,7 @@ html, body {
   line-height: 1;
 }
 
-
-/* ==========================
-   5. HEADER
-========================== */
+/* ── Header ── */
 
 header {
   position: fixed;
@@ -128,7 +109,6 @@ header {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
-/* ── Logo ── */
 .logo_header {
   margin-left: 50px;
 }
@@ -138,7 +118,7 @@ header {
   width: auto;
   display: block;
 }
-/* ── Nav desktop ── */
+
 nav#menu ul {
   list-style: none;
   display: flex;
@@ -161,10 +141,7 @@ nav#menu ul li a:hover {
   color: #F96412;
 }
 
-
-/* ==========================
-   6. HERO / BANNER
-========================== */
+/* ── Hero / Banner ── */
 
 .hero {
   position: relative;
@@ -188,7 +165,6 @@ nav#menu ul li a:hover {
   padding: 0 var(--site-padding-x);
 }
 
-/* ── Conteúdo hero ── */
 .hero-content {
   max-width: 600px;
   display: flex;
@@ -209,11 +185,10 @@ nav#menu ul li a:hover {
   line-height: 1.6;
 }
 
-/* ==========================
-   7. SEÇÕES PRINCIPAIS
-========================== */
+/* ── Seções principais ── */
 
 /* ── Sobre nós ── */
+
 .sobre {
   padding: var(--section-padding-y) var(--site-padding-x);
   background-color: #F4E9FF;
@@ -227,19 +202,19 @@ nav#menu ul li a:hover {
 }
 
 .sobre-conteudo {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: start;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
 }
 
 .sobre-texto {
-    width: 100%;
-    max-width: 580px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    align-items:center;
+  width: 100%;
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
 }
 
 .sobre-texto p {
@@ -252,9 +227,10 @@ nav#menu ul li a:hover {
 .sobre-texto strong {
   color: #F96412;
 }
+
 .sobre-image {
-    width: 100%;
-    max-width: 630px;
+  width: 100%;
+  max-width: 630px;
 }
 
 .sobre-image figure {
@@ -282,6 +258,7 @@ nav#menu ul li a:hover {
 }
 
 /* ── Nossas atividades ── */
+
 .atividades {
   background-image: url('../img_elastitam/backgroundOficinas.png');
   background-size: cover;
@@ -296,6 +273,7 @@ nav#menu ul li a:hover {
   max-width: var(--container-max);
   margin: 0 auto;
 }
+
 .atividades .secao-titulo h2 {
   color: #5E2E81;
   font-size: 3rem;
@@ -303,6 +281,7 @@ nav#menu ul li a:hover {
 }
 
 /* ── Teaser notícias ── */
+
 .teaser-noticias {
   background-color: #F4E9FF;
   padding: var(--section-padding-y) var(--site-padding-x);
@@ -325,7 +304,7 @@ nav#menu ul li a:hover {
   color: #F96412;
 }
 
-.teaser-noticias > .container > p {
+.teaser-noticias>.container>p {
   color: #444;
   font-size: 1.05rem;
   font-family: "Lato", sans-serif;
@@ -355,7 +334,6 @@ nav#menu ul li a:hover {
   font-style: normal;
 }
 
-/* Botão primário — laranja sólido */
 .teaser-noticias-acoes a:first-child {
   padding: 14px 32px;
   background: #F96412;
@@ -372,7 +350,6 @@ nav#menu ul li a:hover {
   transform: translateY(-2px);
 }
 
-/* Link secundário — roxo com seta */
 .teaser-noticias-acoes a:last-child {
   color: #fff;
   text-decoration: none;
@@ -389,6 +366,7 @@ nav#menu ul li a:hover {
 }
 
 /* ── Nossa comunidade ── */
+
 .comunidade {
   background-color: #5E2E81;
   padding: var(--section-padding-y) var(--site-padding-x);
@@ -402,6 +380,7 @@ nav#menu ul li a:hover {
   font-size: 3rem;
   margin-bottom: 40px;
 }
+
 .info-autor h4 {
   font-size: 0.95rem;
   font-family: "Lato", sans-serif;
@@ -420,9 +399,7 @@ nav#menu ul li a:hover {
   margin: 0;
 }
 
-/* ========================================
-   FAÇA PARTE
-======================================== */
+/* ── Faça parte ── */
 
 .faca-parte {
   width: 100%;
@@ -452,15 +429,6 @@ nav#menu ul li a:hover {
   font-size: 3rem;
 }
 
-/* .faca-parte__container .faca-parte__descricao {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.95rem;
-  max-width: 580px;
-  color: #3B3B3B;
-} */
-
 .faca-parte__beneficio .texto_beneficio {
   font-family: "Lato", sans-serif;
   font-weight: 800;
@@ -469,24 +437,20 @@ nav#menu ul li a:hover {
   color: #3B3B3B;
 }
 
-/* ========================================
-   CONTEÚDO
-======================================== */
-
 .faca-parte__conteudo {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .faca-parte__titulo {
-    margin: 0 0 18px;
-    color: #f96412;
-    font-family: "Poppins", sans-serif;
-    font-size: 37px;
-    font-weight: 500;
-    line-height: 1.15;
+  margin: 0 0 18px;
+  color: #f96412;
+  font-family: "Poppins", sans-serif;
+  font-size: 37px;
+  font-weight: 500;
+  line-height: 1.15;
 }
 
 .faca-parte__descricao {
@@ -499,11 +463,6 @@ nav#menu ul li a:hover {
   font-size: 0.95rem;
   max-width: 580px;
 }
-
-
-/* ========================================
-   BENEFÍCIOS
-======================================== */
 
 .faca-parte__beneficios {
   width: 100%;
@@ -535,13 +494,13 @@ nav#menu ul li a:hover {
 }
 
 .faca-parte__icone svg {
-    width: 30px;
-    height: 30px;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 1.8;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+  width: 30px;
+  height: 30px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .faca-parte__beneficio p {
@@ -554,11 +513,6 @@ nav#menu ul li a:hover {
   font-style: normal;
   font-size: 0.95rem;
 }
-
-
-/* ========================================
-   BOTÃO
-======================================== */
 
 .faca-parte__botao {
   width: 167px;
@@ -576,7 +530,9 @@ nav#menu ul li a:hover {
   font-size: 0.70rem;
   text-decoration: none;
   transition:
+
     background-color 0.2s ease,
+
     transform 0.2s ease;
   text-transform: uppercase;
 }
@@ -595,11 +551,6 @@ nav#menu ul li a:hover {
   text-decoration: none;
 }
 
-
-/* ========================================
-   IMAGEM
-======================================== */
-
 .faca-parte__imagem {
   width: 363px;
   height: 304px;
@@ -615,8 +566,8 @@ nav#menu ul li a:hover {
   object-fit: cover;
 }
 
-/* FOOTER*/
-/* ---------- Rodapé ---------- */
+/* ── Footer ── */
+
 .footer {
   min-height: 534px;
   padding: 73px 20px 60px;
@@ -626,19 +577,45 @@ nav#menu ul li a:hover {
   background: linear-gradient(180deg, #f9a66f 0%, #fa6516 100%);
   color: #fff;
 }
-.footer__logo img { display: block; height: 246px; width: auto; }
-.social { display: flex; gap: 14px; margin-top: 26px; }
-.social a { display: block; width: 47px; height: 47px; transition: transform .2s; }
-.social a:hover { transform: translateY(-3px); }
-.social svg { display: block; width: 100%; height: 100%; }
-.copyright { font-size: 20px; text-align: center; margin-top: 30px; }
 
-/* ========================================
-   TABLET
-======================================== */
+.footer__logo img {
+  display: block;
+  height: 246px;
+  width: auto;
+}
+
+.social {
+  display: flex;
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.social a {
+  display: block;
+  width: 47px;
+  height: 47px;
+  transition: transform .2s;
+}
+
+.social a:hover {
+  transform: translateY(-3px);
+}
+
+.social svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.copyright {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* ── Tablet ── */
 
 @media (max-width: 900px) {
-
   .faca-parte {
     padding: 35px 25px;
   }
@@ -656,152 +633,144 @@ nav#menu ul li a:hover {
     width: 320px;
     height: 280px;
   }
-  .footer { min-height: 0; padding: 48px 20px 40px; }
-  .footer__logo img { height: 190px; }
+
+  .footer {
+    min-height: 0;
+    padding: 48px 20px 40px;
+  }
+
+  .footer__logo img {
+    height: 190px;
+  }
 }
 
-
-/* ========================================
-   TABLET MENOR
-======================================== */
+/* ── Tablet Menor ── */
 
 @media (max-width: 760px) {
+  .faca-parte {
+    padding: 30px 20px;
+  }
 
-    .faca-parte {
-        padding: 30px 20px;
-    }
+  .faca-parte__container {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 25px;
+  }
 
-    .faca-parte__container {
-        flex-direction: column;
-        align-items: center;
+  .faca-parte__conteudo {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
 
-        padding: 30px 25px;
-    }
+  .faca-parte__titulo {
+    font-size: 32px;
+  }
 
-    .faca-parte__conteudo {
-        width: 100%;
-        align-items: center;
-        text-align: center;
-    }
+  .faca-parte__descricao {
+    max-width: 500px;
+  }
 
-    .faca-parte__titulo {
-        font-size: 32px;
-    }
+  .faca-parte__beneficios {
+    max-width: 400px;
+  }
 
-    .faca-parte__descricao {
-        max-width: 500px;
-    }
-
-    .faca-parte__beneficios {
-        max-width: 400px;
-    }
-
-    .faca-parte__imagem {
-        width: 100%;
-        max-width: 500px;
-        height: 320px;
-    }
-
+  .faca-parte__imagem {
+    width: 100%;
+    max-width: 500px;
+    height: 320px;
+  }
 }
 
-
-/* ========================================
-   CELULAR
-======================================== */
+/* ── Celular ── */
 
 @media (max-width: 480px) {
+  .faca-parte {
+    padding: 25px 15px;
+  }
 
-    .faca-parte {
-        padding: 25px 15px;
-    }
+  .faca-parte__container {
+    padding: 25px 18px;
+    border-radius: 13px;
+  }
 
-    .faca-parte__container {
-        padding: 25px 18px;
+  .faca-parte__titulo {
+    margin-bottom: 15px;
+    font-size: 27px;
+  }
 
-        border-radius: 13px;
-    }
+  .faca-parte__descricao {
+    font-size: 10px;
+    line-height: 1.45;
+  }
 
-    .faca-parte__titulo {
-        margin-bottom: 15px;
+  .faca-parte__beneficios {
+    gap: 5px;
+  }
 
-        font-size: 27px;
-    }
+  .faca-parte__beneficio {
+    width: 85px;
+  }
 
-    .faca-parte__descricao {
-        font-size: 10px;
-        line-height: 1.45;
-    }
+  .faca-parte__icone {
+    width: 42px;
+    height: 42px;
+  }
 
-    .faca-parte__beneficios {
-        gap: 5px;
-    }
+  .faca-parte__icone svg {
+    width: 23px;
+    height: 23px;
+  }
 
-    .faca-parte__beneficio {
-        width: 85px;
-    }
+  .faca-parte__beneficio p {
+    font-size: 8px;
+  }
 
-    .faca-parte__icone {
-        width: 42px;
-        height: 42px;
-    }
+  .faca-parte__botao {
+    width: 170px;
+    height: 36px;
+    font-size: 9px;
+  }
 
-    .faca-parte__icone svg {
-        width: 23px;
-        height: 23px;
-    }
+  .faca-parte__redirecionamento {
+    font-size: 9px;
+    text-align: center;
+  }
 
-    .faca-parte__beneficio p {
-        font-size: 8px;
-    }
-
-    .faca-parte__botao {
-        width: 170px;
-        height: 36px;
-
-        font-size: 9px;
-    }
-
-    .faca-parte__redirecionamento {
-        font-size: 9px;
-        text-align: center;
-    }
-
-    .faca-parte__imagem {
-        height: 250px;
-    }
-
+  .faca-parte__imagem {
+    height: 250px;
+  }
 }
 
-
-/* ========================================
-   CELULARES MUITO PEQUENOS
-======================================== */
+/* ── Celulares Muito Pequenos ── */
 
 @media (max-width: 360px) {
+  .faca-parte__beneficios {
+    gap: 0;
+  }
 
-    .faca-parte__titulo {
-        font-size: 24px;
-    }
+  .faca-parte__beneficio {
+    width: 78px;
+  }
 
-    .faca-parte__beneficios {
-        gap: 0;
-    }
+  .faca-parte__beneficio p {
+    font-size: 7px;
+  }
 
-    .faca-parte__beneficio {
-        width: 78px;
-    }
+  .faca-parte__imagem {
+    height: 220px;
+  }
 
-    .faca-parte__beneficio p {
-        font-size: 7px;
-    }
-
-    .faca-parte__imagem {
-        height: 220px;
-    }
-
+  .faca-parte__titulo {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
 }
 
 /* ── Newsletter ── */
+
 .newsletter {
   background-color: #F4E9FF;
   padding: var(--section-padding-y) var(--site-padding-x);
@@ -839,12 +808,8 @@ nav#menu ul li a:hover {
   color: rgba(255, 255, 255, 0.5);
 }
 
+/* ── Cards e listas ── */
 
-/* ==========================
-   8. CARDS E LISTAS
-========================== */
-
-/* ── Filtro de atividades ── */
 .filtro-atividades-mobile {
   display: flex;
   align-items: center;
@@ -875,7 +840,6 @@ nav#menu ul li a:hover {
   box-shadow: 0 0 8px #8A2BE2, 0 0 16px #8A2BE2aa;
 }
 
-/* ── Grid dos cards de atividade ── */
 .atividades-trilha {
   width: 100%;
   display: grid;
@@ -886,12 +850,11 @@ nav#menu ul li a:hover {
   align-items: stretch;
 }
 
-/* ── Card de atividade ── */
 .atividades-card {
   background: #fff;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   transition: 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -901,10 +864,9 @@ nav#menu ul li a:hover {
 
 .atividades-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
 
-/* ── Imagem do card ── */
 .atividades-card figure {
   width: 100%;
   height: 280px;
@@ -931,7 +893,6 @@ figcaption {
   padding: 6px 16px 0;
 }
 
-/* ── Conteúdo interno do card ── */
 .atividades-info {
   padding: 12px 16px;
   display: flex;
@@ -948,6 +909,7 @@ figcaption {
 }
 
 .atividades-info p,
+
 .atividades-info span {
   color: #444;
   line-height: 1.5;
@@ -974,7 +936,6 @@ figcaption {
   font-size: 0.85rem;
 }
 
-/* ── Carrossel de atividades ── */
 .atividades-carrossel {
   display: flex;
   align-items: center;
@@ -1026,7 +987,6 @@ figcaption {
   pointer-events: none;
 }
 
-/* ── Depoimentos ── */
 .depoimentos {
   display: flex;
   gap: 24px;
@@ -1081,10 +1041,7 @@ figcaption {
   margin: 0;
 }
 
-
-/* ==========================
-   9. FORMULÁRIOS
-========================== */
+/* ── Formulários ── */
 
 .newsletter-form {
   display: flex;
@@ -1119,10 +1076,7 @@ figcaption {
   background-color: #a341ff;
 }
 
-
-/* ==========================
-   10. FOOTER
-========================== */
+/* ── Footer ── */
 
 footer {
   position: relative;
@@ -1149,6 +1103,7 @@ footer {
 }
 
 .contato_footer,
+
 .redesociais_footer {
   display: flex;
   flex-direction: column;
@@ -1198,7 +1153,6 @@ footer {
   margin-top: 8px;
 }
 
-/* ── ≥ 901px — Carrossel desktop ── */
 @media (min-width: 901px) {
   .filtro-atividades-mobile {
     display: none !important;
@@ -1273,15 +1227,79 @@ footer {
   }
 }
 
-/* ── ≤ 1024px — Tablet ── */
 @media (max-width: 1024px) {
   :root {
-    --site-padding-x:    40px;
+    --site-padding-x: 40px;
     --section-padding-y: 64px;
+  }
+
+  /* ── Nossas atividades ── */
+
+  .atividades-info h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .atividades-info p,
+
+  .atividades-info span,
+
+  .atividades-info a,
+
+  .atividades-info strong,
+
+  .atividades-info .date,
+
+  .atividades-card figcaption,
+
+  .atividades-info .btn-of-btn {
+    font-family: "Lato", sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  /* ── Newsletter ── */
+
+  .newsletter-card h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  .newsletter-card p {
+    font-family: "Lato", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .newsletter-card span {
+    font-family: "Lato", sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .newsletter-card input,
+
+  .newsletter-card button {
+    font-family: "Lato", sans-serif;
+  }
+
+  /* ── Footer ── */
+
+  .footer {
+    font-family: "Lato", sans-serif;
+  }
+
+  .footer .copyright {
+    font-family: "Lato", sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.4;
   }
 }
 
-/* ── ≤ 900px — Carrossel mobile ── */
 @media (max-width: 900px) {
   .atividades-carrossel {
     display: block;
@@ -1315,7 +1333,6 @@ footer {
   }
 }
 
-/* ── ≤ 768px — Mobile geral ── */
 @media (max-width: 768px) {
   .hero {
     min-height: 100svh;
@@ -1383,6 +1400,7 @@ footer {
   }
 
   .newsletter-form input,
+
   .newsletter-form button {
     width: 100%;
     box-sizing: border-box;
@@ -1393,15 +1411,13 @@ footer {
   }
 }
 
-/* ── ≤ 767px — Mobile ── */
 @media (max-width: 767px) {
   :root {
-    --site-padding-x:    24px;
+    --site-padding-x: 24px;
     --section-padding-y: 48px;
   }
 }
 
-/* ── ≤ 480px — Mobile pequeno ── */
 @media (max-width: 480px) {
   .atividades-trilha {
     display: flex;
@@ -1415,81 +1431,1297 @@ footer {
   }
 
   .atividades-card figure,
+
   .atividades-card figure img {
     height: 220px;
   }
 }
 
-/* ── ≤ 479px — Mobile extra pequeno ── */
 @media (max-width: 479px) {
   :root {
-    --site-padding-x:    16px;
+    --site-padding-x: 16px;
     --section-padding-y: 40px;
   }
 }
 
-/* ========================================
-   AJUSTE DA HERO — CELULAR 320px
-======================================== */
+/* ── Ajuste da hero — celular 320px ── */
 
 @media (max-width: 320px) {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
 
-    /* Header */
-    header {
-        padding: 16px 16px;
-    }
+  .logo_header {
+    margin-left: 0;
+    margin-right: 0;
+  }
 
-    .logo_header {
-        margin-left: 0;
-    }
+  .logo_header img {
+    height: 100px;
+    width: auto;
+    display: block;
+  }
 
-    .logo_header img {
-        height: 140px;
-    }
+  .btn-menu {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
-    /* Hero */
-    .hero {
-        margin-top: 175px;
+  .secao-titulo {
+    margin-bottom: 15px;
+  }
 
-        min-height: 0;
-        height: auto;
+  .secao-titulo h2 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
 
-        aspect-ratio: 1366 / 497;
+  /* ── Header ── */
 
-        background-position: top center;
-        background-size: 100% auto;
-        background-repeat: no-repeat;
-    }
-    /* Esconde o botão da hero em telas de até 320px */
-    .btn-junte-se {
-        display: none;
-    }
-    /* SOBRE NÓS — 320px */
+  header {
+    padding: 16px 16px;
+  }
 
-    .sobre-conteudo {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
+  .logo_header {
+    margin-left: 0;
+  }
 
-    .sobre-texto {
-        width: 100%;
-        max-width: 100%;
-    }
+  .logo_header img {
+    height: 140px;
+  }
 
-    .sobre-image {
-        width: 100%;
-        max-width: 100%;
-    }
+  /* ── Hero ── */
 
-    .sobre-image img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-    }
+  .hero {
+    margin-top: 175px;
+    min-height: 0;
+    height: auto;
+    aspect-ratio: 1366 / 497;
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+  }
 
-    .sobre-image figcaption {
-        width: 100%;
-        text-align: center;
-    }
+  .btn-junte-se {
+    display: none;
+  }
+
+  /* ── Sobre nós ── */
+
+  .sobre-conteudo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .sobre-texto {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .sobre-image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .sobre-image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .sobre-image figcaption {
+    width: 100%;
+    text-align: center;
+  }
+
+  .filtro-atividades-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 32px;
+  }
+
+  .monthFilterLabel {
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+  }
+
+  #monthFilter {
+    width: 100%;
+    max-width: 100%;
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #333;
+  }
+
+  .atividades-info h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+  }
+
+  .atividades-info p,
+
+  .atividades-info span,
+
+  .atividades-info a,
+
+  .atividades-info strong {
+    font-family: "Lato", sans-serif;
+  }
+
+  .atividades-info .date {
+    font-family: "Lato", sans-serif;
+  }
+
+  .atividades-card figcaption {
+    font-family: "Lato", sans-serif;
+  }
+
+  .atividades-info .btn-of-btn {
+    font-family: "Lato", sans-serif;
+  }
+
+  .atividades .secao-titulo {
+    margin-bottom: 18px;
+  }
+
+  .atividades .secao-titulo h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.8rem !important;
+    font-weight: 500;
+    line-height: 1.2;
+    white-space: normal;
+    overflow-wrap: break-word;
+    text-align: center;
+  }
+
+  /* ── Nossa comunidade ── */
+
+  .comunidade {
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .comunidade .container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .comunidade .secao-titulo {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .comunidade .secao-titulo h2 {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+
+  .faca-parte__container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .faca-parte__conteudo {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .faca-parte__titulo {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0 0 18px;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.8rem !important;
+    line-height: 1.2;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .faca-parte__descricao {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .faca-parte__beneficio .texto_beneficio {
+    font-size: 0.72rem;
+    line-height: 1.3;
+  }
+
+  .faca-parte__botao {
+    font-size: 0.75rem;
+  }
+
+  .faca-parte__redirecionamento {
+    font-size: 0.7rem;
+    line-height: 1.4;
+  }
+
+  .newsletter-card h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.8rem !important;
+    font-weight: 500;
+    line-height: 1.2;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+
+  .newsletter-card p {
+    font-family: "Lato", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .newsletter-card span {
+    font-family: "Lato", sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .newsletter-card input,
+
+  .newsletter-card button {
+    font-family: "Lato", sans-serif;
+  }
+
+  .footer {
+    font-family: "Lato", sans-serif;
+  }
+
+  .footer .social {
+    gap: 10px;
+  }
+
+  .footer .social a {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer .social svg {
+    width: 34px;
+    height: 34px;
+  }
+
+  .footer .copyright {
+    font-family: "Lato", sans-serif;
+    font-size: 0.7rem;
+    line-height: 1.4;
+    text-align: center;
+    margin-top: 12px;
+  }
+
+  .footer__logo img {
+    width: 110px;
+    height: auto;
+  }
+}
+
+/* ── Ajustes responsivos — telas de 321px até 375px ── */
+
+@media (min-width: 321px) and (max-width: 375px) {
+
+  /* ── Header ── */
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .logo_header {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .logo_header img {
+    height: 110px;
+    width: auto;
+    display: block;
+  }
+
+  .btn-menu {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* ── Hero ── */
+
+  .hero {
+    margin-top: 175px;
+    min-height: 0;
+    height: auto;
+    aspect-ratio: 1366 / 497;
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+  }
+
+  .btn-junte-se {
+    display: none;
+  }
+
+  /* ── Títulos Das Seções ── */
+
+  .secao-titulo {
+    margin-bottom: 15px;
+  }
+
+  .secao-titulo h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+
+  /* ── Sobre nós ── */
+
+  .sobre-conteudo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .sobre-texto {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .sobre-image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .sobre-image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .sobre-image figcaption {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* ── Olha O Que Rolou ── */
+
+  .secao-titulo {
+    margin-bottom: 15px;
+  }
+
+  /* ── Nossas atividades ── */
+
+  .atividades .secao-titulo {
+    margin-bottom: 18px;
+  }
+
+  .atividades .secao-titulo h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.8rem !important;
+    font-weight: 500;
+    line-height: 1.2;
+    white-space: normal;
+    overflow-wrap: break-word;
+    text-align: center;
+  }
+
+  .filtro-atividades-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 32px;
+  }
+
+  .monthFilterLabel {
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+  }
+
+  #monthFilter {
+    width: 100%;
+    max-width: 100%;
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #333;
+  }
+
+  .atividades-info h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+  }
+
+  .atividades-info p,
+
+  .atividades-info span,
+
+  .atividades-info a,
+
+  .atividades-info strong {
+    font-family: "Lato", sans-serif;
+  }
+
+  .atividades-info .date {
+    font-family: "Lato", sans-serif;
+  }
+
+  .atividades-card figcaption {
+    font-family: "Lato", sans-serif;
+  }
+
+  .atividades-info .btn-of-btn {
+    font-family: "Lato", sans-serif;
+  }
+
+  /* ── Nossa comunidade ── */
+
+  .comunidade {
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .comunidade .container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .comunidade .secao-titulo {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .comunidade .secao-titulo h2 {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+
+  /* ── Faça parte ── */
+
+  .faca-parte__container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .faca-parte__conteudo {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .faca-parte__titulo {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0 0 18px;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.8rem !important;
+    font-weight: 500;
+    line-height: 1.2;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .faca-parte__descricao {
+    font-family: "Lato", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .faca-parte__beneficio .texto_beneficio {
+    font-family: "Lato", sans-serif;
+    font-size: 0.72rem;
+    line-height: 1.3;
+  }
+
+  .faca-parte__botao {
+    font-family: "Lato", sans-serif;
+    font-size: 0.75rem;
+  }
+
+  .faca-parte__redirecionamento {
+    font-family: "Lato", sans-serif;
+    font-size: 0.7rem;
+    line-height: 1.4;
+  }
+
+  /* ── Newsletter ── */
+
+  .newsletter-card h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.8rem !important;
+    font-weight: 500;
+    line-height: 1.2;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+
+  .newsletter-card p {
+    font-family: "Lato", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .newsletter-card span {
+    font-family: "Lato", sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .newsletter-card input,
+
+  .newsletter-card button {
+    font-family: "Lato", sans-serif;
+  }
+
+  /* ── Footer ── */
+
+  .footer {
+    font-family: "Lato", sans-serif;
+  }
+
+  .footer__logo img {
+    width: 110px;
+    height: auto;
+  }
+
+  .footer .social {
+    gap: 10px;
+  }
+
+  .footer .social a {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer .social svg {
+    width: 34px;
+    height: 34px;
+  }
+
+  .footer .copyright {
+    font-family: "Lato", sans-serif;
+    font-size: 0.7rem;
+    line-height: 1.4;
+    text-align: center;
+    margin-top: 12px;
+  }
+}
+
+/* ── Responsivo — 426px até 768px ── */
+
+@media (min-width: 426px) and (max-width: 768px) {
+
+  /* ── Header ── */
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .logo_header {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .logo_header img {
+    height: 120px;
+    width: auto;
+    display: block;
+  }
+
+  .btn-menu {
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* ── Hero ── */
+
+  .hero {
+    margin-top: 175px;
+    min-height: 0;
+    height: auto;
+    aspect-ratio: 1366 / 497;
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+  }
+
+  .btn-junte-se {
+    display: none;
+  }
+
+  /* ── Títulos Das Seções ── */
+
+  .secao-titulo {
+    margin-bottom: 20px;
+  }
+
+  .secao-titulo h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    line-height: 1.2;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+
+  /* ── Sobre nós ── */
+
+  .sobre-conteudo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .sobre-texto {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .sobre-image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .sobre-image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .sobre-image figcaption {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* ── Olha O Que Rolou ── */
+
+  .secao-titulo {
+    margin-bottom: 20px;
+  }
+
+  /* ── Nossas atividades ── */
+
+  .atividades .secao-titulo {
+    margin-bottom: 22px;
+  }
+
+  .atividades .secao-titulo h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem !important;
+    font-weight: 500;
+    line-height: 1.2;
+    white-space: normal;
+    overflow-wrap: break-word;
+    text-align: center;
+  }
+
+  .filtro-atividades-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 32px;
+  }
+
+  .monthFilterLabel {
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+  }
+
+  #monthFilter {
+    width: 100%;
+    max-width: 100%;
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #333;
+  }
+
+  .atividades-info h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+  }
+
+  .atividades-info p,
+
+  .atividades-info span,
+
+  .atividades-info a,
+
+  .atividades-info strong {
+    font-family: "Lato", sans-serif;
+  }
+
+  .atividades-info .date {
+    font-family: "Lato", sans-serif;
+  }
+
+  .atividades-card figcaption {
+    font-family: "Lato", sans-serif;
+  }
+
+  .atividades-info .btn-of-btn {
+    font-family: "Lato", sans-serif;
+  }
+
+  /* ── Nossa comunidade ── */
+
+  .comunidade {
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .comunidade .container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .comunidade .secao-titulo {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .comunidade .secao-titulo h2 {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    line-height: 1.2;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+
+  .comunidade .depoimentos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+  }
+
+  .comunidade .card-depoimento {
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+  }
+
+  /* ── Faça parte ── */
+
+  .faca-parte__container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .faca-parte__conteudo {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .faca-parte__titulo {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0 0 20px;
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem !important;
+    font-weight: 500;
+    line-height: 1.2;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .faca-parte__descricao {
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .faca-parte__beneficio .texto_beneficio {
+    font-family: "Lato", sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .faca-parte__botao {
+    font-family: "Lato", sans-serif;
+    font-size: 0.85rem;
+  }
+
+  .faca-parte__redirecionamento {
+    font-family: "Lato", sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+
+  /* ── Newsletter ── */
+
+  .newsletter-card h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem !important;
+    font-weight: 500;
+    line-height: 1.2;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+
+  .newsletter-card p {
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .newsletter-card span {
+    font-family: "Lato", sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .newsletter-card input,
+
+  .newsletter-card button {
+    font-family: "Lato", sans-serif;
+  }
+
+  /* ── Footer ── */
+
+  .footer {
+    font-family: "Lato", sans-serif;
+  }
+
+  .footer__logo img {
+    width: 120px;
+    height: auto;
+  }
+
+  .footer .social {
+    gap: 12px;
+  }
+
+  .footer .social a {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer .social svg {
+    width: 38px;
+    height: 38px;
+  }
+
+  .footer .copyright {
+    font-family: "Lato", sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    text-align: center;
+    margin-top: 14px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1440px) {
+
+  /* ── Nossas atividades ── */
+
+  .atividades-info h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .atividades-info p,
+
+  .atividades-info span,
+
+  .atividades-info a,
+
+  .atividades-info strong,
+
+  .atividades-info .date,
+
+  .atividades-card figcaption,
+
+  .atividades-info .btn-of-btn {
+    font-family: "Lato", sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  /* ── Newsletter ── */
+
+  .newsletter-card h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  .newsletter-card p {
+    font-family: "Lato", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .newsletter-card span {
+    font-family: "Lato", sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .newsletter-card input,
+
+  .newsletter-card button {
+    font-family: "Lato", sans-serif;
+  }
+
+  /* ── Footer ── */
+
+  .footer {
+    font-family: "Lato", sans-serif;
+  }
+
+  .footer .copyright {
+    font-family: "Lato", sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+}
+
+/* ── Telas grandes — 1441px até 2560px ── */
+
+@media (min-width: 1441px) and (max-width: 2560px) {
+
+  /* ── Configurações Gerais ── */
+
+  :root {
+    --site-padding-x: 100px;
+    --section-padding-y: 110px;
+  }
+
+  /* ── Menu ── */
+
+  header {
+    padding: 28px var(--site-padding-x);
+  }
+
+  nav#menu ul {
+    gap: 42px;
+  }
+
+  nav#menu ul li a {
+    font-family: "Lato", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+
+  /* ── Títulos Das Seções ── */
+
+  .secao-titulo h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  /* ── Sobre nós ── */
+
+  .sobre-texto p {
+    font-family: "Lato", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.7;
+  }
+
+  .sobre-image figcaption {
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  /* ── Nossas atividades ── */
+
+  .atividades-info h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.45rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .atividades-info p,
+
+  .atividades-info span,
+
+  .atividades-info a,
+
+  .atividades-info strong,
+
+  .atividades-info .date {
+    font-family: "Lato", sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.5;
+  }
+
+  .atividades-card figcaption {
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .atividades-info .btn-of-btn {
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+  }
+
+  /* ── Nossa comunidade ── */
+
+  .comunidade {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .comunidade .secao-titulo h2 {
+    font-size: 3.2rem;
+    margin-bottom: 40px;
+  }
+
+  .comunidade .depoimentos {
+    width: 100%;
+    max-width: 2200px;
+    margin: 0 auto;
+    gap: 24px;
+  }
+
+  .comunidade .card-depoimento {
+    width: 100%;
+    max-width: 450px;
+    flex: 1 1 0;
+    padding: 38px;
+    box-sizing: border-box;
+  }
+
+  .comunidade .card-depoimento .p_comunidade {
+    font-family: "Lato", sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: 28px;
+  }
+
+  .comunidade .info-autor h4 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.3;
+  }
+
+  .comunidade .info-autor p {
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  /* ── Faça parte ── */
+
+  .faca-parte__beneficios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    width: 100%;
+    max-width: 650px;
+    margin-top: 30px;
+  }
+
+  .faca-parte__beneficio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+  }
+
+  .faca-parte__icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .faca-parte__beneficio .texto_beneficio {
+    width: 150px;
+    max-width: 150px;
+    margin: 8px 0 0;
+    font-family: "Lato", sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.35;
+    text-align: center;
+    overflow-wrap: normal;
+  }
+
+  /* ── Newsletter ── */
+
+  .newsletter {
+    padding: 110px 50px;
+  }
+
+  .newsletter-card {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 75px 90px;
+    box-sizing: border-box;
+  }
+
+  .newsletter-card h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  .newsletter-card p {
+    font-family: "Lato", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.7;
+  }
+
+  .newsletter-card span {
+    font-family: "Lato", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .newsletter-card input,
+
+  .newsletter-card button {
+    font-family: "Lato", sans-serif;
+    font-size: 1.05rem;
+  }
+
+  .newsletter-card input {
+    min-height: 58px;
+  }
+
+  .newsletter-card button {
+    min-height: 58px;
+    padding: 0 32px;
+  }
+
+  /* ── Footer ── */
+
+  .footer {
+    font-family: "Lato", sans-serif;
+  }
+
+  .footer__logo img {
+    width: 160px;
+    height: auto;
+  }
+
+  .footer .social {
+    gap: 16px;
+  }
+
+  .footer .social a {
+    width: 46px;
+    height: 46px;
+  }
+
+  .footer .social svg {
+    width: 46px;
+    height: 46px;
+  }
+
+  .footer .copyright {
+    font-family: "Lato", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
 }
