@@ -3,190 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/stylerelatorio.css">
+    <title>Relatório ElasTitam</title>
+    <link rel="icon" type="image/png" href="img/logoelastitam_transparent.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <title>Relatório ElasTitam</title>
-    <link rel="icon" type="image/png" href="img/logoelastitam_transparent.png">
-    <link rel="stylesheet" href="css/estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/stylerelatorio.css">
 </head>
-<body>
+<body class="relatorio">
 
-    <!--HEADER-->
-    <header>
-        <!--imagem-->
-        <a href="" class="logo_header">
-            <img src="img_elastitam/ElasTitamLogo_roxa.png" alt="logo elas titam">
+    <!-- HERO -->
+    <div class="hero">
+        <img class="hero-logo" src="img/logoelastitam_transparent.png" alt="Logo ElasTitam">
+        <h1>ElasTitam 2025</h1>
+        <h2>Relatório Executivo de Impacto e Engajamento</h2>
+        <p class="periodo">Período: Abril a Novembro de 2025</p>
+        <a class="btn-insta" href="https://www.instagram.com/elastitam?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">
+            Ver Fotos e Vídeos <i class="fa-brands fa-instagram"></i>
         </a>
-
-      <button id="btnMenu" class="btn-menu" aria-label="Abrir menu">☰</button>
-
-        <nav id="menu">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#atividades">Atividades</a></li>
-                <li><a href="#noticias">Notícias</a></li>
-                <li><a href="#comunidade">Comunidade</a></li>
-                <li><a href="contato.html">Contato</a></li>
-                <li><a href="relatorio.html">Relatório</a></li>
-            </ul>
-        </nav>
-    </header>
-
-   <div class="primeiraimg">
-    <div class="lg">
-         <img src="img/logoelastitam_transparent.png" alt="Logo ElasTitam">
-    </div>
-    
-
-   </div>
-    <h1 class="unicotitulo">Elastitam - Girls in tech 2025</h1>
-    <h2 class="h2exe">Relatório Executivo de Impacto e Engajamento</h2>
-    <p class="primeiroparagrafo">Lapa Tito | Período: Abril a Novembro de 2025</p>
-<button class="botao">
-    <a href="https://www.instagram.com/elastitam?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="btn-junte-se"></a>
-    <img  class="icone"  src="img/instagram.png" alt="icone">
-    Ver Fotos e Videos
-</button>
-    
-    <hr class="linha">
-
-    <!-- SEÇÃO 1 — MÉTRICAS -->
-    <h2 class="secao1">Visão Geral e Métricas Chaves</h2>
-    <p class="paragrafosecao1">O projeto ElasTitam se consolidou como um programa de alto engajamento e relevância, superando as expectativas em termos de satisfação e participação voluntária</p>
-
-    <div class="metricasChave">
-        <div class="eventos">
-            <h2 class="dezesseis">16</h2>
-            <p>Eventos Realizados</p>
-        </div>
-        <div class="inscricoes">
-            <h2 class="duzentosequatorze">214</h2>
-            <p>Inscrições Realizadas</p>
-        </div>
-        <div class="feedbacks">
-            <h2 class="noventa">90</h2>
-            <p>Feedbacks Coletados</p>
-        </div>
-        <div class="avaliacao">
-            <h2 class="quatromil">4.98/5</h2>
-            <p>Média de Avaliação</p>
+        <div class="abas">
+            <button type="button" class="ativo" data-ano="2025">2025</button>
+            <button type="button" data-ano="2026">2026</button>
         </div>
     </div>
 
-    <!-- SEÇÃO 2 — SATISFAÇÃO -->
-    <h2 class="secao2">Satisfação e Engajamento</h2>
-    <p class="paragrafosecao2">A qualidade percebida do projeto é praticamente unânime, refletindo o sucesso da abordagem afetiva, segura e inspiradora do ElasTitam.</p>
-    <div class="imgs">
-        <div class="graficoavaliacao">
-            <img src="img/grafieeventos.png" alt="garfico de avaliação">
-        </div>
-        <div class="topeventos">
-            <img src="img/graficostopeventos.png" alt="garfico dos top eventos">
+    <main class="conteudo">
+
+        <div id="ano-2025">
+
+            <!-- MÉTRICAS -->
+            <section>
+                <h2 class="titulo">Visão Geral e Métricas Chave</h2>
+                <p class="intro">O projeto ElasTitam se consolidou como um programa de alto engajamento e relevância, superando as expectativas em termos de satisfação e participação voluntária.</p>
+                <div class="metricas">
+                    <div class="metrica card"><strong>16</strong><span>Eventos Realizados</span></div>
+                    <div class="metrica card"><strong>214</strong><span>Inscrições Registradas</span></div>
+                    <div class="metrica card"><strong>90</strong><span>Feedbacks Coletados</span></div>
+                    <div class="metrica card"><strong>4.98/5</strong><span>Média de Avaliação</span></div>
+                </div>
+            </section>
+
+            <!-- SATISFAÇÃO -->
+            <section>
+                <h2 class="titulo">Satisfação e Engajamento</h2>
+                <p class="intro">A qualidade percebida do projeto é praticamente unânime, refletindo o sucesso da abordagem afetiva, segura e inspiradora do ElasTitam.</p>
+                <div class="graficos">
+                    <div class="grafico card">
+                        <h3>Avaliação Geral (4.98/5)</h3>
+                        <div class="grafico-caixa rosca"><canvas id="graficoAvaliacao" aria-label="Gráfico de rosca: 97,8% nota 5 e 2,2% nota 4" role="img"></canvas></div>
+                        <p class="nota-grafico"><b>NPS Intuitivo:</b> 100% das respondentes indicariam o evento.</p>
+                    </div>
+                    <div class="grafico card">
+                        <h3>Top 5 Eventos por Inscrição (Alcance)</h3>
+                        <div class="grafico-caixa"><canvas id="graficoInscricoes" aria-label="Gráfico de barras: top 5 eventos por inscrição" role="img"></canvas></div>
+                    </div>
+                </div>
+                <div class="grafico grafico-larga card">
+                    <h3>Top 5 Eventos por Feedback (Conexão Profunda)</h3>
+                    <div class="grafico-caixa"><canvas id="graficoFeedbacks" aria-label="Gráfico de barras: top 5 eventos por feedback" role="img"></canvas></div>
+                    <p class="nota-grafico">O engajamento é forte em temas de <b>acolhimento, escuta, diversidade e bem-estar</b>.</p>
+                </div>
+            </section>
+
+            <!-- QUALIDADE -->
+            <section>
+                <h2 class="titulo">Qualidade Percebida e Impacto Qualitativo</h2>
+                <p class="intro">A análise dos depoimentos revela que o ElasTitam é percebido como um espaço seguro, inspirador e transformador.</p>
+                <div class="depoimentos">
+                    <div class="depoimento card">
+                        <h3>Acolhimento e Segurança Emocional</h3>
+                        <blockquote>"Ambiente de extremo acolhimento, comunhão e amor."</blockquote>
+                        <blockquote>"Me senti ouvida, confortável e sem medo de ser julgada."</blockquote>
+                    </div>
+                    <div class="depoimento card">
+                        <h3>Representatividade e Pertencimento</h3>
+                        <blockquote>"Entender que não estou sozinha."</blockquote>
+                        <blockquote>"Ver outras meninas e mulheres passando por situações parecidas."</blockquote>
+                    </div>
+                    <div class="depoimento card">
+                        <h3>Didática e Clareza</h3>
+                        <blockquote>"Palestrante super didática, explicou tudo com clareza."</blockquote>
+                        <blockquote>"Conteúdo claro, organizado, exemplos práticos."</blockquote>
+                    </div>
+                    <div class="depoimento card">
+                        <h3>Pedido Explícito por Continuidade</h3>
+                        <blockquote>"Queria que tivesse mais palestras."</blockquote>
+                        <blockquote>"Gostaria que fosse maior, foi muito curto."</blockquote>
+                    </div>
+                </div>
+                <p class="faixa">O ElasTitam é um <b>Ativo Estratégico</b> para o Senac Lapa Tito, entregando <b>Qualidade Máxima</b> e <b>Engajamento Profundo</b>, alinhado com a promoção de tecnologia e diversidade.</p>
+            </section>
+
+            <!-- TABELA -->
+            <section>
+                <h2 class="titulo">Dados Detalhados por Evento</h2>
+                <p class="intro">Tabela completa com a síntese de todos os 16 eventos realizados, incluindo palestrantes e destaques dos feedbacks.</p>
+                <div class="tabela-caixa card">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>DATA</th>
+                                <th>EVENTO</th>
+                                <th>PALESTRANTE(S)</th>
+                                <th class="centro">AVALIAÇÃO</th>
+                                <th>DESTAQUE DO FEEDBACK</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>24/04</td><td>LinkedIn para Mulheres</td><td>Samira Vieira</td><td class="centro nota">5/5</td><td class="destaque">"Palestrante super didática, explicou tudo com clareza"</td></tr>
+                            <tr><td>08/05</td><td>Empoderamento Feminino no Instagram</td><td>Fernanda Nalon</td><td class="centro nota">5/5</td><td class="destaque">"Docente maravilhosa, amei cada segundo"</td></tr>
+                            <tr><td>20/05 e 23/05</td><td>Desconstruindo o Óbvio</td><td>Comitê de Inclusão e Diversidade</td><td class="centro nota">5/5</td><td class="destaque">"Espaço para desabafo e acolhimento. Completamente necessário"</td></tr>
+                            <tr><td>30/05</td><td>Por Trás dos Likes: Jornada dos Seus Dados</td><td>Amanda Cristina</td><td class="centro nota">5/5</td><td class="destaque">"Palestra necessária e enriquecedora"</td></tr>
+                            <tr><td>13/06</td><td>UX em Ação</td><td>Tamara Fumeiro</td><td class="centro nota">5/5</td><td class="destaque">"Oficina maravilhosa, palestrante bem didática"</td></tr>
+                            <tr><td>04/07</td><td>Análise de Qualidade de Software (QA)</td><td>Tamara Fumeiro</td><td class="centro nota">5/5</td><td class="destaque">"Conteúdo claro e enriquecedor"</td></tr>
+                            <tr><td>14 e 15/08</td><td>Design Thinking</td><td>Beatriz Makers</td><td class="centro nota">5/5</td><td class="destaque">"Incrível, troca de experiências muito rica"</td></tr>
+                            <tr><td>15/08</td><td>Engenharia Social: Um Alerta para Mulheres</td><td>Thalita e Rebeca</td><td class="centro nota">5/5</td><td class="destaque">"Tema necessário e muito bem explicado"</td></tr>
+                            <tr><td>12/09</td><td>Inteligência Artificial com Criatividade e Estratégia</td><td>Luana Dorizo</td><td class="centro nota">5/5</td><td class="destaque">"Amei. Sanou muitas dúvidas"</td></tr>
+                            <!-- Adicione aqui as linhas dos demais eventos (copie uma <tr> acima) -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- RECOMENDAÇÕES -->
+            <section>
+                <h2 class="titulo">Recomendações Estratégicas (2025-2026)</h2>
+                <div class="recomendacoes">
+                    <div class="recomendacao card">
+                        <h3>1. Institucionalizar o Programa</h3>
+                        <p>Os dados justificam formalmente a continuidade e ampliação para outras unidades do Senac.</p>
+                    </div>
+                    <div class="recomendacao card">
+                        <h3>2. Manter e Ampliar Temas de Tração</h3>
+                        <p>Foco em Carreira em TI, Diversidade/Inclusão e Temas de Dados/IA sob a lente feminina.</p>
+                    </div>
+                    <div class="recomendacao card">
+                        <h3>3. Fortalecer Combinação Docente-Aluna</h3>
+                        <p>Palestras conduzidas por ex-alunas, alunas atuais e docentes têm ótimo desempenho em QA, UX, dados e IA.</p>
+                    </div>
+                    <div class="recomendacao card">
+                        <h3>4. Ajustar Fluxo de Inscrição</h3>
+                        <p>Revisar o processo para registrar melhor quem participa fisicamente, especialmente em oficinas com alta presença informal.</p>
+                    </div>
+                </div>
+            </section>
         </div>
 
-    </div>
+        <div id="ano-2026" hidden>
+            <p class="em-breve">Os dados de 2026 serão publicados em breve.</p>
+        </div>
+    </main>
 
-
-    <!-- SEÇÃO 3 — QUALIDADE -->
-    <h2 class="secao3">Qualidade Percebida e Impacto Qualitativo</h2>
-    <p class="pterceirasecao">A análise dos depoimentos revela que o ElasTitam é percebido como um espaço seguro, inspirador e transformador.</p>
-
-    <div class="QualidadeeImpacto">
-        <div class="card1">
-            <h3 class="acolhimento">Acolhimento e Segurança Emocional</h3>
-            <p class="pseguranca">"Ambiente de extremo acolhimento, comunhão e amor."</p>
-            <p class="pseguranc">"Me senti ouvida, confortável e sem medo de ser julgada."</p>
-        </div>
-        <div class="card2">
-            <h3 class="representatividade">Representatividade e Pertencimento</h3>
-            <p class="prepresentatividade">"Entender que não estou sozinha."</p>
-            <p class="prepresentatividade">"Ver outras meninas e mulheres passando por situações parecidas."</p>
-        </div>
-        <div class="card3">
-            <h3 class="didatica">Didática e Clareza</h3>
-            <p class="pdidatica">"Palestrante super didática, explicou tudo com clareza."</p>
-            <p class="pdidatic">"Palestrante super didática, explicou tudo com clareza."</p>
-        </div>
-        <div class="card4">
-            <h3 class="pedido">Pedido Explícito por Continuidade</h3>
-            <p class="ppedido">"Queria que tivesse mais palestras."</p>
-            <p class="ppedido">"Gostaria que fosse maior, foi muito curto."</p>
-        </div>
-    </div>
-
-    <!-- QUADRADO ROXO — texto em linha corrida -->
-    <div class="quadradoroxo">
-        <div class="letras">
-        
-            <p class="textoquadrado">
-                O ElasTitam é um
-                <span class="texto2">Ativo Estratégico,</span>
-                entregando
-                <span class="texto4">Qualidade Máxima</span>
-                e
-                <span class="texto6">Engajamento Profundo</span>
-                alinhado com a promoção de tecnologia e diversidade.
-            </p>
-        </div>
-    </div>
-
-    <!-- SEÇÃO 4 — DADOS -->
-    <h2 class="ultimasecao">Dados Detalhados por Evento</h2>
-    <p class="paragrafoultimasecao">Tabela completa com a síntese de todos os 16 eventos realizados, incluindo palestrantes e destaques dos feedbacks.</p>
-    <div class="imgdados">
-        <div class="ultimografico">
-            <img src="img/ultimografico.png" alt="ultimo grafico">
-        </div>
-    </div>
-
-    <!-- SEÇÃO 5 — RECOMENDAÇÕES -->
-    <h2 class="recomendacoes">Recomendações Estratégicas (2025-2026)</h2>
-
-    <div class="cardes">
-        <div class="cardum">
-            <h2 class="text1">1. Institucionalizar o Programa</h2>
-            <p class="textt1">Os dados justificam formalmente a continuidade e ampliação para outras unidades.</p>
-        </div>
-        <div class="carddois">
-            <h2 class="text2">2. Manter e Ampliar Temas de Tração</h2>
-            <p class="textt2">Foco em Carreira em TI, Diversidade/Inclusão e Temas de Dados/IA sob a lente feminina.</p>
-        </div>
-        <div class="cardtres">
-            <h2 class="text3">3. Fortalecer Combinação Docente-Aluna</h2>
-            <p class="textt3">Palestras conduzidas por ex-alunas, alunas atuais e docentes têm ótimo desempenho em QA, UX, dados e IA.</p>
-        </div>
-        <div class="cardquatro">
-            <h2 class="text4">4. Ajustar Fluxo de Inscrição</h2>
-            <p class="textt4">Revisar o processo para registrar melhor quem participa fisicamente, especialmente em oficinas com alta presença informal.</p>
-        </div>
-    </div>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="logofrase_footer">
-            <div class="texto_footer">
-                <h4 class="titulo_footer">Elas Titam - Girls In Tech</h4>
-                <p class="p_footer">Onde mulheres transformam ideias em tecnologia</p>
-            </div>
-        </div>
-        <div class="contato_footer">
-            <h4 class="titulo_footer">Contato</h4>
-            <p class="p_contato">elastitam@gmail.com</p>
-        </div>
-        <div class="redesociais_footer">
-            <h4 class="titulo_footer">Redes Sociais</h4>
-            <div class="icones">
-                <a href=""><i class="fa-brands fa-instagram" style="font-size: 30px; color: #3B3B3B;"></i></a>
-                <a href=""><i class="fa-brands fa-whatsapp" style="font-size: 30px; color: #3B3B3B;"></i></a>
-            </div>
-        </div>
-        <p class="frase_relatorio">Relatório Gerado por Manus AI | Estilo Bauhaus | Lapa Tito</p>
-        <p class="frase_footer">© 2025 ElasTitam - Girls in Tech. Todos os direitos reservados.</p>
+    <footer class="rodape-relatorio">
+        ElasTitam — Relatório de Atividades 2025
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+    <script>
+        // ── Abas 2025 / 2026 ──
+        document.querySelectorAll('.abas button').forEach(function (botao) {
+            botao.addEventListener('click', function () {
+                document.querySelectorAll('.abas button').forEach(function (b) { b.classList.remove('ativo'); });
+                botao.classList.add('ativo');
+                document.getElementById('ano-2025').hidden = botao.dataset.ano !== '2025';
+                document.getElementById('ano-2026').hidden = botao.dataset.ano !== '2026';
+            });
+        });
+
+        // ── Gráficos ──
+        var roxo = '#8A2BE2';
+        Chart.defaults.font.family = "'Open Sans', sans-serif";
+
+        new Chart(document.getElementById('graficoAvaliacao'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Nota 5 (97.8%)', 'Nota 4 (2.2%)'],
+                datasets: [{ data: [97.8, 2.2], backgroundColor: [roxo, '#c8c8c8'], borderWidth: 2 }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                cutout: '50%',
+                plugins: { legend: { position: 'bottom', labels: { usePointStyle: true } } }
+            }
+        });
+
+        function barras(id, rotulos, valores, maximo) {
+            new Chart(document.getElementById(id), {
+                type: 'bar',
+                data: { labels: rotulos, datasets: [{ data: valores, backgroundColor: roxo, barPercentage: .8, categoryPercentage: .85 }] },
+                options: {
+                    indexAxis: 'y',
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: { x: { max: maximo, grid: { color: '#f0f0f0' } }, y: { grid: { display: false } } }
+                }
+            });
+        }
+
+        barras('graficoInscricoes',
+            ['O Mercado é Delas', 'Mulheres na Indústria de Jogos', 'LinkedIn para Mulheres', 'Desconstruindo o Óbvio', 'Por trás dos Likes'],
+            [38, 33, 21, 21, 15], 40);
+
+        barras('graficoFeedbacks',
+            ['Desconstruindo o Óbvio (23/05)', 'O Mercado é Delas', 'Expressão Corporal (23/09)', 'Desconstruindo o Óbvio (20/05)', 'Por trás dos Likes'],
+            [15, 13, 12, 11, 8], 18);
+    </script>
 </body>
 </html>
