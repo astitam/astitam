@@ -573,7 +573,6 @@ nav#menu ul li a:hover {
   font-family: "Lato", sans-serif;
   font-weight: 600;
   font-style: normal;
-  
   font-size: 0.70rem;
   text-decoration: none;
   transition:
@@ -616,6 +615,23 @@ nav#menu ul li a:hover {
   object-fit: cover;
 }
 
+/* FOOTER*/
+/* ---------- Rodapé ---------- */
+.footer {
+  min-height: 534px;
+  padding: 73px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(180deg, #f9a66f 0%, #fa6516 100%);
+  color: #fff;
+}
+.footer__logo img { display: block; height: 246px; width: auto; }
+.social { display: flex; gap: 14px; margin-top: 26px; }
+.social a { display: block; width: 47px; height: 47px; transition: transform .2s; }
+.social a:hover { transform: translateY(-3px); }
+.social svg { display: block; width: 100%; height: 100%; }
+.copyright { font-size: 20px; text-align: center; margin-top: 30px; }
 
 /* ========================================
    TABLET
@@ -623,24 +639,25 @@ nav#menu ul li a:hover {
 
 @media (max-width: 900px) {
 
-    .faca-parte {
-        padding: 35px 25px;
-    }
+  .faca-parte {
+    padding: 35px 25px;
+  }
 
-    .faca-parte__container {
-        padding: 25px;
-        gap: 25px;
-    }
+  .faca-parte__container {
+    padding: 25px;
+    gap: 25px;
+  }
 
-    .faca-parte__titulo {
-        font-size: 32px;
-    }
+  .faca-parte__titulo {
+    font-size: 32px;
+  }
 
-    .faca-parte__imagem {
-        width: 320px;
-        height: 280px;
-    }
-
+  .faca-parte__imagem {
+    width: 320px;
+    height: 280px;
+  }
+  .footer { min-height: 0; padding: 48px 20px 40px; }
+  .footer__logo img { height: 190px; }
 }
 
 
@@ -1409,4 +1426,70 @@ footer {
     --site-padding-x:    16px;
     --section-padding-y: 40px;
   }
+}
+
+/* ========================================
+   AJUSTE DA HERO — CELULAR 320px
+======================================== */
+
+@media (max-width: 320px) {
+
+    /* Header */
+    header {
+        padding: 16px 16px;
+    }
+
+    .logo_header {
+        margin-left: 0;
+    }
+
+    .logo_header img {
+        height: 140px;
+    }
+
+    /* Hero */
+    .hero {
+        margin-top: 175px;
+
+        min-height: 0;
+        height: auto;
+
+        aspect-ratio: 1366 / 497;
+
+        background-position: top center;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+    }
+    /* Esconde o botão da hero em telas de até 320px */
+    .btn-junte-se {
+        display: none;
+    }
+    /* SOBRE NÓS — 320px */
+
+    .sobre-conteudo {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .sobre-texto {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .sobre-image {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .sobre-image img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .sobre-image figcaption {
+        width: 100%;
+        text-align: center;
+    }
 }
