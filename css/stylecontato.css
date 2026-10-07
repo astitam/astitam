@@ -781,3 +781,8 @@ footer {
         width: 100%;
     }
 }
+@media (max-width: 1023px) {
+    .formulario_imagem {
+        display: none;
+    }
+}

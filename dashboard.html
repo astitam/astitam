@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Minha área | ElasTitam</title>
+  <link rel="icon" type="image/png" href="img_elastitam/logoElasTitam.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
@@ -111,28 +112,60 @@
       <div class="highlights">
         <h2><i class="fa-solid fa-star"></i> Destaques da sua jornada</h2>
         <blockquote>"O conhecimento que você compartilha inspira outras mulheres a irem mais longe"</blockquote>
+        <img class="highlights__logo" src="img_elastitam/logoElasTitam.png" alt="ElasTitam – Girls in tech">
       </div>
 
       <div class="card progress">
-        <h2><i class="fa-solid fa-chart-simple"></i> Seu progresso</h2>
-        <div class="bar">
-          <h3 id="p1">Oficinas ministradas</h3>
-          <div class="bar__track" role="progressbar" aria-labelledby="p1" aria-valuenow="71" aria-valuemin="0" aria-valuemax="100"><span class="bar__fill bar__fill--orange" style="width:71%"></span></div>
+    <h2>
+        <i class="fa-solid fa-chart-simple"></i>
+        Seu progresso
+    </h2>
+
+    <div class="bar">
+        <div class="bar__head">
+            <h3 id="p1">Oficinas ministradas</h3>
+            <strong>12 de 20</strong>
         </div>
-        <div class="bar">
-          <h3 id="p2">Oficinas ministradas</h3>
-          <div class="bar__track" role="progressbar" aria-labelledby="p2" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100"><span class="bar__fill bar__fill--purple" style="width:83%"></span></div>
+
+        <div class="bar__track"
+             role="progressbar"
+             aria-labelledby="p1"
+             aria-valuenow="12"
+             aria-valuemin="0"
+             aria-valuemax="20">
+            <span class="bar__fill bar__fill--orange" style="width:71%"></span>
         </div>
-        <div class="ranking">
-          <i class="fa-solid fa-trophy"></i>
-          <p>Você está entre as 20% das mulheres integrantes da comunidade que mais participam!</p>
+    </div>
+
+    <div class="bar">
+        <div class="bar__head">
+            <h3 id="p2">Oficinas que participou</h3>
+            <strong>28 de 40</strong>
         </div>
-      </div>
+
+        <div class="bar__track"
+             role="progressbar"
+             aria-labelledby="p2"
+             aria-valuenow="28"
+             aria-valuemin="0"
+             aria-valuemax="40">
+            <span class="bar__fill bar__fill--purple" style="width:83%"></span>
+        </div>
+    </div>
+
+    <div class="ranking">
+        <i class="fa-solid fa-trophy"></i>
+        <p>
+            Você está entre as 20% das mulheres integrantes da comunidade
+            que mais participam!
+        </p>
+    </div>
+</div>
     </section>
 
   </main>
 
-  <footer class="footer">
+  <!-- <footer class="footer">
     <a href="#" class="footer__logo"><img src="img_elastitam/LogoRoxo_Elas Titam.png" alt="ElasTitam – Girls in tech"></a>
     <div class="social">
     <a href="#" aria-label="Instagram do ElasTitam">
@@ -143,7 +176,7 @@
     </a>
     </div>
     <p class="copyright">© 2026 ElasTitam - Girls in Tech. Todos os direitos reservados.</p>
-  </footer>
+  </footer> -->
 
   <!-- Seu arquivo JS -->
   <script src="js/script.js"></script>
