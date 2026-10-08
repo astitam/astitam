@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório ElasTitam 2026</title>
+    <link rel="icon" type="image/png" href="img/logoelastitam_transparent.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/relatorio2026.css">
+</head>
+<body class="relatorio">
+
+    <div class="hero">
+        <img class="hero-logo" src="img_elastitam/logoElasTitam.png" alt="Logo ElasTitam">
+        <h1>ElasTitam 2026</h1>
+        <h2>Relatório de Atividades e Alcance</h2>
+        <p class="periodo">Período consolidado: fevereiro a junho de 2026</p>
+        <a class="btn-insta" href="https://elastitam.com.br/noticias.html">
+            Ver Fotos e Vídeos <i class="fa-brands fa-instagram"></i>
+        </a>
+        <div class="abas">
+            <a href="relatorio.html">2025</a>
+            <a href="relatorio2026.html" class="ativo" aria-current="page">2026</a>
+        </div>
+    </div>
+
+    <main class="conteudo">
+
+        <section>
+            <h2 class="titulo">Visão Geral</h2>
+            <p class="intro">As atividades de 2026 ampliaram a conexão entre tecnologia, carreira, comunicação, criatividade, cultura e empoderamento feminino.</p>
+            <div class="metricas seis" id="metricas"></div>
+        </section>
+
+        <section>
+            <h2 class="titulo">Alcance e Engajamento</h2>
+            <div class="graficos">
+                <div class="grafico card">
+                    <h3>Top 5 por inscrições</h3>
+                    <div class="grafico-caixa"><canvas id="graficoInscricoes" role="img" aria-label="Gráfico de barras: top 5 atividades por inscrições"></canvas></div>
+                    <p class="nota-grafico">A oficina de Canva liderou o alcance, seguida por atividades de empoderamento, infraestrutura, pitch e narrativas interativas.</p>
+                </div>
+                <div class="grafico card">
+                    <h3>Top 5 por feedbacks</h3>
+                    <div class="grafico-caixa"><canvas id="graficoFeedbacks" role="img" aria-label="Gráfico de barras: top 5 atividades por feedbacks"></canvas></div>
+                    <p class="nota-grafico">"Poder feminino" apresentou o maior volume de retornos, indicando forte conexão com o público.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="titulo">Participação por curso e público</h2>
+            <div class="graficos">
+                <div class="grafico card">
+                    <h3>Alunas do Lapa Tito e externas</h3>
+                    <div class="grafico-caixa rosca"><canvas id="graficoPublico" role="img" aria-label="Gráfico de rosca: alunas do Lapa Tito e participantes externas"></canvas></div>
+                </div>
+                <div class="grafico card" id="cardCursos" hidden>
+                    <h3>Distribuição registrada por curso</h3>
+                    <div class="grafico-caixa"><canvas id="graficoCursos" role="img" aria-label="Gráfico de barras: inscrições por curso"></canvas></div>
+                </div>
+            </div>
+
+            <h3 class="subtitulo">Leituras estratégicas</h3>
+            <div class="recomendacoes">
+                <div class="recomendacao card">
+                    <h3>Diversidade temática</h3>
+                    <p>Programação, IA, infraestrutura, design, carreira, literatura e identidade feminina.</p>
+                </div>
+                <div class="recomendacao card">
+                    <h3>Integração</h3>
+                    <p>As ações alcançaram alunas da unidade e público externo, fortalecendo a abertura do movimento para a comunidade.</p>
+                </div>
+                <div class="recomendacao card">
+                    <h3>Continuidade</h3>
+                    <p>O volume de inscrições e feedbacks reforça a relevância de manter uma agenda recorrente e ampliar a coleta de avaliações.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="titulo">Atividades de 2026</h2>
+            <p class="intro">Dados consolidados a partir da planilha <b>relatorio_2026</b>.</p>
+            <div class="tabela-caixa tabela-larga card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>DATA</th><th>ATIVIDADE</th><th>PALESTRANTE(S)</th>
+                            <th class="centro">INSCRIÇÕES</th><th class="centro">FEEDBACKS</th>
+                            <th class="centro">ALUNAS TITO</th><th class="centro">EXTERNAS</th>
+                        </tr>
+                    </thead>
+                    <tbody id="atividades"></tbody>
+                </table>
+            </div>
+            <p class="faixa" id="conclusao"></p>
+        </section>
+    </main>
+
+    <footer class="rodape-relatorio">ElasTitam — Relatório de Atividades 2026</footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+    <script>
+    /* ════════════════════════════════════════════════════════
+       DADOS — para adicionar/alterar uma atividade, edite a lista.
+       Métricas, Top 5 e gráfico de público são calculados sozinhos.
+       Ordem: data, atividade, palestrantes, inscrições, feedbacks, alunas Tito, externas
+       ════════════════════════════════════════════════════════ */
+    var atividades = [
+        ['23/02/2026', 'Pensamento Computacional para Resolução de Problemas', 'Luana Dorizo', 23, 4, 12, 11],
+        ['23/03/2026', 'Poder feminino: Quem definiu os papeis?', 'Fernanda Nalon e Luana Dorizo', 30, 17, 27, 3],
+        ['24/03/2026', 'O Poder da Mulher Negra nas Profissões do Futuro', 'Tainã Antunes e Samira Vieira', 14, 4, 5, 9],
+        ['26/03/2026', 'Servidores e Infraestrutura Básica de TI', 'Gabrielly Cesario', 29, 5, 15, 14],
+        ['27/03/2026', 'Bate-papo sobre a obra literária: Meu Corpo, Minha Casa', 'Aline, Tainá, Luana Fernanda e Samira', 11, 5, 11, 0],
+        ['27/04/2026', 'Canva para Comunicação Digital e Impacto Social', 'Claudia Lima', 48, 8, 25, 24],
+        ['29/04/2026', 'Affinity: Design Criativo e Comunicação Visual Profissional', 'Fernanda Mayumi', 21, 12, 12, 6],
+        ['19/05/2026', 'Pitch Mode On: Ative sua apresentação', 'Claudia Lima', 28, 11, 8, 3],
+        ['21/05/2026', 'Upgrade no LinkedIn: Sua Carreira 2.0', 'Samira Vieira', 18, 3, 6, 6],
+        ['23/06/2026', 'IA com Ren’Py: Narrativas Interativas e Jogos', 'Ester Maximiano', 28, 11, 25, 3],
+        ['25/06/2026', 'Meu Primeiro Cordel', 'Isabela Castello', 7, 4, 7, 0]
+    ];
+
+    // Distribuição por curso (o gráfico só aparece se houver dados).
+    // Exemplo: [{ nome: 'Nome do curso', valor: 40 }, ...]
+    var cursos = [];
+
+    /* ───────── a partir daqui não precisa mexer ───────── */
+    function soma(i) { return atividades.reduce(function (s, a) { return s + a[i]; }, 0); }
+    function el(tag, classe, texto) {
+        var e = document.createElement(tag);
+        if (classe) e.className = classe;
+        if (texto !== undefined) e.textContent = texto;
+        return e;
+    }
+
+    var totalInsc = soma(3), totalFeed = soma(4), totalTito = soma(5), totalExt = soma(6);
+
+    [
+        [atividades.length, 'Atividades realizadas'],
+        [totalInsc, 'Inscrições registradas'],
+        [totalFeed, 'Feedbacks coletados'],
+        [(totalFeed / totalInsc * 100).toFixed(1) + '%', 'Retorno de feedback'],
+        [totalTito, 'Alunas do Lapa Tito'],
+        [totalExt, 'Participantes externas']
+    ].forEach(function (m) {
+        var c = el('div', 'metrica card');
+        c.appendChild(el('strong', '', m[0]));
+        c.appendChild(el('span', '', m[1]));
+        document.getElementById('metricas').appendChild(c);
+    });
+
+    var rotulos = ['Data', 'Atividade', 'Palestrante(s)', 'Inscrições', 'Feedbacks', 'Alunas Tito', 'Externas'];
+    atividades.forEach(function (a) {
+        var tr = el('tr');
+        a.forEach(function (v, i) {
+            var td = el('td', i > 2 ? 'centro' : '', v);
+            td.setAttribute('data-label', rotulos[i]);
+            tr.appendChild(td);
+        });
+        document.getElementById('atividades').appendChild(tr);
+    });
+    document.getElementById('conclusao').textContent =
+        'Em 5 meses de atividades, o ElasTitam reuniu ' + totalInsc + ' inscrições em experiências que conectam formação, protagonismo e impacto social.';
+
+    /* Gráficos */
+    var roxo = '#8A2BE2', pequeno = window.innerWidth < 600;
+    Chart.defaults.font.family = "'Open Sans', sans-serif";
+    Chart.defaults.font.size = pequeno ? 11 : 12;
+
+    function quebrar(texto, max) {
+        var linhas = [], atual = '';
+        texto.split(' ').forEach(function (p) {
+            if ((atual + ' ' + p).trim().length > max) { linhas.push(atual); atual = p; }
+            else { atual = (atual + ' ' + p).trim(); }
+        });
+        linhas.push(atual);
+        return linhas;
+    }
+
+    function barras(canvasId, lista) {
+        new Chart(document.getElementById(canvasId), {
+            type: 'bar',
+            data: {
+                labels: lista.map(function (i) { return i.nome; }),
+                datasets: [{ data: lista.map(function (i) { return i.valor; }), backgroundColor: roxo, barPercentage: .8, categoryPercentage: .85 }]
+            },
+            options: {
+                indexAxis: 'y',
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: { beginAtZero: true, grid: { color: '#f0f0f0' } },
+                    y: { grid: { display: false }, ticks: { callback: function (v) { return quebrar(this.getLabelForValue(v), pequeno ? 16 : 28); } } }
+                }
+            }
+        });
+    }
+
+    function top5(indice) {
+        return atividades.map(function (a) { return { nome: a[1], valor: a[indice] }; })
+            .sort(function (x, y) { return y.valor - x.valor; }).slice(0, 5);
+    }
+
+    barras('graficoInscricoes', top5(3));
+    barras('graficoFeedbacks', top5(4));
+
+    new Chart(document.getElementById('graficoPublico'), {
+        type: 'doughnut',
+        data: {
+            labels: ['Alunas do Lapa Tito (' + totalTito + ')', 'Externas (' + totalExt + ')'],
+            datasets: [{ data: [totalTito, totalExt], backgroundColor: [roxo, '#c8c8c8'], borderWidth: 2 }]
+        },
+        options: { maintainAspectRatio: false, cutout: '50%', plugins: { legend: { position: 'bottom', labels: { usePointStyle: true } } } }
+    });
+
+    if (cursos.length) {
+        document.getElementById('cardCursos').hidden = false;
+        barras('graficoCursos', cursos);
+    }
+    </script>
+</body>
+</html>
